@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Transit Neural Network - Constantine</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 380px;
+            background: white;
+            padding: 20px;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        h1 {
+            color: #059669;
+            margin-bottom: 5px;
+            font-size: 22px;
+        }
+
+        .subtitle {
+            color: #6b7280;
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+
+        .search-box {
+            background: #f0fdf4;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #86efac;
+        }
+
+        .input-group {
+            margin-bottom: 12px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #374151;
+            font-size: 13px;
+        }
+
+        .input-group select,
+        .input-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #059669;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #047857;
+        }
+
+        button.secondary {
+            background: #f59e0b;
+            margin-top: 10px;
+        }
+
+        button.secondary:hover {
+            background: #d97706;
+        }
+
+        .route-details {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+            margin-top: 15px;
+        }
+
+        .route-details h3 {
+            color: #059669;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .route-step {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            background: white;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            font-size: 12px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .mode-badge {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        .mode-tram {
+            background: #10b981;
+        }
+
+        .mode-bus {
+            background: #3b82f6;
+        }
+
+        .mode-walk {
+            background: #6b7280;
+        }
+
+        #map {
+            flex: 1;
+            height: 100vh;
+        }
+
+        .error-msg {
+            color: #b91c1c;
+            background: #fef2f2;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            border: 1px solid #fca5a5;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1>🚊 Transit Neural Network</h1>
+            <p class="subtitle">Constantine, Algeria</p>
+
+            <div id="errorContainer"></div>
+
+            <div class="search-box">
+                <h3 style="margin-bottom: 10px; color: #059669;">🗺️ Planifier un trajet</h3>
+                <div class="input-group">
+                    <label>Origine</label>
+                    <select id="origin">
+                        <option value="">Sélectionner...</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Destination</label>
+                    <select id="destination">
+                        <option value="">Sélectionner...</option>
+                    </select>
+                </div>
+                <button onclick="searchRoute()">Calculer l'itinéraire</button>
+            </div>
+
+            <div id="routeDetails" style="display:none;" class="route-details">
+                <h3>📍 Votre itinéraire</h3>
+                <div id="routeSummary" style="margin-bottom: 10px; color: #6b7280; font-size: 13px;"></div>
+                <div id="routeSteps"></div>
+                <button class="secondary" onclick="startLiveRide()">🚀 Simuler Télémétrie</button>
+            </div>
+        </div>
+
+        <div id="map"></div>
+    </div>
+
+    <script>
+        const API_URL = 'http://localhost:8000';
+        let map;
+        let routeLayer;
+        let currentRoute = null;
+
+        // Initialize map
+        map = L.map('map').setView([36.3100, 6.6050], 12);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+
+        // Load stops
+        async function loadStops() {
+            try {
+                const res = await fetch(`${API_URL}/stops`);
+                if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+                const stops = await res.json();
+
+                const originSelect = document.getElementById('origin');
+                const destSelect = document.getElementById('destination');
+
+                originSelect.innerHTML = '<option value="">Sélectionner...</option>';
+                destSelect.innerHTML = '<option value="">Sélectionner...</option>';
+
+                stops.forEach(stop => {
+                    const opt1 = document.createElement('option');
+                    opt1.value = stop.id;
+                    opt1.textContent = stop.name;
+                    originSelect.appendChild(opt1);
+
+                    const opt2 = document.createElement('option');
+                    opt2.value = stop.id;
+                    opt2.textContent = stop.name;
+                    destSelect.appendChild(opt2);
+
+                    // Add marker to map
+                    L.circleMarker([stop.lat, stop.lon], {
+                        radius: 5,
+                        fillColor: '#059669',
+                        color: 'white',
+                        weight: 2,
+                        fillOpacity: 0.8
+                    }).bindPopup(stop.name).addTo(map);
+                });
+                console.log('Stops loaded successfully:', stops.length);
+            } catch (err) {
+                console.error('Error loading stops:', err);
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'error-msg';
+                errorDiv.innerHTML = `<strong>Erreur de connexion:</strong><br>Impossible de charger les arrêts.<br>Vérifiez que le backend tourne sur port 8000.<br>Erreur: ${err.message}`;
+                document.getElementById('errorContainer').appendChild(errorDiv);
+            }
+        }
+
+        // Search route
+        async function searchRoute() {
+            const origin = document.getElementById('origin').value;
+            const destination = document.getElementById('destination').value;
+
+            if (!origin || !destination) {
+                alert('Veuillez sélectionner origine et destination');
+                return;
+            }
+
+            try {
+                const res = await fetch(`${API_URL}/route`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ origin, destination })
+                });
+
+                if (!res.ok) throw new Error('Route not found');
+
+                const route = await res.json();
+                currentRoute = route;
+                displayRoute(route);
+            } catch (err) {
+                alert('Erreur: ' + err.message);
+            }
+        }
+
+        // Display route
+        async function displayRoute(route) {
+            // Clear previous route
+            if (routeLayer) map.removeLayer(routeLayer);
+
+            // Get stops data
+            const stopsRes = await fetch(`${API_URL}/stops`);
+            const stops = await stopsRes.json();
+            const stopsMap = {};
+            stops.forEach(s => stopsMap[s.id] = s);
+
+            // Draw route on map
+            const coords = [];
+            route.steps.forEach(step => {
+                const fromStop = stopsMap[step.from_stop];
+                const toStop = stopsMap[step.to_stop];
+                if (fromStop && toStop) {
+                    const color = step.mode === 'tram' ? '#10b981' :
+                        step.mode === 'bus' ? '#3b82f6' : '#6b7280';
+                    const polyline = L.polyline(
+                        [[fromStop.lat, fromStop.lon], [toStop.lat, toStop.lon]],
+                        { color, weight: 4, opacity: 0.7 }
+                    ).addTo(map);
+                    coords.push([fromStop.lat, fromStop.lon]);
+                    coords.push([toStop.lat, toStop.lon]);
+                }
+            });
+
+            // Fit bounds
+            if (coords.length > 0) {
+                map.fitBounds(coords);
+            }
+
+            // Display route details
+            const duration = Math.round(route.total_duration / 60);
+            document.getElementById('routeSummary').innerHTML =
+                `⏱️ <b>${duration} min</b> | 🔄 ${route.transfers} transfert(s) | 📍 ${route.steps.length} segments`;
+
+            let stepsHTML = '';
+            route.steps.forEach((step, i) => {
+                const fromName = stopsMap[step.from_stop]?.name || step.from_stop;
+                const toName = stopsMap[step.to_stop]?.name || step.to_stop;
+                const modeClass = `mode-${step.mode}`;
+                const emoji = step.mode === 'tram' ? '🚊' :
+                    step.mode === 'bus' ? '🚌' : '🚶';
+                stepsHTML += `
+                    <div class="route-step">
+                        <span class="mode-badge ${modeClass}"></span>
+                        <span>${emoji} ${fromName} → ${toName}</span>
+                    </div>
+                `;
+            });
+
+            document.getElementById('routeSteps').innerHTML = stepsHTML;
+            document.getElementById('routeDetails').style.display = 'block';
+        }
+
+        // Live ride simulation
+        async function startLiveRide() {
+            if (!currentRoute) return;
+
+            const transitSteps = currentRoute.steps.filter(s => s.mode !== 'walk');
+
+            for (let step of transitSteps.slice(0, 5)) {
+                const speed = 10 + Math.random() * 20; // 10-30 m/s
+
+                try {
+                    await fetch(`${API_URL}/telemetry`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            u: step.from_stop,
+                            v: step.to_stop,
+                            speed_mps: speed
+                        })
+                    });
+                    console.log(`Télémétrie envoyée: ${step.from_stop} → ${step.to_stop} @ ${speed.toFixed(1)} m/s`);
+                } catch (err) {
+                    console.error('Erreur télémétrie:', err);
+                }
+
+                await new Promise(resolve => setTimeout(resolve, 1000));
+            }
+
+            alert('Simulation de télémétrie terminée!');
+        }
+
+        // Load stops on page load
+        loadStops();
+    </script>
+</body>
+
+</html>
