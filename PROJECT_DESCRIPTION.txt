@@ -1,0 +1,25 @@
+Project Farida: Transit Navigator
+
+Project Farida is a smart transit navigation application designed to help people get around Constantine, Algeria, easily and efficiently.
+
+Key Features:
+
+1.  Interactive Map
+    - View the entire transit network on a clear, easy-to-read map.
+    - See the real-time locations of trams, buses, and taxis moving across the city.
+    - Locate all transit stops and stations at a glance.
+
+2.  Smart Routing
+    - Simply enter your starting point and destination to get the best route.
+    - The app calculates the quickest path, combining walking, trams, buses, and taxis.
+    - It provides a step-by-step itinerary, telling you exactly where to walk, which line to take, and where to get off.
+
+3.  Trip Details
+    - Get a clear summary of your trip, including the total estimated time and the number of transfers.
+    - See a detailed breakdown of each leg of your journey.
+
+4.  Live Updates (Simulation)
+    - The system simulates a live transit network, showing vehicles moving in real-time, so you can see exactly where your ride is.
+
+Goal:
+To make public transportation in Constantine accessible, predictable, and stress-free for everyone.

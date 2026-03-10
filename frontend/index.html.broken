@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Transit Neural Network</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 400px;
+            background: white;
+            padding: 20px;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: #059669;
+            margin-bottom: 5px;
+            font-size: 24px;
+        }
+
+        .subtitle {
+            color: #6b7280;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        .mode-switch {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            background: #f3f4f6;
+            padding: 5px;
+            border-radius: 8px;
+        }
+
+        .mode-btn {
+            flex: 1;
+            padding: 8px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 13px;
+            background: transparent;
+            color: #6b7280;
+            transition: all 0.2s;
+        }
+
+        .mode-btn.active {
+            background: white;
+            color: #059669;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .panel {
+            display: none;
+        }
+
+        .panel.active {
+            display: block;
+        }
+
+        .search-box,
+        .editor-box {
+            background: #f0fdf4;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #86efac;
+        }
+
+        .editor-box {
+            background: #fff7ed;
+            border-color: #fdba74;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #374151;
+            font-size: 13px;
+        }
+
+        select,
+        button,
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 13px;
+        }
+
+        select:focus,
+        input:focus {
+            outline: none;
+            border-color: #10b981;
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+        }
+
+        button {
+            background: #059669;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #047857;
+        }
+
+        button:disabled {
+            background: #9ca3af;
+            cursor: not-allowed;
+        }
+
+        .editor-btn {
+            background: #ea580c;
+        }
+
+        .editor-btn:hover {
+            background: #c2410c;
+        }
+
+        #map {
+            flex: 1;
+            height: 100%;
+            cursor: crosshair;
+        }
+
+        .route-details {
+            background: #f3f4f6;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .route-step {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            background: white;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            font-size: 12px;
+        }
+
+        .mode-badge {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .mode-tram {
+            background: #10b981;
+        }
+
+        .mode-bus {
+            background: #3b82f6;
+        }
+
+        .mode-walk {
+            background: #6b7280;
+        }
+
+        .stat {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .stat-value {
+            font-weight: 600;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 10px;
+            color: #6b7280;
+        }
+
+        .loading.active {
+            display: block;
+        }
+
+        /* Editor specific styles */
+        .editor-instructions {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1>🌐 Global Transit Neural Network</h1>
+            <p class="subtitle">Community-Powered Transit (Constantine)</p>
+
+            <div class="mode-switch">
+                <button class="mode-btn active" onclick="switchMode('rider')">Rider Mode</button>
+                <button class="mode-btn" onclick="switchMode('editor')">Community Editor</button>
+            </div>
+
+            <!-- RIDER PANEL -->
+            <div id="riderPanel" class="panel active">
+                <div class="search-box">
+                    <div class="input-group">
+                        <label for="origin">📍 Station de départ</label>
+                        <select id="origin">
+                            <option value="">Sélectionner l'origine...</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="destination">🎯 Station d'arrivée</label>
+                        <select id="destination">
+                            <option value="">Sélectionner la destination...</option>
+                        </select>
+                    </div>
+
+                    <button id="searchBtn" onclick="searchRoute()">Calculer l'itinéraire</button>
+                </div>
+
+                <div class="loading" id="loading">Calcul en cours...</div>
+
+                <div id="routeDetails" style="display: none;">
+                    <div class="route-details">
+                        <h3 style="margin-bottom: 10px; font-size: 15px;">Détails du trajet</h3>
+                        <div class="stat">
+                            <span>Durée:</span>
+                            <span class="stat-value" id="duration">-</span>
+                        </div>
+                        <div class="stat">
+                            <span>Correspondances:</span>
+                            <span class="stat-value" id="transfers">-</span>
+                        </div>
+                        <div id="steps"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EDITOR PANEL -->
+            <div id="editorPanel" class="panel">
+                <div class="editor-box">
+                    <h3>🛠️ Ajouter un Arrêt</h3>
+                    <p class="editor-instructions">Cliquez sur la carte pour définir la position.</p>
+
+                    <div class="input-group">
+                        <label>Nom de l'arrêt</label>
+                        <input type="text" id="newStopName" placeholder="Ex: Place des Martyrs">
+                    </div>
+
+                    <div class="input-group">
+                        <label>ID (unique)</label>
+                        <input type="text" id="newStopId" placeholder="Ex: martyrs_sq">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Coordonnées</label>
+                        <input type="text" id="newStopCoords" readonly placeholder="Cliquez sur la carte">
+                    </div>
+
+                    <button class="editor-btn" onclick="createStop()">Sauvegarder l'arrêt</button>
+                </div>
+
+                <div class="editor-box">
+                    <h3>🔗 Créer une Liaison</h3>
+                    <div class="input-group">
+                        <label>De (ID)</label>
+                        <select id="edgeSource"></select>
+                    </div>
+                    <div class="input-group">
+                        <label>À (ID)</label>
+                        <select id="edgeTarget"></select>
+                    </div>
+                    <div class="input-group">
+                        <label>Mode</label>
+                        <select id="edgeMode">
+                            <option value="bus">Bus</option>
+                            <option value="tram">Tramway</option>
+                            <option value="walk">Marche</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Durée (secondes)</label>
+                        <input type="number" id="edgeDuration" value="120">
+                    </div>
+                    <button class="editor-btn" onclick="createEdge()">Créer la liaison</button>
+                </div>
+            </div>
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: background 0.2s;
+            }
+
+            button:hover {
+            background: #047857;
+            }
+
+            button:disabled {
+            background: #9ca3af;
+            cursor: not-allowed;
+            }
+
+            .editor-btn {
+            background: #ea580c;
+            }
+
+            .editor-btn:hover {
+            background: #c2410c;
+            }
+
+            #map {
+            flex: 1;
+            height: 100%;
+            cursor: crosshair;
+            }
+
+            .route-details {
+            background: #f3f4f6;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+            }
+
+            .route-step {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            background: white;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            font-size: 12px;
+            }
+
+            .mode-badge {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            }
+
+            .mode-tram {
+            background: #10b981;
+            }
+
+            .mode-bus {
+            background: #3b82f6;
+            }
+
+            .mode-walk {
+            background: #6b7280;
+            }
+
+            .stat {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 14px;
+            }
+
+            .stat-value {
+            font-weight: 600;
+            }
+
+            .loading {
+            display: none;
+            text-align: center;
+            padding: 10px;
+            color: #6b7280;
+            }
+
+            .loading.active {
+            display: block;
+            }
+
+            /* Editor specific styles */
+            .editor-instructions {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 10px;
+            font-style: italic;
+            }
+            </style>
+            </head>
+
+            <body>
+                <div class="container">
+                    <div class="sidebar">
+                        <h1>🌐 Global Transit Neural Network</h1>
+                        <p class="subtitle">Community-Powered Transit (Constantine)</p>
+
+                        <div class="mode-switch">
+                            <button class="mode-btn active" onclick="switchMode('rider')">Rider Mode</button>
+                            <button class="mode-btn" onclick="switchMode('editor')">Community Editor</button>
+                        </div>
+
+                        ```html
+                        <!-- RIDER PANEL -->
+                        <div id="riderPanel" class="panel active">
+                            <div class="search-box">
+                                <div class="input-group">
+                                    <label for="origin">📍 Station de départ</label>
+                                    <select id="origin">
+                                        <option value="">Sélectionner l'origine...</option>
+                                    </select>
+                                </div>
+
+                                <div class="input-group">
+                                    <label for="destination">🎯 Station d'arrivée</label>
+                                    <select id="destination">
+                                        <option value="">Sélectionner la destination...</option>
+                                    </select>
+                                </div>
+
+                                <button id="searchBtn" onclick="searchRoute()">Calculer l'itinéraire</button>
+                            </div>
+
+                            <div class="loading" id="loading">Calcul en cours...</div>
+
+                            <div id="routeDetails" style="display: none;">
+                                <div class="route-details">
+                                    <h3 style="margin-bottom: 10px; font-size: 15px;">Détails du trajet</h3>
+                                    <div class="stat">
+                                        <span>Durée:</span>
+                                        <span class="stat-value" id="duration">-</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span>Correspondances:</span>
+                                        <span class="stat-value" id="transfers">-</span>
+                                    </div>
+                                    <div id="steps"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- EDITOR PANEL -->
+                        <div id="editorPanel" class="panel">
+                            <div class="editor-box">
+                                <h3>🛠️ Ajouter un Arrêt</h3>
+                                <p class="editor-instructions">Cliquez sur la carte pour définir la position.</p>
+
+                                <div class="input-group">
+                                    <label>Nom de l'arrêt</label>
+                                    <input type="text" id="newStopName" placeholder="Ex: Place des Martyrs">
+                                </div>
+
+                                <div class="input-group">
+                                    <label>ID (unique)</label>
+                                    <input type="text" id="newStopId" placeholder="Ex: martyrs_sq">
+                                </div>
+
+                                <div class="input-group">
+                                    <label>Coordonnées</label>
+                                    <input type="text" id="newStopCoords" readonly placeholder="Cliquez sur la carte">
+                                </div>
+
+                                <button class="editor-btn" onclick="createStop()">Sauvegarder l'arrêt</button>
+                            </div>
+
+                            <div class="editor-box">
+                                <h3>🔗 Créer une Liaison</h3>
+                                <div class="input-group">
+                                    <label>De (ID)</label>
+                                    <select id="edgeSource"></select>
+                                </div>
+                                <div class="input-group">
+                                    <label>À (ID)</label>
+                                    <select id="edgeTarget"></select>
+                                </div>
+                                <div class="input-group">
+                                    <label>Mode</label>
+                                    <select id="edgeMode">
+                                        <option value="bus">Bus</option>
+                                        <option value="tram">Tramway</option>
+                                        <option value="walk">Marche</option>
+                                    </select>
+                                </div>
+                                <div class="input-group">
+                                    <label>Durée (secondes)</label>
+                                    <input type="number" id="edgeDuration" value="120">
+                                </div>
+                                <button class="editor-btn" onclick="createEdge()">Créer la liaison</button>
+                            </div>
+                        </div>
+                        cursor: pointer;
+                        font-weight: 600;
+                        margin-top: 10px;
+                        transition: background 0.2s;
+                        }
+
+                        button:hover {
+                        background: #047857;
+                        }
+
+                        button:disabled {
+                        background: #9ca3af;
+                        cursor: not-allowed;
+                        }
+
+                        .editor-btn {
+                        background: #ea580c;
+                        }
+
+                        .editor-btn:hover {
+                        background: #c2410c;
+                        }
+
+                        #map {
+                        flex: 1;
+                        height: 100%;
+                        cursor: crosshair;
+                        }
+
+                        .route-details {
+                        background: #f3f4f6;
+                        padding: 15px;
+                        border-radius: 8px;
+                        margin-top: 10px;
+                        }
+
+                        .route-step {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        padding: 10px;
+                        background: white;
+                        border-radius: 6px;
+                        margin-bottom: 8px;
+                        font-size: 12px;
+                        }
+
+                        .mode-badge {
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        }
+
+                        .mode-tram {
+                        background: #10b981;
+                        }
+
+                        .mode-bus {
+                        background: #3b82f6;
+                        }
+
+                        .mode-walk {
+                        background: #6b7280;
+                        }
+
+                        .stat {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 10px;
+                        font-size: 14px;
+                        }
+
+                        .stat-value {
+                        font-weight: 600;
+                        }
+
+                        .loading {
+                        display: none;
+                        text-align: center;
+                        padding: 10px;
+                        color: #6b7280;
+                        }
+
+                        .loading.active {
+                        display: block;
+                        }
+
+                        /* Editor specific styles */
+                        .editor-instructions {
+                        font-size: 12px;
+                        color: #666;
+                        margin-bottom: 10px;
+                        font-style: italic;
+                        }
+                        </style>
+                        </head>
+
+                        <body>
+                            <div class="container">
+                                <div class="sidebar">
+                                    <h1>🌐 Global Transit Neural Network</h1>
+                                    <p class="subtitle">Community-Powered Transit (Constantine)</p>
+
+                                    <div class="mode-switch">
+                                        <button class="mode-btn active" onclick="switchMode('rider')">Rider
+                                            Mode</button>
+                                        <button class="mode-btn" onclick="switchMode('editor')">Community
+                                            Editor</button>
+                                    </div>
+
+                                    <!-- RIDER PANEL -->
+                                    <div id="riderPanel" class="panel active">
+                                        <div class="search-box">
+                                            <div class="input-group">
+                                                <label for="origin">📍 Station de départ</label>
+                                                <select id="origin">
+                                                    <option value="">Sélectionner l'origine...</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="input-group">
+                                                <label for="destination">🎯 Station d'arrivée</label>
+                                                <select id="destination">
+                                                    <option value="">Sélectionner la destination...</option>
+                                                </select>
+                                            </div>
+
+                                            <button id="searchBtn" onclick="searchRoute()">Calculer
+                                                l'itinéraire</button>
+                                        </div>
+
+                                        <div class="loading" id="loading">Calcul en cours...</div>
+
+                                        <div id="routeDetails" style="display: none;">
+                                            <div class="route-details">
+                                                <h3 style="margin-bottom: 10px; font-size: 15px;">Détails du trajet</h3>
+                                                <div class="stat">
+                                                    <span>Durée:</span>
+                                                    <span class="stat-value" id="duration">-</span>
+                                                </div>
+                                                <div class="stat">
+                                                    <span>Correspondances:</span>
+                                                    <span class="stat-value" id="transfers">-</span>
+                                                </div>
+                                                <div id="steps"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- EDITOR PANEL -->
+                                    <div id="editorPanel" class="panel">
+                                        <div class="editor-box">
+                                            <h3>🛠️ Ajouter un Arrêt</h3>
+                                            <p class="editor-instructions">Cliquez sur la carte pour définir la
+                                                position.</p>
+
+                                            <div class="input-group">
+                                                <label>Nom de l'arrêt</label>
+                                                <input type="text" id="newStopName" placeholder="Ex: Place des Martyrs">
+                                            </div>
+
+                                            <div class="input-group">
+                                                <label>ID (unique)</label>
+                                                <input type="text" id="newStopId" placeholder="Ex: martyrs_sq">
+                                            </div>
+
+                                            <div class="input-group">
+                                                <label>Coordonnées</label>
+                                                <input type="text" id="newStopCoords" readonly
+                                                    placeholder="Cliquez sur la carte">
+                                            </div>
+
+                                            <button class="editor-btn" onclick="createStop()">Sauvegarder
+                                                l'arrêt</button>
+                                        </div>
+
+                                        <div class="editor-box">
+                                            <h3>🔗 Créer une Liaison</h3>
+                                            <div class="input-group">
+                                                <label>De (ID)</label>
+                                                <select id="edgeSource"></select>
+                                            </div>
+                                            <div class="input-group">
+                                                <label>À (ID)</label>
+                                                <select id="edgeTarget"></select>
+                                            </div>
+                                            <div class="input-group">
+                                                <label>Mode</label>
+                                                <select id="edgeMode">
+                                                    <option value="bus">Bus</option>
+                                                    <option value="tram">Tramway</option>
+                                                    <option value="walk">Marche</option>
+                                                </select>
+                                            </div>
+                                            <div class="input-group">
+                                                <label>Durée (secondes)</label>
+                                                <input type="number" id="edgeDuration" value="120">
+                                            </div>
+                                            <button class="editor-btn" onclick="createEdge()">Créer la liaison</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script>
+                                    const API_URL = 'http://localhost:8000';
+                                    let map, stops = [], routePath = null;
+                                    const markers = [];
+                                    const routeLines = [];
+                                    let tempMarker = null;
+                                    let isEditorMode = false;
+
+                                    // Initialize map
+                                    map = L.map('map').setView([36.3100, 6.6050], 12);
+                                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                        attribution: '© OpenStreetMap contributors'
+                                    }).addTo(map);
+
+                                    // Map Click Handler for Editor
+                                    map.on('click', function (e) {
+                                        if (!isEditorMode) return;
+
+                                        const lat = e.latlng.lat.toFixed(5);
+                                        const lng = e.latlng.lng.toFixed(5);
+
+                                        document.getElementById('newStopCoords').value = `${lat}, ${lng}`;
+
+                                        if (tempMarker) map.removeLayer(tempMarker);
+                                        tempMarker = L.marker([lat, lng], { draggable: true }).addTo(map);
+                                        tempMarker.bindPopup("Nouvel arrêt").openPopup();
+                                    });
+
+                                    function switchMode(mode) {
+                                        const riderBtn = document.querySelector('.mode-btn:nth-child(1)');
+                                        const editorBtn = document.querySelector('.mode-btn:nth-child(2)');
+                                        const riderPanel = document.getElementById('riderPanel');
+                                        const editorPanel = document.getElementById('editorPanel');
+
+                                        if (mode === 'editor') {
+                                            isEditorMode = true;
+                                            riderBtn.classList.remove('active');
+                                            editorBtn.classList.add('active');
+                                            riderPanel.classList.remove('active');
+                                            editorPanel.classList.add('active');
+                                            document.getElementById('map').style.cursor = 'crosshair';
+                                        } else {
+                                            isEditorMode = false;
+                                            editorBtn.classList.remove('active');
+                                            riderBtn.classList.add('active');
+                                            editorPanel.classList.remove('active');
+                                            riderPanel.classList.add('active');
+                                            document.getElementById('map').style.cursor = 'grab';
+                                            if (tempMarker) map.removeLayer(tempMarker);
+                                        }
+                                    }
+
+                                    async function loadStops() {
+                                        try {
+                                            const res = await fetch(`${API_URL}/stops`);
+                                            stops = await res.json();
+
+                                            // Populate Rider Dropdowns
+                                            const originSelect = document.getElementById('origin');
+                                            const destSelect = document.getElementById('destination');
+
+                                            // Populate Editor Dropdowns
+                                            const edgeSource = document.getElementById('edgeSource');
+                                            const edgeTarget = document.getElementById('edgeTarget');
+
+                                            [originSelect, destSelect, edgeSource, edgeTarget].forEach(el => {
+                                                el.innerHTML = '<option value="">Sélectionner...</option>';
+                                            });
+
+                                            // Clear existing markers
+                                            markers.forEach(m => map.removeLayer(m));
+                                            markers.length = 0;
+
+                                            stops.forEach(stop => {
+                                                // Dropdowns
+                                                [originSelect, destSelect, edgeSource, edgeTarget].forEach(el => {
+                                                    const opt = document.createElement('option');
+                                                    opt.value = stop.id;
+                                                    opt.textContent = stop.name;
+                                                    el.appendChild(opt);
+                                                });
+
+                                                // Map Markers
+                                                const marker = L.marker([stop.lat, stop.lon])
+                                                    .bindPopup(`<b>${stop.name}</b><br><small>${stop.id}</small>`)
+                                                    .addTo(map);
+                                                markers.push(marker);
+                                            });
+                                        } catch (err) {
+                                            console.error('Error loading stops:', err);
+                                        }
+                                    }
+
+                                    async function createStop() {
+                                        const name = document.getElementById('newStopName').value;
+                                        const id = document.getElementById('newStopId').value;
+                                        const coords = document.getElementById('newStopCoords').value;
+
+                                        if (!name || !id || !coords) {
+                                            alert('Veuillez remplir tous les champs');
+                                            return;
+                                        }
+
+                                        const [lat, lon] = coords.split(',').map(n => parseFloat(n.trim()));
+
+                                        try {
+                                            const res = await fetch(`${API_URL}/stops`, {
+                                                method: 'POST',
+                                                headers: { 'Content-Type': 'application/json' },
+                                                body: JSON.stringify({ id, name, lat, lon })
+                                            });
+
+                                            if (res.ok) {
+                                                alert('Arrêt créé avec succès !');
+                                                await loadStops(); // Refresh dropdowns and markers
+
+                                                // Reset form
+                                                document.getElementById('newStopName').value = '';
+                                                document.getElementById('newStopId').value = '';
+                                                document.getElementById('newStopCoords').value = '';
+                                                if (tempMarker) map.removeLayer(tempMarker);
+                                            } else {
+                                                const err = await res.json();
+                                                alert('Erreur: ' + err.detail);
+                                            }
+                                        } catch (err) {
+                                            alert('Erreur réseau: ' + err.message);
+                                        }
+                                    }
+
+                                    async function createEdge() {
+                                        const u = document.getElementById('edgeSource').value;
+                                        const v = document.getElementById('edgeTarget').value;
+                                        const mode = document.getElementById('edgeMode').value;
+                                        const duration = parseInt(document.getElementById('edgeDuration').value);
+
+                                        if (!u || !v) {
+                                            alert('Veuillez sélectionner deux arrêts');
+                                            return;
+                                        }
+
+                                        try {
+                                            const res = await fetch(`${API_URL}/edges`, {
+                                                method: 'POST',
+                                                headers: { 'Content-Type': 'application/json' },
+                                                body: JSON.stringify({ u, v, mode, duration })
+                                            });
+
+                                            if (res.ok) {
+                                                alert('Liaison créée avec succès !');
+                                            } else {
+                                                const err = await res.json();
+                                                alert('Erreur: ' + err.detail);
+                                            }
+                                        } catch (err) {
+                                            alert('Erreur réseau: ' + err.message);
+                                        }
+                                    }
+
+                                    async function searchRoute() {
+                                        const origin = document.getElementById('origin').value;
+                                        const destination = document.getElementById('destination').value;
+
+                                        if (!origin || !destination) {
+                                            alert('Veuillez sélectionner l\'origine et la destination');
+                                            return;
+                                        }
+
+                                        document.getElementById('loading').classList.add('active');
+                                        document.getElementById('searchBtn').disabled = true;
+                                        document.getElementById('routeDetails').style.display = 'none';
+
+                                        routeLines.forEach(line => map.removeLayer(line));
+                                        routeLines.length = 0;
+
+                                        try {
+                                            const res = await fetch(`${API_URL}/route`, {
+                                                method: 'POST',
+                                                headers: { 'Content-Type': 'application/json' },
+                                                body: JSON.stringify({ origin, destination })
+                                            });
+
+                                            if (!res.ok) throw new Error('Route not found');
+
+                                            const data = await res.json();
+                                            routePath = data; // Store the route data globally
+                                            displayRoute(data);
+
+                                        } catch (err) {
+                                            alert('Impossible de trouver un itinéraire: ' + err.message);
+                                        } finally {
+                                            document.getElementById('loading').classList.remove('active');
+                                            document.getElementById('searchBtn').disabled = false;
+                                        }
+                                    }
+
+                                    function displayRoute(data) {
+                                        document.getElementById('duration').textContent = Math.round(data.total_duration / 60) + ' min';
+                                        document.getElementById('transfers').textContent = data.transfers;
+
+                                        const stepsDiv = document.getElementById('steps');
+                                        stepsDiv.innerHTML = '';
+
+                                        data.steps.forEach((step, idx) => {
+                                            const stepEl = document.createElement('div');
+                                            stepEl.className = 'route-step';
+
+                                            const badge = document.createElement('div');
+                                            badge.className = `mode-badge mode-${step.mode}`;
+
+                                            const info = document.createElement('div');
+                                            info.style.flex = '1';
+
+                                            const modeText = step.mode === 'tram' ? '🚊 Tramway' :
+                                                step.mode === 'bus' ? '🚌 Bus' :
+                                                    step.mode === 'walk' ? '🚶 Marche' : step.mode;
+
+                                            info.innerHTML = `
+                    <div style="font-weight: 500;">
+                        ${modeText} ${step.route ? '(' + step.route + ')' : ''}
+                    </div>
+                    <div style="font-size: 11px; color: #6b7280;">
+                        ${stops.find(s => s.id === step.from_stop)?.name} → ${stops.find(s => s.id === step.to_stop)?.name}
+                    </div>
+                `;
+
+                                            const duration = document.createElement('div');
+                                            duration.style.color = '#6b7280';
+                                            duration.textContent = Math.round(step.duration / 60) + ' min';
+
+                                            stepEl.appendChild(badge);
+                                            stepEl.appendChild(info);
+                                            stepEl.appendChild(duration);
+                                            stepsDiv.appendChild(stepEl);
+
+                                            const fromStop = stops.find(s => s.id === step.from_stop);
+                                            const toStop = stops.find(s => s.id === step.to_stop);
+
+                                            if (fromStop && toStop) {
+                                                const color = step.mode === 'tram' ? '#10b981' :
+                                                    step.mode === 'bus' ? '#3b82f6' : '#6b7280';
+                                                const line = L.polyline(
+                                                    [[fromStop.lat, fromStop.lon], [toStop.lat, toStop.lon]],
+                                                    {
+                                                        color: color,
+                                                        weight: 5,
+                                                        dashArray: step.mode === 'walk' ? '5, 10' : null
+                                                    }
+                                                ).addTo(map);
+                                                routeLines.push(line);
+                                            }
+                                        });
+
+                                        document.getElementById('routeDetails').style.display = 'block';
+
+                                        if (routeLines.length > 0) {
+                                            const group = new L.featureGroup(routeLines);
+                                            map.fitBounds(group.getBounds().pad(0.1));
+                                        }
+
+                                        // Add Live Ride Button
+                                        const existingBtn = document.getElementById('liveRideBtn');
+                                        if (existingBtn) existingBtn.remove();
+
+                                        const liveRideBtn = document.createElement('button');
+                                        liveRideBtn.id = 'liveRideBtn';
+                                        liveRideBtn.textContent = '🚀 Start Live Ride Simulation';
+                                        liveRideBtn.style.marginTop = '10px';
+                                        liveRideBtn.style.background = '#8b5cf6';
+                                        liveRideBtn.onclick = startLiveRide;
+                                        document.getElementById('routeDetails').appendChild(liveRideBtn);
+                                    }
+
+                                    async function startLiveRide() {
+                                        if (!routePath || routePath.steps.length === 0) {
+                                            alert("No route to simulate!");
+                                            return;
+                                        }
+
+                                        alert("Starting Live Ride Simulation... Watch the console for updates.");
+
+                                        // Simple simulation: Iterate through steps and send telemetry
+                                        for (const step of routePath.steps) {
+                                            if (step.mode === 'walk') continue; // Skip walking for telemetry
+
+                                            // Simulate moving along the edge
+                                            const u = step.from_stop;
+                                            const v = step.to_stop;
+
+                                            // Simulate a random speed (e.g., 10m/s to 30m/s)
+                                            const speed = 10 + Math.random() * 20;
+
+                                            console.log(`Simulating travel from ${u} to ${v} at ${speed.toFixed(2)} m/s`);
+
+                                            try {
+                                                const res = await fetch(`${API_URL}/telemetry`, {
+                                                    method: 'POST',
+                                                    headers: { 'Content-Type': 'application/json' },
+                                                    body: JSON.stringify({
+                                                        u: u,
+                                                        v: v,
+                                                        speed_mps: speed
+                                                    })
+                                                });
+                                                const data = await res.json();
+                                                console.log('Telemetry update:', data);
+                                            } catch (err) {
+                                                console.error('Telemetry error:', err);
+                                            }
+
+                                            // Wait a bit to simulate travel time (scaled down)
+                                            await new Promise(r => setTimeout(r, 1000));
+                                        }
+
+                                        alert("Live Ride Simulation Complete!");
+                                    }
+
+                                    loadStops();
+                                </script>
+                        </body>
+
+</html>
+```
