@@ -19,9 +19,15 @@ export interface Vehicle {
 export interface RouteStep {
     from_stop: string;
     to_stop: string;
+    from_name?: string;
+    to_name?: string;
     mode: string;
     route?: string;
+    route_short?: string;
+    route_long?: string;
     duration: number;
+    dep_time?: number;
+    arr_time?: number;
     path_coordinates?: number[][];
     // Frontend computed properties
     count?: number;

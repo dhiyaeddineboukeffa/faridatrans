@@ -1,4 +1,4 @@
-$root = "c:\Users\bob\Desktop\project farida"
+$root = "c:\Users\LagunaNL5A\Desktop\ffa\faridatrans-master"
 
 Write-Host "Starting Ingestion Service..."
 Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd '$root\backend\ingestion-service'; python main.py" -WorkingDirectory "$root\backend\ingestion-service"

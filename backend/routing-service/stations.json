@@ -1,0 +1,590 @@
+[
+  {
+    "id": "ZAAMOUCHE",
+    "name": "ZAAMOUCHE",
+    "lat": 36.5663,
+    "lon": 6.7369
+  },
+  {
+    "id": "EL_MERIDJ",
+    "name": "EL MERIDJ",
+    "lat": 36.4972,
+    "lon": 6.7161
+  },
+  {
+    "id": "ZIGHOYD_YOUCEF",
+    "name": "ZIGHOYD YOUCEF",
+    "lat": 36.5419,
+    "lon": 6.7118
+  },
+  {
+    "id": "CONSTANTINE",
+    "name": "CONSTANTINE",
+    "lat": 36.365,
+    "lon": 6.6147
+  },
+  {
+    "id": "AIN_ABID",
+    "name": "AIN ABID",
+    "lat": 36.2328,
+    "lon": 6.9436
+  },
+  {
+    "id": "GARE_ROUTIER_EST",
+    "name": "GARE ROUTIER EST",
+    "lat": 36.3589,
+    "lon": 6.6512
+  },
+  {
+    "id": "IBN_ZIAD",
+    "name": "IBN ZIAD",
+    "lat": 36.4467,
+    "lon": 6.5921
+  },
+  {
+    "id": "MESSA_BOUDJAROU",
+    "name": "MESSA BOUDJAROU",
+    "lat": 36.4312,
+    "lon": 6.6054
+  },
+  {
+    "id": "KHROUB",
+    "name": "KHROUB",
+    "lat": 36.5528,
+    "lon": 6.6943
+  },
+  {
+    "id": "IBN_BADIS",
+    "name": "IBN BADIS",
+    "lat": 36.3718,
+    "lon": 6.6129
+  },
+  {
+    "id": "OULED_RAHMOUNE",
+    "name": "OULED RAHMOUNE",
+    "lat": 36.5061,
+    "lon": 6.6897
+  },
+  {
+    "id": "EL_GOURZI",
+    "name": "EL GOURZI",
+    "lat": 36.3461,
+    "lon": 6.6208
+  },
+  {
+    "id": "BEN_YAGOUB",
+    "name": "BEN YAGOUB",
+    "lat": 36.3384,
+    "lon": 6.6679
+  },
+  {
+    "id": "V_B_BOUDIEMAA",
+    "name": "V/B BOUDIEMAA",
+    "lat": 36.5441,
+    "lon": 6.7032
+  },
+  {
+    "id": "ZIGHOUD_YOUSEF",
+    "name": "ZIGHOUD YOUSEF",
+    "lat": 36.5419,
+    "lon": 6.7118
+  },
+  {
+    "id": "DIDOUCHE_MOURAD",
+    "name": "DIDOUCHE MOURAD",
+    "lat": 36.451,
+    "lon": 6.2624
+  },
+  {
+    "id": "BEN_ZIAD",
+    "name": "BEN ZIAD",
+    "lat": 36.4467,
+    "lon": 6.5921
+  },
+  {
+    "id": "HAMMA_BOUZIANE",
+    "name": "HAMMA BOUZIANE",
+    "lat": 36.4214,
+    "lon": 6.6589
+  },
+  {
+    "id": "MESSAOUD_BOUDJE",
+    "name": "MESSAOUD BOUDJE",
+    "lat": 36.4312,
+    "lon": 6.6054
+  },
+  {
+    "id": "MASSA_BOUDJAROU",
+    "name": "MASSA BOUDJAROU",
+    "lat": 36.4096,
+    "lon": 6.6712
+  },
+  {
+    "id": "BENI_HAMIDENE",
+    "name": "BENI HAMIDENE",
+    "lat": 36.4873,
+    "lon": 6.6075
+  },
+  {
+    "id": "BOUDRAA_SALAH",
+    "name": "BOUDRAA SALAH",
+    "lat": 36.4718,
+    "lon": 6.5984
+  },
+  {
+    "id": "NOUVELLE_ALI_MENDJ",
+    "name": "NOUVELLE ALI MENDJ",
+    "lat": 36.2701,
+    "lon": 6.5624
+  },
+  {
+    "id": "KADDOUR_BOUMEDDOS",
+    "name": "KADDOUR BOUMEDDOS",
+    "lat": 36.3594,
+    "lon": 6.6298
+  },
+  {
+    "id": "CITE_20_OUT_55",
+    "name": "CITE 20 OUT 55",
+    "lat": 36.3381,
+    "lon": 6.5949
+  },
+  {
+    "id": "5_JUILET",
+    "name": "5  JUILET",
+    "lat": 36.3712,
+    "lon": 6.6186
+  },
+  {
+    "id": "KAF_SALAH",
+    "name": "KAF SALAH",
+    "lat": 36.5534,
+    "lon": 6.7552
+  },
+  {
+    "id": "KITOUNI_A_MALEK",
+    "name": "KITOUNI A/MALEK",
+    "lat": 36.3556,
+    "lon": 6.6219
+  },
+  {
+    "id": "BENCHERGUI",
+    "name": "BENCHERGUI",
+    "lat": 36.3427,
+    "lon": 6.6093
+  },
+  {
+    "id": "AIN_SMARA",
+    "name": "AIN SMARA",
+    "lat": 36.2669,
+    "lon": 6.6936
+  },
+  {
+    "id": "ELDJEBES",
+    "name": "ELDJEBES",
+    "lat": 36.3349,
+    "lon": 6.6331
+  },
+  {
+    "id": "SALAH_BEY",
+    "name": "SALAH BEY",
+    "lat": 36.3726,
+    "lon": 6.6087
+  },
+  {
+    "id": "SIDI_MABROUK",
+    "name": "SIDI MABROUK",
+    "lat": 36.3532,
+    "lon": 6.6527
+  },
+  {
+    "id": "DJEBEL_ELOUAHCH",
+    "name": "DJEBEL ELOUAHCH",
+    "lat": 36.3458,
+    "lon": 6.6419
+  },
+  {
+    "id": "KAF_LARBI",
+    "name": "KAF LARBI",
+    "lat": 36.5534,
+    "lon": 6.7552
+  },
+  {
+    "id": "BEKIRA",
+    "name": "BEKIRA",
+    "lat": 36.5498,
+    "lon": 6.7486
+  },
+  {
+    "id": "KHEMISTI",
+    "name": "KHEMISTI",
+    "lat": 36.3479,
+    "lon": 6.5942
+  },
+  {
+    "id": "BOUMERZOUG",
+    "name": "BOUMERZOUG",
+    "lat": 36.3604,
+    "lon": 6.5817
+  },
+  {
+    "id": "GAMAS",
+    "name": "GAMAS",
+    "lat": 36.5581,
+    "lon": 6.7204
+  },
+  {
+    "id": "ZIADIA",
+    "name": "ZIADIA",
+    "lat": 36.5512,
+    "lon": 6.7311
+  },
+  {
+    "id": "SIDI_MAROUK",
+    "name": "SIDI MAROUK",
+    "lat": 36.3341,
+    "lon": 6.5989
+  },
+  {
+    "id": "NOUVELLE_VILLE",
+    "name": "NOUVELLE VILLE",
+    "lat": 36.2621,
+    "lon": 6.6898
+  },
+  {
+    "id": "CITE_564_LOGTS",
+    "name": "CITE 564 LOGTS",
+    "lat": 36.3517,
+    "lon": 6.6012
+  },
+  {
+    "id": "BOUSSOUF",
+    "name": "BOUSSOUF",
+    "lat": 36.3539,
+    "lon": 6.6368
+  },
+  {
+    "id": "KADOUR_BOUMEDOU",
+    "name": "KADOUR BOUMEDOU",
+    "lat": 36.3594,
+    "lon": 6.6298
+  },
+  {
+    "id": "FERME_ARFA",
+    "name": "FERME ARFA",
+    "lat": 36.3719,
+    "lon": 6.6423
+  },
+  {
+    "id": "CITE_RIADH",
+    "name": "CITE RIADH",
+    "lat": 36.3408,
+    "lon": 6.6114
+  },
+  {
+    "id": "1100_LOGTS_A_BEY",
+    "name": "1100 LOGTS A BEY",
+    "lat": 36.3369,
+    "lon": 6.6178
+  },
+  {
+    "id": "SARKINA",
+    "name": "SARKINA",
+    "lat": 36.5592,
+    "lon": 6.7528
+  },
+  {
+    "id": "BOUHOUCHE",
+    "name": "BOUHOUCHE",
+    "lat": 6.5587,
+    "lon": 6.7219
+  },
+  {
+    "id": "MASSINISSA",
+    "name": "MASSINISSA",
+    "lat": 36.556,
+    "lon": 6.7421
+  },
+  {
+    "id": "CITE_600_LOGTS",
+    "name": "CITE 600 LOGTS",
+    "lat": 36.2692,
+    "lon": 6.5669
+  },
+  {
+    "id": "CITE_1600_LOGTS",
+    "name": "CITE 1600 LOGTS",
+    "lat": 36.2748,
+    "lon": 6.5591
+  },
+  {
+    "id": "N_VELLE_ALI_MENDJELI",
+    "name": "N/VELLE ALI MENDJELI",
+    "lat": 36.2701,
+    "lon": 6.5624
+  },
+  {
+    "id": "RIADH",
+    "name": "RIADH",
+    "lat": 36.5576,
+    "lon": 6.7289
+  },
+  {
+    "id": "BENGUI",
+    "name": "BENGUI",
+    "lat": 36.3284,
+    "lon": 6.6017
+  },
+  {
+    "id": "BENCHADOU",
+    "name": "BENCHADOU",
+    "lat": 36.3169,
+    "lon": 6.5898
+  },
+  {
+    "id": "SISSAOUI",
+    "name": "SISSAOUI",
+    "lat": 36.5599,
+    "lon": 6.7238
+  },
+  {
+    "id": "LALLA_N_SOUMER",
+    "name": "LALLA N\u2019SOUMER",
+    "lat": 36.5601,
+    "lon": 6.7454
+  },
+  {
+    "id": "CENTRE_VILLE",
+    "name": "CENTRE VILLE",
+    "lat": 36.365,
+    "lon": 6.6147
+  },
+  {
+    "id": "AEROPORT_MED_BOUDIAF",
+    "name": "AEROPORT MED/BOUDIAF",
+    "lat": 36.276,
+    "lon": 6.62
+  },
+  {
+    "id": "EXTENSION_OUEST",
+    "name": "EXTENSION OUEST",
+    "lat": 36.3608,
+    "lon": 6.6039
+  },
+  {
+    "id": "GARE_R_A_MENDJE",
+    "name": "GARE R/A MENDJE",
+    "lat": 36.3396,
+    "lon": 6.6281
+  },
+  {
+    "id": "EXTENSION_SUD",
+    "name": "EXTENSION SUD",
+    "lat": 36.3452,
+    "lon": 6.6215
+  },
+  {
+    "id": "CENTRE_V_A_MENDJE",
+    "name": "CENTRE V/A MENDJE",
+    "lat": 36.3387,
+    "lon": 6.6294
+  },
+  {
+    "id": "RETBA",
+    "name": "RETBA",
+    "lat": 36.4792,
+    "lon": 6.2854
+  },
+  {
+    "id": "P_J_AIN_NHAS",
+    "name": "P.J AIN NHAS",
+    "lat": 36.5571,
+    "lon": 6.7198
+  },
+  {
+    "id": "PU_MASSINISSA",
+    "name": "PU MASSINISSA",
+    "lat": 36.556,
+    "lon": 6.7421
+  },
+  {
+    "id": "NV_ALI_MANDJELI",
+    "name": "NV ALI MANDJELI",
+    "lat": 36.2665,
+    "lon": 6.5703
+  },
+  {
+    "id": "AIN_NHAS",
+    "name": "AIN NHAS",
+    "lat": 36.5571,
+    "lon": 6.7198
+  },
+  {
+    "id": "AIN_SAAD",
+    "name": "AIN SAAD",
+    "lat": 36.4536,
+    "lon": 6.2764
+  },
+  {
+    "id": "VILLAGE_20_AOUT",
+    "name": "VILLAGE 20 AOUT",
+    "lat": 36.2354,
+    "lon": 6.955
+  },
+  {
+    "id": "SALAH_DERADJI",
+    "name": "SALAH DERADJI",
+    "lat": 36.5402,
+    "lon": 6.7021
+  },
+  {
+    "id": "BOUNOUARA",
+    "name": "BOUNOUARA",
+    "lat": 36.5617,
+    "lon": 6.7084
+  },
+  {
+    "id": "KIKAYA",
+    "name": "KIKAYA",
+    "lat": 36.2798,
+    "lon": 6.6804
+  },
+  {
+    "id": "ALLOUK_ABDELLAH",
+    "name": "ALLOUK ABDELLAH",
+    "lat": 36.5481,
+    "lon": 6.6892
+  },
+  {
+    "id": "GUETAR_EL_AYCH",
+    "name": "GUETAR EL AYCH",
+    "lat": 36.5461,
+    "lon": 6.6934
+  },
+  {
+    "id": "ZIGHOUD_YOUCEF",
+    "name": "ZIGHOUD YOUCEF",
+    "lat": 36.5419,
+    "lon": 6.7118
+  },
+  {
+    "id": "MIHOUBI",
+    "name": "MIHOUBI",
+    "lat": 36.5342,
+    "lon": 6.6958
+  },
+  {
+    "id": "KASRNADJA",
+    "name": "KASRNADJA",
+    "lat": 36.5289,
+    "lon": 6.7027
+  },
+  {
+    "id": "BORDJ_M_HIRIS",
+    "name": "BORDJ M\u2019HIRIS",
+    "lat": 36.2194,
+    "lon": 6.9218
+  },
+  {
+    "id": "CHA_ELMEDBOUH",
+    "name": "CHA/ELMEDBOUH",
+    "lat": 36.4392,
+    "lon": 6.6718
+  },
+  {
+    "id": "EL_KARIA",
+    "name": "EL KARIA",
+    "lat": 36.2514,
+    "lon": 6.7051
+  },
+  {
+    "id": "SIDI_LARBI",
+    "name": "SIDI LARBI",
+    "lat": 36.4368,
+    "lon": 6.6402
+  },
+  {
+    "id": "CH_ELMEDBOUH",
+    "name": "CH/ELMEDBOUH",
+    "lat": 36.4392,
+    "lon": 6.6718
+  },
+  {
+    "id": "CHAABET_MEDBOUH",
+    "name": "CHAABET MEDBOUH",
+    "lat": 36.4392,
+    "lon": 6.6718
+  },
+  {
+    "id": "BENI_MESTINA",
+    "name": "BENI MESTINA",
+    "lat": 36.4726,
+    "lon": 6.2917
+  },
+  {
+    "id": "HERAICHA_AMMAR",
+    "name": "HERAICHA AMMAR",
+    "lat": 36.3725,
+    "lon": 6.6821
+  },
+  {
+    "id": "VILLAGE_AGRICOL",
+    "name": "VILLAGE AGRICOL",
+    "lat": 36.4598,
+    "lon": 6.2709
+  },
+  {
+    "id": "4_EME_KM",
+    "name": "4 EME KM",
+    "lat": 36.5146,
+    "lon": 6.7038
+  },
+  {
+    "id": "BEN_DJEDOU",
+    "name": "BEN DJEDOU",
+    "lat": 36.5287,
+    "lon": 6.6975
+  },
+  {
+    "id": "AIN_KEBIRA",
+    "name": "AIN KEBIRA",
+    "lat": 36.3794,
+    "lon": 6.5943
+  },
+  {
+    "id": "MAESSAOUD_BOUDJR",
+    "name": "MAESSAOUD BOUDJR",
+    "lat": 36.3008,
+    "lon": 6.6365
+  },
+  {
+    "id": "BAB_TROUCHE",
+    "name": "BAB TROUCHE",
+    "lat": 36.3669,
+    "lon": 6.6143
+  },
+  {
+    "id": "V_HAMMDI",
+    "name": "V/ HAMMDI",
+    "lat": 36.2805,
+    "lon": 6.6288
+  },
+  {
+    "id": "SIDI_ARRAB",
+    "name": "SIDI ARRAB",
+    "lat": 36.4391,
+    "lon": 6.648
+  },
+  {
+    "id": "AIN_TRAB",
+    "name": "AIN TRAB",
+    "lat": 36.4018,
+    "lon": 6.5612
+  },
+  {
+    "id": "150LOGTS_BEKIRA",
+    "name": "150LOGTS BEKIRA",
+    "lat": 36.4089,
+    "lon": 6.6321
+  }
+]

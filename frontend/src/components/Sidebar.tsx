@@ -24,7 +24,7 @@ const Sidebar: React.FC<SidebarProps> = ({
         <div
             className={`transition-all duration-300 ease-in-out relative flex flex-col overflow-hidden
           ${isSidebarOpen
-                    ? 'bg-white/95 backdrop-blur-xl shadow-2xl rounded-2xl w-full h-[60vh] md:h-auto md:max-h-[calc(100vh-4rem)] border border-white/20'
+                    ? 'bg-white/95 backdrop-blur-xl shadow-2xl rounded-2xl w-full h-[85vh] md:h-auto md:max-h-[calc(100vh-4rem)] border border-white/20'
                     : 'bg-white shadow-lg rounded-full w-12 h-12 self-end md:self-start items-center justify-center'}
         `}
         >
