@@ -1,22 +1,39 @@
 import json
 import logging
-import requests
 import math
+import heapq
 
 logger = logging.getLogger(__name__)
 
-class ProximityEngine:
-    def __init__(self, stations_file="stations.json"):
-        logger.info(f"Loading stations database from {stations_file}...")
+class GraphEngine:
+    def __init__(self, network_file="network_data.json"):
+        logger.info(f"Loading network database from {network_file}...")
         try:
-            with open(stations_file, 'r') as f:
-                self.stations_list = json.load(f)
-            self.stations = {s['id']: s for s in self.stations_list}
-            logger.info(f"Loaded {len(self.stations)} stations.")
+            with open(network_file, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            self.stations = data.get("nodes", {})
+            self.edges = data.get("edges", [])
+            logger.info(f"Loaded {len(self.stations)} stations and {len(self.edges)} edges.")
+            self._build_graph()
         except Exception as e:
-            logger.error(f"Failed to load stations: {e}")
+            logger.error(f"Failed to load network: {e}")
             self.stations = {}
-            self.stations_list = []
+            self.edges = []
+            self.graph = {}
+
+    def _build_graph(self):
+        self.graph = {node_id: [] for node_id in self.stations}
+        for edge in self.edges:
+            u = edge['u']
+            v = edge['v']
+            if u in self.graph and v in self.graph:
+                self.graph[u].append({
+                    'to': v,
+                    'mode': edge['mode'],
+                    'route': edge.get('route'),
+                    'duration': edge.get('duration', 0),
+                    'weight': edge.get('weight', 0)
+                })
 
     def _haversine(self, lat1, lon1, lat2, lon2):
         R = 6371000
@@ -33,113 +50,155 @@ class ProximityEngine:
                 nearest = stop_id
         return nearest, min_dist
 
-    def _point_to_segment_dist(self, px, py, p1x, p1y, p2x, p2y):
-        l2 = (p1x - p2x)**2 + (p1y - p2y)**2
-        if l2 == 0:
-            return math.hypot(px - p1x, py - p1y), 0
-        t = max(0, min(1, ((px - p1x) * (p2x - p1x) + (py - p1y) * (p2y - p1y)) / l2))
-        proj_x = p1x + t * (p2x - p1x)
-        proj_y = p1y + t * (p2y - p1y)
-        return math.hypot(px - proj_x, py - proj_y), t
-
     def compute_route(self, origin_id, dest_id, departure_time_sec=0):
         if origin_id not in self.stations or dest_id not in self.stations:
             logger.error(f"Cannot route. Unknown stations: {origin_id} or {dest_id}")
             return None
 
-        origin = self.stations[origin_id]
-        dest = self.stations[dest_id]
+        # Dijkstra's Algorithm
+        TRANSFER_PENALTY = 900 # 15 minutes penalty for transferring
+        BOARDING_PENALTY = 300 # 5 minute penalty for getting on a bus/tram
+        WALK_PENALTY_MULTIPLIER = 3.0 # Strongly discourage excessive walking
 
-        osrm_url = f"http://router.project-osrm.org/route/v1/driving/{origin['lon']},{origin['lat']};{dest['lon']},{dest['lat']}?geometries=geojson&overview=full"
-        try:
-            resp = requests.get(osrm_url)
-            data = resp.json()
-            if data['code'] != 'Ok':
-                logger.error(f"OSRM returned error: {data['code']}")
-                return None
-            
-            route = data['routes'][0]
-            path_coords = route['geometry']['coordinates'] # [lon, lat]
-            total_duration_sec = route['duration']
-            total_distance_m = route['distance']
-            
-        except Exception as e:
-            logger.error(f"Failed OSRM Request: {e}")
+        # Priority Queue: (cost, current_node, current_route, path_length, visited_routes, path)
+        import itertools
+        counter = itertools.count()
+        pq = [(0, next(counter), origin_id, None, 0, frozenset(), [])]
+        best_cost = {}
+
+        best_path = None
+        min_final_cost = float('inf')
+
+        while pq:
+            cost, _, current_node, current_route, path_len, visited_routes, path = heapq.heappop(pq)
+
+            if cost >= min_final_cost:
+                continue
+
+            state = (current_node, current_route, visited_routes)
+            if state in best_cost and cost > best_cost[state]:
+                continue
+            best_cost[state] = cost
+
+            if current_node == dest_id:
+                if cost < min_final_cost:
+                    min_final_cost = cost
+                    best_path = path
+                continue
+
+            for edge in self.graph[current_node]:
+                next_node = edge['to']
+                next_route = edge['route']
+                
+                # Calculate cost and penalties
+                edge_cost = edge['duration']
+                if edge['mode'] == 'walk':
+                    edge_cost *= WALK_PENALTY_MULTIPLIER
+
+                penalty = 0
+                new_visited_routes = visited_routes
+                if next_route is not None:
+                    if next_route != current_route:
+                        if next_route in visited_routes:
+                            penalty += 999999
+                        if current_route is not None:
+                            penalty += TRANSFER_PENALTY
+                        else:
+                            penalty += BOARDING_PENALTY
+                        new_visited_routes = visited_routes.union({next_route})
+                else:
+                    if current_route is not None:
+                        penalty += BOARDING_PENALTY
+                
+                new_cost = cost + edge_cost + penalty
+                
+                new_state = (next_node, next_route, new_visited_routes)
+                if new_state not in best_cost or new_cost < best_cost[new_state]:
+                    best_cost[new_state] = new_cost
+                    new_step = {
+                        'from_stop': current_node,
+                        'to_stop': next_node,
+                        'mode': edge['mode'],
+                        'route_short': next_route if next_route else "WALK",
+                        'route_long': f"Route {next_route}" if next_route else "Walk",
+                        'duration': edge['duration']
+                    }
+                    heapq.heappush(pq, (new_cost, next(counter), next_node, next_route, path_len + 1, new_visited_routes, path + [new_step]))
+
+        if not best_path:
             return None
 
-        TOLERANCE_DEG = 0.0018 
-        
-        selected_stations = []
-        
-        for s in self.stations_list:
-            if s['id'] == origin_id or s['id'] == dest_id:
-                continue
-                
-            px, py = s['lon'], s['lat']
-            min_dist = float('inf')
-            best_progression = 0
-            
-            # Find the closest segment on the polyline to this point
-            for i in range(len(path_coords) - 1):
-                p1x, p1y = path_coords[i]
-                p2x, p2y = path_coords[i+1]
-                
-                dist, t = self._point_to_segment_dist(px, py, p1x, p1y, p2x, p2y)
-                if dist < min_dist:
-                    min_dist = dist
-                    best_progression = i + t
-                    
-            if min_dist <= TOLERANCE_DEG:
-                selected_stations.append({
-                    'station': s,
-                    'progression': best_progression,
-                    'distance_to_line': min_dist
-                })
-                
-        # Sort nodes by progression order from Origin to Destination
-        selected_stations.sort(key=lambda x: x['progression'])
-        
-        route_sequence = [origin] + [x['station'] for x in selected_stations] + [dest]
-        
-        # Build array of progression indices to slice the OSRM path
-        progressions = [0] + [int(x['progression']) for x in selected_stations] + [len(path_coords) - 1]
-        
+        # Reconstruct legs
         legs = []
-        for i in range(len(route_sequence) - 1):
-            curr_s = route_sequence[i]
-            next_s = route_sequence[i+1]
+        current_time = departure_time_sec
+        transfers = 0
+        
+        for i, step in enumerate(best_path):
+            from_stop = step['from_stop']
+            to_stop = step['to_stop']
+            from_name = self.stations[from_stop]['name']
+            to_name = self.stations[to_stop]['name']
             
-            # Slice the OSRM path using the progression indices we collected
-            start_idx = progressions[i]
-            end_idx = progressions[i+1]
+            if i > 0 and step['route_short'] != best_path[i-1]['route_short'] and step['mode'] != 'walk':
+                transfers += 1
+                current_time += TRANSFER_PENALTY
+
+            arr_time = current_time + step['duration']
             
-            # Ensure at least two points (start and end) exist if they mapped to the same segment index
-            if start_idx >= end_idx:
-                sliced_coords = [[curr_s['lat'], curr_s['lon']], [next_s['lat'], next_s['lon']]]
-            else:
-                # OSRM path is [lon, lat], but our UI expects [lat, lon]
-                sliced_coords = [[lat, lon] for lon, lat in path_coords[start_idx:end_idx+1]]
-                # Force the first and last point to snap exactly to the station coordinates to prevent gaps
-                sliced_coords[0] = [curr_s['lat'], curr_s['lon']]
-                sliced_coords[-1] = [next_s['lat'], next_s['lon']]
+            lat1, lon1 = self.stations[from_stop]['lat'], self.stations[from_stop]['lon']
+            lat2, lon2 = self.stations[to_stop]['lat'], self.stations[to_stop]['lon']
             
             leg = {
-                'from_stop': curr_s['id'],
-                'to_stop': next_s['id'],
-                'from_name': curr_s['name'],
-                'to_name': next_s['name'],
-                'mode': 'bus',
-                'route_short': "PROXIMITY",
-                'route_long': "Geometric Directed Trace",
-                'dep_time': departure_time_sec + int((i/len(route_sequence)) * total_duration_sec),
-                'arr_time': departure_time_sec + int(((i+1)/len(route_sequence)) * total_duration_sec),
-                'duration': int(total_duration_sec / max(1, len(route_sequence))),
-                'path_coordinates': sliced_coords
+                'from_stop': from_stop,
+                'to_stop': to_stop,
+                'from_name': from_name,
+                'to_name': to_name,
+                'mode': step['mode'],
+                'route_short': step['route_short'],
+                'route_long': step['route_long'],
+                'dep_time': current_time,
+                'arr_time': arr_time,
+                'duration': step['duration'],
+                'path_coordinates': [[lat1, lon1], [lat2, lon2]]
             }
             legs.append(leg)
+            current_time = arr_time
+
+        # Merge consecutive legs on the same route
+        merged_legs = []
+        for leg in legs:
+            if not merged_legs:
+                merged_legs.append(leg)
+                continue
+                
+            last = merged_legs[-1]
+            if last['mode'] == leg['mode'] and last['route_short'] == leg['route_short']:
+                last['to_stop'] = leg['to_stop']
+                last['to_name'] = leg['to_name']
+                last['arr_time'] = leg['arr_time']
+                last['duration'] += leg['duration']
+                last['path_coordinates'].extend(leg['path_coordinates'][1:])
+            else:
+                merged_legs.append(leg)
+
+        # Now fetch OSRM path for each merged leg
+        import requests
+        for m_leg in merged_legs:
+            if m_leg['mode'] != 'walk' and len(m_leg['path_coordinates']) > 1:
+                coords_str = ";".join([f"{lon},{lat}" for lat, lon in m_leg['path_coordinates']])
+                url = f"http://router.project-osrm.org/route/v1/driving/{coords_str}?geometries=geojson&overview=full"
+                try:
+                    resp = requests.get(url, timeout=5)
+                    if resp.status_code == 200:
+                        data = resp.json()
+                        if data.get('code') == 'Ok' and len(data.get('routes', [])) > 0:
+                            osrm_coords = data['routes'][0]['geometry']['coordinates']
+                            m_leg['path_coordinates'] = [[lat, lon] for lon, lat in osrm_coords]
+                except Exception as e:
+                    logger.error(f"Failed to fetch OSRM multi-point route: {e}")
 
         return {
-            'legs': legs,
-            'total_duration': total_duration_sec,
-            'transfers': 0 
+            'legs': merged_legs,
+            'total_duration': current_time - departure_time_sec,
+            'transfers': transfers
         }

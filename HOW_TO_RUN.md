@@ -1,169 +1,157 @@
 # 🚌 Project Farida — How to Run from Scratch
 
-A complete step-by-step guide to get the application running on a fresh Windows machine after downloading from GitHub.
+A complete step-by-step guide to get the application running after downloading from GitHub, using **VS Code** or any terminal.
 
 ---
 
 ## ✅ Prerequisites
 
-Before you start, make sure the following software is installed on your computer:
+Install the following before starting:
 
-| Software | Minimum Version | Download Link |
+| Software | Min Version | Download |
 |---|---|---|
 | **Python** | 3.10+ | https://www.python.org/downloads/ |
 | **Node.js** | 18+ | https://nodejs.org/ |
+| **VS Code** *(recommended)* | Any | https://code.visualstudio.com/ |
 | **Git** *(optional)* | Any | https://git-scm.com/ |
 
-> **Important:** During Python installation, check the box **"Add Python to PATH"**.  
-> During Node.js installation, keep all defaults.
+> **Important:** During Python installation, check **"Add Python to PATH"**.
+
+### Recommended VS Code Extensions
+Install these from the Extensions panel (`Ctrl+Shift+X`):
+
+| Extension | Purpose |
+|---|---|
+| **Python** (Microsoft) | Python syntax, linting, IntelliSense |
+| **ES7+ React/Redux/React-Native snippets** | React/TSX support |
+| **Tailwind CSS IntelliSense** | Autocomplete for CSS classes |
+| **Prettier** | Code formatting |
 
 ---
 
 ## 📥 Step 1 — Download the Project
 
-### Option A: Download as ZIP from GitHub
+### Option A: Download ZIP from GitHub
 1. Go to the GitHub repository page
-2. Click the green **`< > Code`** button → **Download ZIP**
-3. Extract the ZIP to a folder, e.g.:  
-   `C:\Users\YourName\Desktop\faridatrans-master`
+2. Click **`< > Code`** → **Download ZIP**
+3. Extract the ZIP somewhere, e.g. `C:\Projects\faridatrans-master`
 
 ### Option B: Clone with Git
-```powershell
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
+```bash
+git clone https://github.com/dhiyaeddineboukeffa/faridatrans.git
 ```
 
 ---
 
-## 📂 Project Structure
+## 🗂️ Step 2 — Open in VS Code
 
-After extracting, you should see:
+1. Open **VS Code**
+2. Go to **File → Open Folder…**
+3. Select the `faridatrans-master` folder
+4. VS Code will load the project — you'll see this structure in the Explorer panel:
 
 ```
 faridatrans-master/
 ├── frontend/               ← Next.js web interface
 ├── backend/
-│   ├── routing-service/    ← Python route calculation API
-│   └── ingestion-service/  ← Python data ingestion service
-├── run_project.ps1         ← One-click launcher script
-└── HOW_TO_RUN.md           ← This file
+│   ├── routing-service/    ← Python route API (port 8000)
+│   └── ingestion-service/  ← Python ingestion service (port 8001)
+├── run_project.ps1         ← One-click launcher
+└── HOW_TO_RUN.md
 ```
 
 ---
 
-## 🐍 Step 2 — Install Python Dependencies
+## 🐍 Step 3 — Install Python Dependencies
 
-You need to install dependencies for **both** backend services.
-
-Open **PowerShell** or **Command Prompt** and run:
+Open the **VS Code integrated terminal** with `` Ctrl+` `` (backtick) and run:
 
 ### Routing Service
-```powershell
-cd "C:\path\to\faridatrans-master\backend\routing-service"
+```bash
+cd backend/routing-service
 pip install -r requirements.txt
 ```
 
 ### Ingestion Service
-```powershell
-cd "C:\path\to\faridatrans-master\backend\ingestion-service"
+```bash
+cd ../ingestion-service
 pip install -r requirements.txt
 ```
 
-> **Tip:** Replace `C:\path\to\faridatrans-master` with the actual path where you extracted the project.
+> **Tip:** You can open multiple terminals in VS Code using the **`+`** button in the terminal panel — useful for running all 3 services simultaneously.
 
 ---
 
-## 🌐 Step 3 — Install Frontend Dependencies
+## 🌐 Step 4 — Install Frontend Dependencies
 
-```powershell
-cd "C:\path\to\faridatrans-master\frontend"
+In the VS Code terminal:
+```bash
+cd frontend
 npm install
 ```
-
-This downloads all the required JavaScript packages (may take 1–2 minutes on first run).
+This downloads all JavaScript packages (1–2 min on first run).
 
 ---
 
-## 🚀 Step 4 — Run the Application
+## 🚀 Step 5 — Run the Application
 
-### ⚡ Easiest way: One-Click Script
+You need **3 terminal tabs** running at the same time. In VS Code, click **`+`** in the terminal panel to open new tabs.
 
-From the **root folder** of the project, right-click on **`run_project.ps1`** and choose **"Run with PowerShell"**.
+### Terminal 1 — Routing Service
+```bash
+cd backend/routing-service
+python main.py
+```
+✅ Wait for: `Application started, Proximity engine loaded.`
 
-Or run it from PowerShell directly:
+### Terminal 2 — Ingestion Service
+```bash
+cd backend/ingestion-service
+python main.py
+```
+
+### Terminal 3 — Frontend
+```bash
+cd frontend
+npm run dev
+```
+✅ Wait for: `✓ Ready on http://localhost:3000`
+
+---
+
+### ⚡ Alternative: One-Click Script
+
+Instead of the 3 terminals above, open **one** VS Code terminal and run:
 
 ```powershell
-cd "C:\path\to\faridatrans-master"
 powershell -ExecutionPolicy Bypass -File .\run_project.ps1
 ```
 
-This will automatically open **3 separate terminal windows**:
-- 🟢 **Routing Service** — runs on `http://localhost:8000`
-- 🟡 **Ingestion Service** — runs on `http://localhost:8001`
-- 🔵 **Frontend** — runs on `http://localhost:3000`
+This opens 3 separate windows automatically.
 
 ---
 
-### 🛠️ Manual way: Run each service separately
+## 🌍 Step 6 — Open the App
 
-If you prefer to start each service yourself, open **3 separate PowerShell windows**:
-
-**Window 1 — Routing Service (Backend)**
-```powershell
-cd "C:\path\to\faridatrans-master\backend\routing-service"
-python main.py
-```
-Wait until you see: `Application started, Proximity engine loaded.`
-
-**Window 2 — Ingestion Service (Backend)**
-```powershell
-cd "C:\path\to\faridatrans-master\backend\ingestion-service"
-python main.py
-```
-
-**Window 3 — Frontend**
-```powershell
-cd "C:\path\to\faridatrans-master\frontend"
-npm run dev
-```
-Wait until you see: `✓ Ready on http://localhost:3000`
-
----
-
-## 🌍 Step 5 — Open the App
-
-Once all 3 services are running, open your browser and go to:
+With all 3 services running, open your browser and go to:
 
 ```
 http://localhost:3000
 ```
 
-You should see the **Project Farida** map interface. 🗺️
+You'll see the **Project Farida** map. 🗺️
 
 ---
 
 ## 🗺️ How to Use
 
-1. **Select an origin** from the dropdown (e.g., *ZAAMOUCHE*)
-2. **Select a destination** (e.g., *CONSTANTINE*)
+1. Select an **origin** from the dropdown (e.g. *ZAAMOUCHE*)
+2. Select a **destination** (e.g. *CONSTANTINE*)
 3. Click **Find Route**
-4. The route will be drawn on the map and **Trip Details** will appear in the sidebar showing:
-   - Total travel time and number of transfers
-   - Mode of transport (Bus, Tram, Walk, Taxi)
-   - All intermediate stations along the route (click to expand)
-
----
-
-## ❗ Common Errors & Fixes
-
-| Error | Cause | Fix |
-|---|---|---|
-| `python is not recognized` | Python not in PATH | Reinstall Python and check "Add to PATH" |
-| `npm is not recognized` | Node.js not installed | Download and install Node.js from nodejs.org |
-| `pip install` fails | Missing pip | Run `python -m ensurepip --upgrade` |
-| `cannot be loaded, running scripts is disabled` | PowerShell execution policy | Run with `powershell -ExecutionPolicy Bypass -File .\run_project.ps1` |
-| `Route not found` error in app | Routing service not running | Make sure Window 1 (routing service) started without errors |
-| Frontend shows blank page | Frontend not built yet | Wait a few seconds after `npm run dev`, then refresh |
-| `No stops found near origin` | GPS not available | Use the dropdown to select a stop manually |
+4. The route appears on the map and **Trip Details** shows in the sidebar:
+   - Total duration and transfers
+   - Transport mode (Bus, Walk, etc.)
+   - All intermediate stations (click **"Show X intermediate stops"** to expand)
 
 ---
 
@@ -171,16 +159,31 @@ You should see the **Project Farida** map interface. 🗺️
 
 | Service | URL |
 |---|---|
-| Frontend (Web App) | http://localhost:3000 |
+| Frontend | http://localhost:3000 |
 | Routing API | http://localhost:8000 |
-| Routing API Docs | http://localhost:8000/docs |
+| API Docs (Swagger) | http://localhost:8000/docs |
 | Ingestion Service | http://localhost:8001 |
+
+> The **API Docs** at `/docs` let you test backend routes directly in the browser — useful for debugging.
+
+---
+
+## ❗ Common Errors & Fixes
+
+| Error | Cause | Fix |
+|---|---|---|
+| `python is not recognized` | Python not in PATH | Reinstall Python, check "Add to PATH" |
+| `npm is not recognized` | Node.js not installed | Install Node.js from nodejs.org |
+| `cannot be loaded, scripts disabled` | PowerShell policy | Run with `-ExecutionPolicy Bypass` as shown above |
+| Frontend blank page | Next.js still starting | Wait a few seconds and refresh |
+| `Route not found` in app | Routing service not running | Check Terminal 1 started without errors |
+| `Module not found` (Python) | Dependencies missing | Re-run `pip install -r requirements.txt` |
 
 ---
 
 ## 🛑 Stopping the App
 
-Simply close the 3 terminal windows that were opened, or press **`Ctrl + C`** in each one.
+In each VS Code terminal tab, press **`Ctrl+C`** to stop the service. Or just close VS Code.
 
 ---
 

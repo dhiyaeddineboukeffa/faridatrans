@@ -9,7 +9,7 @@ import datetime
 import logging
 from contextlib import asynccontextmanager
 
-from route_engine import ProximityEngine
+from route_engine import GraphEngine
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -20,7 +20,7 @@ ALLOWED_ORIGINS = ["*"]
 
 # --- State ---
 class AppState:
-    engine: Optional[ProximityEngine] = None
+    engine: Optional[GraphEngine] = None
 
 state = AppState()
 
@@ -28,8 +28,8 @@ state = AppState()
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     try:
-        state.engine = ProximityEngine(stations_file="stations.json")
-        logger.info("Application started, Proximity engine loaded.")
+        state.engine = GraphEngine(network_file="network_data.json")
+        logger.info("Application started, Graph engine loaded.")
         yield
     except Exception as e:
         logger.error(f"Startup error: {e}")

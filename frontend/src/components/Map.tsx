@@ -80,11 +80,29 @@ export default function TransitMap({ vehicles = [], stops = [], routePath, userL
         )}
 
         {/* Stops Markers */}
-        {stops.map((stop) => (
-          <Marker key={`stop-${stop.id}`} longitude={stop.lon} latitude={stop.lat}>
-            <div className="w-3 h-3 bg-white border-2 border-gray-600 rounded-full shadow-md" title={stop.name} />
-          </Marker>
-        ))}
+        {stops.map((stop) => {
+          const color =
+            stop.type === 'tram' ? '#EF4444' :   // red
+            stop.type === 'bus'  ? '#3B82F6' :   // blue
+                                   '#6B7280';    // gray fallback
+
+          return (
+            <Marker key={`stop-${stop.id}`} longitude={stop.lon} latitude={stop.lat}>
+              <div
+                title={stop.name}
+                style={{
+                  width: 12,
+                  height: 12,
+                  backgroundColor: 'white',
+                  border: `2.5px solid ${color}`,
+                  borderRadius: '50%',
+                  boxShadow: '0 1px 4px rgba(0,0,0,0.3)',
+                  cursor: 'pointer',
+                }}
+              />
+            </Marker>
+          );
+        })}
 
         {/* Vehicle Markers */}
         {vehicles.map((vehicle) => (
