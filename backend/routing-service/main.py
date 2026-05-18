@@ -72,6 +72,7 @@ class RouteResponse(BaseModel):
     steps: List[RouteStep]
     total_duration: float
     transfers: int
+    cost: Optional[int] = None
 
 # --- Endpoints ---
 @app.get("/stops")
@@ -162,7 +163,8 @@ async def calculate_route(request: RouteRequest):
     return RouteResponse(
         steps=steps,
         total_duration=result['total_duration'] + total_walk_time,
-        transfers=result['transfers']
+        transfers=result['transfers'],
+        cost=result.get('cost', 0)
     )
 
 if __name__ == "__main__":

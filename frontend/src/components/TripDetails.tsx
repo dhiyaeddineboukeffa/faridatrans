@@ -124,9 +124,12 @@ const TripDetails: React.FC<TripDetailsProps> = ({ routeDetails }) => {
             {/* Header */}
             <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-5 text-white rounded-t-2xl">
                 <h3 className="font-bold text-lg tracking-tight">Trip Details</h3>
-                <div className="flex justify-between items-center text-blue-100 text-sm mt-2 font-medium">
-                    <span className="bg-white/20 px-2.5 py-1 rounded-lg backdrop-blur-sm">{Math.round(routeDetails.total_duration / 60)} min</span>
-                    <span className="bg-white/20 px-2.5 py-1 rounded-lg backdrop-blur-sm">{routeDetails.transfers} transfers</span>
+                <div className="flex gap-2 text-blue-100 text-sm mt-2 font-medium flex-wrap">
+                    <span className="bg-white/20 px-2.5 py-1 rounded-lg backdrop-blur-sm whitespace-nowrap">{Math.round(routeDetails.total_duration / 60)} min</span>
+                    <span className="bg-white/20 px-2.5 py-1 rounded-lg backdrop-blur-sm whitespace-nowrap">{routeDetails.transfers} transfers</span>
+                    {routeDetails.cost !== undefined && routeDetails.cost > 0 && (
+                        <span className="bg-green-500/30 text-green-50 px-2.5 py-1 rounded-lg backdrop-blur-sm whitespace-nowrap font-bold ml-auto">{routeDetails.cost} DZD</span>
+                    )}
                 </div>
             </div>
 

@@ -38,6 +38,7 @@ export interface RouteResponse {
     steps: RouteStep[];
     total_duration: number;
     transfers: number;
+    cost?: number;
 }
 
 export interface UserLocation {

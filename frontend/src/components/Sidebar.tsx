@@ -44,9 +44,14 @@ const Sidebar: React.FC<SidebarProps> = ({
             </button>
 
             <div className={`flex flex-col gap-5 p-5 overflow-y-auto scrollbar-hide h-full ${!isSidebarOpen && 'hidden'}`}>
-                <h1 className="text-2xl font-black tracking-tight text-gray-900 drop-shadow-sm pb-2 border-b border-gray-100">
-                    Project <span className="text-blue-600">Farida</span>
-                </h1>
+                {/* Trajecto Logo Component */}
+                <div className="flex flex-col items-center justify-center pb-4 border-b border-gray-100">
+                    <img 
+                        src="/logo.jpg" 
+                        alt="Trajecto Logo" 
+                        className="w-full max-w-[200px] object-contain drop-shadow-sm"
+                    />
+                </div>
 
                 <RouteSearch
                     stops={stops}

@@ -197,8 +197,11 @@ class GraphEngine:
                 except Exception as e:
                     logger.error(f"Failed to fetch OSRM multi-point route: {e}")
 
+        total_cost_dzd = len(set(m['route_short'] for m in merged_legs if m['mode'] != 'walk')) * 40
+
         return {
             'legs': merged_legs,
             'total_duration': current_time - departure_time_sec,
-            'transfers': transfers
+            'transfers': transfers,
+            'cost': total_cost_dzd
         }
