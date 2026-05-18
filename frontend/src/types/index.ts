@@ -29,6 +29,7 @@ export interface RouteStep {
     dep_time?: number;
     arr_time?: number;
     path_coordinates?: number[][];
+    wait_time?: number;
     // Frontend computed properties
     count?: number;
     endTime?: number;

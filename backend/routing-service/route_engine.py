@@ -96,9 +96,16 @@ class GraphEngine:
                     edge_cost *= WALK_PENALTY_MULTIPLIER
 
                 penalty = 0
+                wait_time = 0
                 new_visited_routes = visited_routes
                 if next_route is not None:
                     if next_route != current_route:
+                        # Bus departs every 15 mins (900 seconds)
+                        current_arrival_time = departure_time_sec + cost
+                        remainder = current_arrival_time % 900
+                        if remainder > 0:
+                            wait_time = 900 - remainder
+
                         if next_route in visited_routes:
                             penalty += 999999
                         if current_route is not None:
@@ -110,7 +117,7 @@ class GraphEngine:
                     if current_route is not None:
                         penalty += BOARDING_PENALTY
                 
-                new_cost = cost + edge_cost + penalty
+                new_cost = cost + edge_cost + penalty + wait_time
                 
                 new_state = (next_node, next_route, new_visited_routes)
                 if new_state not in best_cost or new_cost < best_cost[new_state]:
@@ -121,7 +128,8 @@ class GraphEngine:
                         'mode': edge['mode'],
                         'route_short': next_route if next_route else "WALK",
                         'route_long': f"Route {next_route}" if next_route else "Walk",
-                        'duration': edge['duration']
+                        'duration': edge['duration'],
+                        'wait_time': wait_time
                     }
                     heapq.heappush(pq, (new_cost, next(counter), next_node, next_route, path_len + 1, new_visited_routes, path + [new_step]))
 

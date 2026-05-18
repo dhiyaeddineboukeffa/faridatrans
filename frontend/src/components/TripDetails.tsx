@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import { RouteResponse, RouteStep } from '@/types';
 
 interface TripDetailsProps {
@@ -14,6 +14,44 @@ const modeColor = (mode: string) => {
     if (mode === 'bus') return 'bg-blue-500';
     if (mode === 'taxi') return 'bg-amber-500';
     return 'bg-emerald-500'; // walk
+};
+
+const NextBusClock: React.FC = () => {
+    const calculateTimeLeft = () => {
+        const now = new Date();
+        const minutes = now.getMinutes();
+        const seconds = now.getSeconds();
+        
+        const remainderMinutes = minutes % 15;
+        let minutesLeft = 14 - remainderMinutes;
+        let secondsLeft = 60 - seconds;
+        
+        if (secondsLeft === 60) {
+            secondsLeft = 0;
+            minutesLeft += 1;
+        }
+        
+        return minutesLeft * 60 + secondsLeft;
+    };
+
+    const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setTimeLeft(calculateTimeLeft());
+        }, 1000);
+        return () => clearInterval(timer);
+    }, []);
+
+    const m = Math.floor(timeLeft / 60);
+    const s = timeLeft % 60;
+    
+    return (
+        <span className="flex items-center gap-1 px-2 py-0.5 bg-amber-100 text-amber-700 text-xs rounded-md font-bold border border-amber-300">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            {m}:{s.toString().padStart(2, '0')}
+        </span>
+    );
 };
 
 const StepCard: React.FC<{ step: AggregatedStep; idx: number; isLast: boolean }> = ({ step, idx, isLast }) => {
@@ -123,7 +161,13 @@ const TripDetails: React.FC<TripDetailsProps> = ({ routeDetails }) => {
         <div className="bg-white/80 backdrop-blur-md rounded-2xl shadow-sm border border-gray-100 flex flex-col mt-2">
             {/* Header */}
             <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-5 text-white rounded-t-2xl">
-                <h3 className="font-bold text-lg tracking-tight">Trip Details</h3>
+                <div className="flex justify-between items-center">
+                    <h3 className="font-bold text-lg tracking-tight">Trip Details</h3>
+                    <div className="flex items-center gap-2 text-xs font-semibold bg-white/20 px-2 py-1 rounded-lg backdrop-blur-sm">
+                        <span>Next Bus:</span>
+                        <NextBusClock />
+                    </div>
+                </div>
                 <div className="flex gap-2 text-blue-100 text-sm mt-2 font-medium flex-wrap">
                     <span className="bg-white/20 px-2.5 py-1 rounded-lg backdrop-blur-sm whitespace-nowrap">{Math.round(routeDetails.total_duration / 60)} min</span>
                     <span className="bg-white/20 px-2.5 py-1 rounded-lg backdrop-blur-sm whitespace-nowrap">{routeDetails.transfers} transfers</span>
