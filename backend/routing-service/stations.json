@@ -1,5 +1,628 @@
 [
   {
+    "id": "ZAAMOUCHE",
+    "name": "ZAAMOUCHE",
+    "lat": 36.364682,
+    "lon": 6.616947,
+    "type": "bus"
+  },
+  {
+    "id": "EL_MERIDJ",
+    "name": "EL MERIDJ",
+    "lat": 35.80088195666073,
+    "lon": 8.233690522019858,
+    "type": "bus"
+  },
+  {
+    "id": "ZIGHOYD_YOUCEF",
+    "name": "ZIGHOYD YOUCEF",
+    "lat": 36.532696042872516,
+    "lon": 6.711761963587001,
+    "type": "bus"
+  },
+  {
+    "id": "CONSTANTINE",
+    "name": "CONSTANTINE",
+    "lat": 36.364682,
+    "lon": 6.616947,
+    "type": "bus"
+  },
+  {
+    "id": "AIN_ABID",
+    "name": "AIN ABID",
+    "lat": 36.240283414499565,
+    "lon": 6.922765963593303,
+    "type": "bus"
+  },
+  {
+    "id": "GARE_ROUTIER_EST",
+    "name": "GARE ROUTIER EST",
+    "lat": 36.3510349,
+    "lon": 6.6219617,
+    "type": "bus"
+  },
+  {
+    "id": "IBN_ZIAD",
+    "name": "IBN ZIAD",
+    "lat": 36.3827361223889,
+    "lon": 6.4715778799457,
+    "type": "bus"
+  },
+  {
+    "id": "MESSOUD_BOUDJRIOU",
+    "name": "MESSOUD BOUDJRIOU",
+    "lat": 36.430759192547825,
+    "lon": 6.468002857940587,
+    "type": "bus"
+  },
+  {
+    "id": "KHROUB",
+    "name": "KHROUB",
+    "lat": 36.263719,
+    "lon": 6.690799,
+    "type": "bus"
+  },
+  {
+    "id": "IBN_BADIS",
+    "name": "IBN BADIS",
+    "lat": 36.38973679920406,
+    "lon": 6.637317457185694,
+    "type": "bus"
+  },
+  {
+    "id": "OULED_RAHMOUNE",
+    "name": "OULED RAHMOUNE",
+    "lat": 36.18626087362963,
+    "lon": 6.6909078249331415,
+    "type": "bus"
+  },
+  {
+    "id": "EL_GOURZI",
+    "name": "EL GOURZI",
+    "lat": 36.15066292308654,
+    "lon": 6.626109054342001,
+    "type": "bus"
+  },
+  {
+    "id": "BEN_YAGOUB",
+    "name": "BEN YAGOUB",
+    "lat": 36.37506511067003,
+    "lon": 6.879244947689147,
+    "type": "bus"
+  },
+  {
+    "id": "VILLAGE_BOUCHEBAA",
+    "name": "VILLAGE BOUCHEBAA",
+    "lat": 36.24444187523834,
+    "lon": 6.550962916190518,
+    "type": "bus"
+  },
+  {
+    "id": "ZIGHOUD_YOUSSEF",
+    "name": "ZIGHOUD YOUSSEF",
+    "lat": 36.532696042872516,
+    "lon": 6.711761963587001,
+    "type": "bus"
+  },
+  {
+    "id": "DIDOUCHE_MOURAD",
+    "name": "DIDOUCHE MOURAD",
+    "lat": 36.450791925016105,
+    "lon": 6.632278409884134,
+    "type": "bus"
+  },
+  {
+    "id": "BEN_ZIAD",
+    "name": "BEN ZIAD",
+    "lat": 36.3827361223889,
+    "lon": 6.4715778799457,
+    "type": "bus"
+  },
+  {
+    "id": "HAMMA_BOUZIANE",
+    "name": "HAMMA BOUZIANE",
+    "lat": 36.41161409921078,
+    "lon": 6.596363094690649,
+    "type": "bus"
+  },
+  {
+    "id": "MESSAOUD_BOUDJRIOU",
+    "name": "MESSAOUD BOUDJRIOU",
+    "lat": 36.430759192547825,
+    "lon": 6.468002857940587,
+    "type": "bus"
+  },
+  {
+    "id": "NOUVELLE_VILLE",
+    "name": "NOUVELLE VILLE",
+    "lat": 36.263626,
+    "lon": 6.569425,
+    "type": "bus"
+  },
+  {
+    "id": "KADDOUR_BOUMEDDOS",
+    "name": "KADDOUR BOUMEDDOS",
+    "lat": 36.34812881654343,
+    "lon": 6.600920693434598,
+    "type": "bus"
+  },
+  {
+    "id": "CITE_20_OUT_55",
+    "name": "CITE 20 OUT 55",
+    "lat": 36.33928323607305,
+    "lon": 6.5946203230799325,
+    "type": "bus"
+  },
+  {
+    "id": "5__JUILET",
+    "name": "5  JUILET",
+    "lat": 36.35719525981326,
+    "lon": 6.639382246887964,
+    "type": "bus"
+  },
+  {
+    "id": "KAFE_SALAH",
+    "name": "KAFE SALAH",
+    "lat": 36.43190528966095,
+    "lon": 6.640311460639172,
+    "type": "bus"
+  },
+  {
+    "id": "OUED_LAHDJAR",
+    "name": "OUED LAHDJAR",
+    "lat": 36.4517494059569,
+    "lon": 6.648592244504645,
+    "type": "bus"
+  },
+  {
+    "id": "KITOUNI_ABDELMALEK",
+    "name": "KITOUNI AbdelMALEK",
+    "lat": 36.36492628420016,
+    "lon": 6.605880380062158,
+    "type": "bus"
+  },
+  {
+    "id": "BENCHERGUI",
+    "name": "BENCHERGUI",
+    "lat": 36.36504032501761,
+    "lon": 6.582374239958634,
+    "type": "bus"
+  },
+  {
+    "id": "BOUDRAA_SALAH",
+    "name": "BOUDRAA SALAH",
+    "lat": 36.35952676097813,
+    "lon": 6.598191302569249,
+    "type": "bus"
+  },
+  {
+    "id": "AIN_SMARA",
+    "name": "AIN SMARA",
+    "lat": 36.26593,
+    "lon": 6.49849,
+    "type": "bus"
+  },
+  {
+    "id": "NOUVELLE_ALI_MENDJ",
+    "name": "NOUVELLE ALI MENDJ",
+    "lat": 36.263626,
+    "lon": 6.569425,
+    "type": "bus"
+  },
+  {
+    "id": "ELDJEBES",
+    "name": "ELDJEBES",
+    "lat": 36.357212540466286,
+    "lon": 6.639028195289364,
+    "type": "bus"
+  },
+  {
+    "id": "SALAH_BEY",
+    "name": "SALAH BEY",
+    "lat": 36.38166735293937,
+    "lon": 6.574548627356913,
+    "type": "bus"
+  },
+  {
+    "id": "SIDI_MABROUK",
+    "name": "SIDI MABROUK",
+    "lat": 36.364074579069474,
+    "lon": 6.640166491784862,
+    "type": "bus"
+  },
+  {
+    "id": "DJEBEL_ELOUAHCH",
+    "name": "DJEBEL ELOUAHCH",
+    "lat": 36.392313152766405,
+    "lon": 6.649172855009447,
+    "type": "bus"
+  },
+  {
+    "id": "KAF_LAKHAL",
+    "name": "KAF LAKHAL",
+    "lat": 36.40297974792608,
+    "lon": 6.7177356780926765,
+    "type": "bus"
+  },
+  {
+    "id": "BEKIRA",
+    "name": "BEKIRA",
+    "lat": 36.39558804059363,
+    "lon": 6.610368181572787,
+    "type": "bus"
+  },
+  {
+    "id": "KHEMISTI",
+    "name": "KHEMISTI",
+    "lat": 36.354892715893094,
+    "lon": 6.6098541090359495,
+    "type": "bus"
+  },
+  {
+    "id": "BOUMERZOUG",
+    "name": "BOUMERZOUG",
+    "lat": 36.336249977499854,
+    "lon": 6.634261498666347,
+    "type": "bus"
+  },
+  {
+    "id": "GAMAS",
+    "name": "GAMAS",
+    "lat": 36.340501889525015,
+    "lon": 6.655805050588319,
+    "type": "bus"
+  },
+  {
+    "id": "SIDI_MAROUK",
+    "name": "SIDI MAROUK",
+    "lat": 36.364074579069474,
+    "lon": 6.640166491784862,
+    "type": "bus"
+  },
+  {
+    "id": "BOUSSOUF",
+    "name": "BOUSSOUF",
+    "lat": 36.3307,
+    "lon": 6.57951,
+    "type": "bus"
+  },
+  {
+    "id": "CHAAB_RSAS",
+    "name": "CHAAB RSAS",
+    "lat": 36.329992517734176,
+    "lon": 6.632137215925363,
+    "type": "bus"
+  },
+  {
+    "id": "KADOUR_BOUMEDOUS",
+    "name": "KADOUR BOUMEDOUS",
+    "lat": 36.34812881654343,
+    "lon": 6.600920693434598,
+    "type": "bus"
+  },
+  {
+    "id": "FRERES_ARFA",
+    "name": "FRERES ARFA",
+    "lat": 36.31305361543669,
+    "lon": 6.628815695573823,
+    "type": "bus"
+  },
+  {
+    "id": "CITE_RIADH",
+    "name": "CITE RIADH",
+    "lat": 36.36066872665258,
+    "lon": 6.654796269834728,
+    "type": "bus"
+  },
+  {
+    "id": "1100_LOGTS_AIN_BEY",
+    "name": "1100 LOGTS AIN BEY",
+    "lat": 36.313780739824665,
+    "lon": 6.6290902674659655,
+    "type": "bus"
+  },
+  {
+    "id": "SARKINA",
+    "name": "SARKINA",
+    "lat": 36.38032365388413,
+    "lon": 6.643541969937332,
+    "type": "bus"
+  },
+  {
+    "id": "BOUHOUCHE",
+    "name": "BOUHOUCHE",
+    "lat": 36.263719,
+    "lon": 6.690799,
+    "type": "bus"
+  },
+  {
+    "id": "MASSINISSA",
+    "name": "MASSINISSA",
+    "lat": 36.28016991062183,
+    "lon": 6.710091540292658,
+    "type": "bus"
+  },
+  {
+    "id": "LALLA_N’SOUMER",
+    "name": "LALLA N’SOUMER",
+    "lat": 36.250617720904735,
+    "lon": 6.561394600203874,
+    "type": "bus"
+  },
+  {
+    "id": "CITE_900_LOGTS",
+    "name": "CITE 900 LOGTS",
+    "lat": 36.26924378680963,
+    "lon": 6.704907042714267,
+    "type": "bus"
+  },
+  {
+    "id": "CITE_1600_LOGTS",
+    "name": "CITE 1600 LOGTS",
+    "lat": 36.26034213851144,
+    "lon": 6.703003651101842,
+    "type": "bus"
+  },
+  {
+    "id": "N_VELLE_ALI_MENDJELI",
+    "name": "N/VELLE ALI MENDJELI",
+    "lat": 36.263626,
+    "lon": 6.569425,
+    "type": "bus"
+  },
+  {
+    "id": "RIADH",
+    "name": "RIADH",
+    "lat": 36.36066872665258,
+    "lon": 6.654796269834728,
+    "type": "bus"
+  },
+  {
+    "id": "BERGLI",
+    "name": "BERGLI",
+    "lat": 18.233367856204815,
+    "lon": 42.504767423268845,
+    "type": "bus"
+  },
+  {
+    "id": "BENCHAOUI",
+    "name": "BENCHAOUI",
+    "lat": 36.433631222595274,
+    "lon": 6.602860283657275,
+    "type": "bus"
+  },
+  {
+    "id": "SISSAOUI",
+    "name": "SISSAOUI",
+    "lat": 36.3280476784208,
+    "lon": 6.6632025698864625,
+    "type": "bus"
+  },
+  {
+    "id": "CENTRE_VILLE",
+    "name": "CENTRE VILLE",
+    "lat": 36.364682,
+    "lon": 6.616947,
+    "type": "bus"
+  },
+  {
+    "id": "AEROPORT_MED_BOUDIAF",
+    "name": "AEROPORT MED/BOUDIAF",
+    "lat": 36.283473,
+    "lon": 6.621136,
+    "type": "bus"
+  },
+  {
+    "id": "EXTENSION_OUEST",
+    "name": "EXTENSION OUEST",
+    "lat": 36.25379057774919,
+    "lon": 6.537490414074081,
+    "type": "bus"
+  },
+  {
+    "id": "GARE_ROUTIERE_ALI_MENDJELI",
+    "name": "GARE ROUTIERE ALI MENDJELI",
+    "lat": 36.263626,
+    "lon": 6.569425,
+    "type": "bus"
+  },
+  {
+    "id": "RETBA",
+    "name": "RETBA",
+    "lat": 36.4432583625598,
+    "lon": 6.663380291884259,
+    "type": "bus"
+  },
+  {
+    "id": "AIN_NHAS",
+    "name": "AIN NHAS",
+    "lat": 36.29479877557177,
+    "lon": 6.732169756935695,
+    "type": "bus"
+  },
+  {
+    "id": "AIN_SAAD",
+    "name": "AIN SAAD",
+    "lat": 36.46887928201286,
+    "lon": 6.698624536381644,
+    "type": "bus"
+  },
+  {
+    "id": "SALAH_DERADJI",
+    "name": "SALAH DERADJI",
+    "lat": 36.22489905828804,
+    "lon": 6.678372545489452,
+    "type": "bus"
+  },
+  {
+    "id": "BOUNOUARA",
+    "name": "BOUNOUARA",
+    "lat": 36.21111215942531,
+    "lon": 6.805074148541744,
+    "type": "bus"
+  },
+  {
+    "id": "KIKAYA",
+    "name": "KIKAYA",
+    "lat": 36.457749201446006,
+    "lon": 6.348533951113974,
+    "type": "bus"
+  },
+  {
+    "id": "ALLOUK_ABDELLAH",
+    "name": "ALLOUK ABDELLAH",
+    "lat": 36.26128877851726,
+    "lon": 6.668532498262247,
+    "type": "bus"
+  },
+  {
+    "id": "GUETAR_EL_AYCH",
+    "name": "GUETAR EL AYCH",
+    "lat": 36.18754344584162,
+    "lon": 6.582742020827661,
+    "type": "bus"
+  },
+  {
+    "id": "MIHOUBI",
+    "name": "MIHOUBI",
+    "lat": 36.51418199913134,
+    "lon": 6.7146252846903485,
+    "type": "bus"
+  },
+  {
+    "id": "KASRNADJA",
+    "name": "KASRNADJA",
+    "lat": 36.51889372875471,
+    "lon": 6.649440077588517,
+    "type": "bus"
+  },
+  {
+    "id": "BORDJ_M’HIRIS",
+    "name": "BORDJ M’HIRIS",
+    "lat": 36.18701545266165,
+    "lon": 6.875520363933827,
+    "type": "bus"
+  },
+  {
+    "id": "CHAABET_MEDBOUH",
+    "name": "CHAABET MEDBOUH",
+    "lat": 36.437720471097364,
+    "lon": 6.554793986487146,
+    "type": "bus"
+  },
+  {
+    "id": "EL_KARIA",
+    "name": "EL KARIA",
+    "lat": 36.33808375715914,
+    "lon": 6.551299871821431,
+    "type": "bus"
+  },
+  {
+    "id": "SIDI_LARBI",
+    "name": "SIDI LARBI",
+    "lat": 36.4368,
+    "lon": 6.6402,
+    "type": "bus"
+  },
+  {
+    "id": "BENI_HAMIDENE",
+    "name": "BENI HAMIDENE",
+    "lat": 36.50708225185956,
+    "lon": 6.5097016423519465,
+    "type": "bus"
+  },
+  {
+    "id": "CHAABET_ELMEDBOUH",
+    "name": "CHAABET ELMEDBOUH",
+    "lat": 36.437720471097364,
+    "lon": 6.554793986487146,
+    "type": "bus"
+  },
+  {
+    "id": "BENI_MESTINA",
+    "name": "BENI MESTINA",
+    "lat": 36.49011748835402,
+    "lon": 6.619301615975386,
+    "type": "bus"
+  },
+  {
+    "id": "HERAICHA_AMMAR",
+    "name": "HERAICHA AMMAR",
+    "lat": 36.26213839388823,
+    "lon": 6.482858715858034,
+    "type": "bus"
+  },
+  {
+    "id": "VILLAGE_AGRICOL",
+    "name": "VILLAGE AGRICOL",
+    "lat": 36.55529476405522,
+    "lon": 6.309850878834912,
+    "type": "bus"
+  },
+  {
+    "id": "4_EME_KM",
+    "name": "4 EME KM",
+    "lat": 36.34834807225687,
+    "lon": 6.641116706476773,
+    "type": "bus"
+  },
+  {
+    "id": "ZIGHOUD_YOUCEF",
+    "name": "ZIGHOUD YOUCEF",
+    "lat": 36.532696042872516,
+    "lon": 6.711761963587001,
+    "type": "bus"
+  },
+  {
+    "id": "BEN_DJEDOU",
+    "name": "BEN DJEDOU",
+    "lat": 36.53282673494578,
+    "lon": 6.728780632274439,
+    "type": "bus"
+  },
+  {
+    "id": "AIN_KEBIRA",
+    "name": "AIN KEBIRA",
+    "lat": 36.422028916693414,
+    "lon": 6.437535525287875,
+    "type": "bus"
+  },
+  {
+    "id": "MAESSAOUD_BOUDJRIOU",
+    "name": "MAESSAOUD BOUDJRIOU",
+    "lat": 36.430759192547825,
+    "lon": 6.468002857940587,
+    "type": "bus"
+  },
+  {
+    "id": "BAB_ETROCHE",
+    "name": "Bab Etroche",
+    "lat": 36.35382220194784,
+    "lon": 6.328884440416088,
+    "type": "bus"
+  },
+  {
+    "id": "SIDI_ARRAB",
+    "name": "SIDI ARRAB",
+    "lat": 36.4368,
+    "lon": 6.6402,
+    "type": "bus"
+  },
+  {
+    "id": "AIN_TRAB",
+    "name": "AIN TRAB",
+    "lat": 36.22770881647712,
+    "lon": 7.1375613687990125,
+    "type": "bus"
+  },
+  {
+    "id": "1500_LOGTS_BEKIRA",
+    "name": "1500 LOGTS BEKIRA",
+    "lat": 36.40282608832248,
+    "lon": 6.610685779768533,
+    "type": "bus"
+  },
+  {
     "id": "BEN_ABDELMALEK_RAMDANE",
     "name": "Ben Abdelmalek Ramdane",
     "lat": 36.35857081529557,
@@ -11,13 +634,6 @@
     "name": "Seffari Abdelmalek",
     "lat": 36.35456000427466,
     "lon": 6.6024406412101655,
-    "type": "tram"
-  },
-  {
-    "id": "KADOUR_BOUMEDOUS",
-    "name": "Kadour Boumedous",
-    "lat": 36.35091876992789,
-    "lon": 6.6011496989975065,
     "type": "tram"
   },
   {

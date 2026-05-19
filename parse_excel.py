@@ -1,16 +1,12 @@
 """
-ETL Script: Parse les arrets des bus.xlsx, tramway.constantine.xlsx → network_data.json
-
-NOTE: BUS DE CONSTANTINE.xlsx is intentionally excluded — it only contains
-start/end points per route (2 edges each), which creates phantom connections
-between distant stops and confuses the router. All real stop-by-stop data
-comes from les arrets des bus.xlsx.
+ETL Script: Parse BUS DE CONSTANTINE.xlsx, les arrets des bus.xlsx, tramway.constantine.xlsx → network_data.json
 """
 import openpyxl
 import json
 import re
 from math import radians, cos, sin, asin, sqrt
 
+BUS_EXCEL_PATH = r"BUS DE CONSTANTINE.xlsx"
 ARRETS_EXCEL_PATH = r"les arrets des bus.xlsx"
 TRAMWAY_EXCEL_PATH = r"tramway.constantine.xlsx"
 OUTPUT_PATH = r"backend/routing-service/network_data.json"
@@ -46,7 +42,45 @@ nodes = {}  # id -> {name, lat, lon, type}
 edges = []  # {u, v, mode, route, duration, weight}
 
 # ============================================================
-# 1. Parse Tramway (bidirectional, already good)
+# 1. Parse BUS DE CONSTANTINE (city-wide bus lines, start/end only)
+# ============================================================
+print("Parsing BUS DE CONSTANTINE.xlsx...")
+try:
+    wb_bus = openpyxl.load_workbook(BUS_EXCEL_PATH)
+    ws_bus = wb_bus.active
+    for row in ws_bus.iter_rows(min_row=2, values_only=True):
+        if len(row) < 7:
+            continue
+        line_num, dep_name, dep_coords, arr_name, arr_coords = row[0], row[1], row[3], row[4], row[6]
+
+        if not dep_name or not arr_name:
+            continue
+
+        dep_lat, dep_lon = parse_coords(dep_coords)
+        arr_lat, arr_lon = parse_coords(arr_coords)
+
+        if dep_lat is None or arr_lat is None:
+            continue
+
+        dep_id = slugify(dep_name)
+        arr_id = slugify(arr_name)
+        route_id = f"L{line_num}"
+
+        if dep_id not in nodes:
+            nodes[dep_id] = {"name": str(dep_name).strip(), "lat": dep_lat, "lon": dep_lon, "type": "bus"}
+        if arr_id not in nodes:
+            nodes[arr_id] = {"name": str(arr_name).strip(), "lat": arr_lat, "lon": arr_lon, "type": "bus"}
+
+        dist_m = calc_dist(dep_lat, dep_lon, arr_lat, arr_lon)
+        duration_sec = int(dist_m / (30 * 1000 / 3600))  # 30 km/h
+
+        edges.append({"u": dep_id, "v": arr_id, "mode": "bus", "route": route_id, "duration": duration_sec, "weight": duration_sec})
+        edges.append({"u": arr_id, "v": dep_id, "mode": "bus", "route": route_id, "duration": duration_sec, "weight": duration_sec})
+except Exception as e:
+    print(f"Error parsing BUS DE CONSTANTINE: {e}")
+
+# ============================================================
+# 2. Parse Tramway (bidirectional, already good)
 # ============================================================
 print("Parsing tramway.constantine.xlsx...")
 try:
@@ -86,7 +120,7 @@ except Exception as e:
     print(f"Error parsing tramway: {e}")
 
 # ============================================================
-# 2. Parse Bus Stops (les arrets des bus.xlsx)
+# 3. Parse Bus Stops (les arrets des bus.xlsx)
 #    - Dynamically detect name vs coordinate columns
 #    - Make ALL edges bidirectional
 # ============================================================

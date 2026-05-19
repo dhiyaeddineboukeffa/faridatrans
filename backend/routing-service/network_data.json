@@ -1,5 +1,539 @@
 {
   "nodes": {
+    "ZAAMOUCHE": {
+      "name": "ZAAMOUCHE",
+      "lat": 36.364682,
+      "lon": 6.616947,
+      "type": "bus"
+    },
+    "EL_MERIDJ": {
+      "name": "EL MERIDJ",
+      "lat": 35.80088195666073,
+      "lon": 8.233690522019858,
+      "type": "bus"
+    },
+    "ZIGHOYD_YOUCEF": {
+      "name": "ZIGHOYD YOUCEF",
+      "lat": 36.532696042872516,
+      "lon": 6.711761963587001,
+      "type": "bus"
+    },
+    "CONSTANTINE": {
+      "name": "CONSTANTINE",
+      "lat": 36.364682,
+      "lon": 6.616947,
+      "type": "bus"
+    },
+    "AIN_ABID": {
+      "name": "AIN ABID",
+      "lat": 36.240283414499565,
+      "lon": 6.922765963593303,
+      "type": "bus"
+    },
+    "GARE_ROUTIER_EST": {
+      "name": "GARE ROUTIER EST",
+      "lat": 36.3510349,
+      "lon": 6.6219617,
+      "type": "bus"
+    },
+    "IBN_ZIAD": {
+      "name": "IBN ZIAD",
+      "lat": 36.3827361223889,
+      "lon": 6.4715778799457,
+      "type": "bus"
+    },
+    "MESSOUD_BOUDJRIOU": {
+      "name": "MESSOUD BOUDJRIOU",
+      "lat": 36.430759192547825,
+      "lon": 6.468002857940587,
+      "type": "bus"
+    },
+    "KHROUB": {
+      "name": "KHROUB",
+      "lat": 36.263719,
+      "lon": 6.690799,
+      "type": "bus"
+    },
+    "IBN_BADIS": {
+      "name": "IBN BADIS",
+      "lat": 36.38973679920406,
+      "lon": 6.637317457185694,
+      "type": "bus"
+    },
+    "OULED_RAHMOUNE": {
+      "name": "OULED RAHMOUNE",
+      "lat": 36.18626087362963,
+      "lon": 6.6909078249331415,
+      "type": "bus"
+    },
+    "EL_GOURZI": {
+      "name": "EL GOURZI",
+      "lat": 36.15066292308654,
+      "lon": 6.626109054342001,
+      "type": "bus"
+    },
+    "BEN_YAGOUB": {
+      "name": "BEN YAGOUB",
+      "lat": 36.37506511067003,
+      "lon": 6.879244947689147,
+      "type": "bus"
+    },
+    "VILLAGE_BOUCHEBAA": {
+      "name": "VILLAGE BOUCHEBAA",
+      "lat": 36.24444187523834,
+      "lon": 6.550962916190518,
+      "type": "bus"
+    },
+    "ZIGHOUD_YOUSSEF": {
+      "name": "ZIGHOUD YOUSSEF",
+      "lat": 36.532696042872516,
+      "lon": 6.711761963587001,
+      "type": "bus"
+    },
+    "DIDOUCHE_MOURAD": {
+      "name": "DIDOUCHE MOURAD",
+      "lat": 36.450791925016105,
+      "lon": 6.632278409884134,
+      "type": "bus"
+    },
+    "BEN_ZIAD": {
+      "name": "BEN ZIAD",
+      "lat": 36.3827361223889,
+      "lon": 6.4715778799457,
+      "type": "bus"
+    },
+    "HAMMA_BOUZIANE": {
+      "name": "HAMMA BOUZIANE",
+      "lat": 36.41161409921078,
+      "lon": 6.596363094690649,
+      "type": "bus"
+    },
+    "MESSAOUD_BOUDJRIOU": {
+      "name": "MESSAOUD BOUDJRIOU",
+      "lat": 36.430759192547825,
+      "lon": 6.468002857940587,
+      "type": "bus"
+    },
+    "NOUVELLE_VILLE": {
+      "name": "NOUVELLE VILLE",
+      "lat": 36.263626,
+      "lon": 6.569425,
+      "type": "bus"
+    },
+    "KADDOUR_BOUMEDDOS": {
+      "name": "KADDOUR BOUMEDDOS",
+      "lat": 36.34812881654343,
+      "lon": 6.600920693434598,
+      "type": "bus"
+    },
+    "CITE_20_OUT_55": {
+      "name": "CITE 20 OUT 55",
+      "lat": 36.33928323607305,
+      "lon": 6.5946203230799325,
+      "type": "bus"
+    },
+    "5__JUILET": {
+      "name": "5  JUILET",
+      "lat": 36.35719525981326,
+      "lon": 6.639382246887964,
+      "type": "bus"
+    },
+    "KAFE_SALAH": {
+      "name": "KAFE SALAH",
+      "lat": 36.43190528966095,
+      "lon": 6.640311460639172,
+      "type": "bus"
+    },
+    "OUED_LAHDJAR": {
+      "name": "OUED LAHDJAR",
+      "lat": 36.4517494059569,
+      "lon": 6.648592244504645,
+      "type": "bus"
+    },
+    "KITOUNI_ABDELMALEK": {
+      "name": "KITOUNI AbdelMALEK",
+      "lat": 36.36492628420016,
+      "lon": 6.605880380062158,
+      "type": "bus"
+    },
+    "BENCHERGUI": {
+      "name": "BENCHERGUI",
+      "lat": 36.36504032501761,
+      "lon": 6.582374239958634,
+      "type": "bus"
+    },
+    "BOUDRAA_SALAH": {
+      "name": "BOUDRAA SALAH",
+      "lat": 36.35952676097813,
+      "lon": 6.598191302569249,
+      "type": "bus"
+    },
+    "AIN_SMARA": {
+      "name": "AIN SMARA",
+      "lat": 36.26593,
+      "lon": 6.49849,
+      "type": "bus"
+    },
+    "NOUVELLE_ALI_MENDJ": {
+      "name": "NOUVELLE ALI MENDJ",
+      "lat": 36.263626,
+      "lon": 6.569425,
+      "type": "bus"
+    },
+    "ELDJEBES": {
+      "name": "ELDJEBES",
+      "lat": 36.357212540466286,
+      "lon": 6.639028195289364,
+      "type": "bus"
+    },
+    "SALAH_BEY": {
+      "name": "SALAH BEY",
+      "lat": 36.38166735293937,
+      "lon": 6.574548627356913,
+      "type": "bus"
+    },
+    "SIDI_MABROUK": {
+      "name": "SIDI MABROUK",
+      "lat": 36.364074579069474,
+      "lon": 6.640166491784862,
+      "type": "bus"
+    },
+    "DJEBEL_ELOUAHCH": {
+      "name": "DJEBEL ELOUAHCH",
+      "lat": 36.392313152766405,
+      "lon": 6.649172855009447,
+      "type": "bus"
+    },
+    "KAF_LAKHAL": {
+      "name": "KAF LAKHAL",
+      "lat": 36.40297974792608,
+      "lon": 6.7177356780926765,
+      "type": "bus"
+    },
+    "BEKIRA": {
+      "name": "BEKIRA",
+      "lat": 36.39558804059363,
+      "lon": 6.610368181572787,
+      "type": "bus"
+    },
+    "KHEMISTI": {
+      "name": "KHEMISTI",
+      "lat": 36.354892715893094,
+      "lon": 6.6098541090359495,
+      "type": "bus"
+    },
+    "BOUMERZOUG": {
+      "name": "BOUMERZOUG",
+      "lat": 36.336249977499854,
+      "lon": 6.634261498666347,
+      "type": "bus"
+    },
+    "GAMAS": {
+      "name": "GAMAS",
+      "lat": 36.340501889525015,
+      "lon": 6.655805050588319,
+      "type": "bus"
+    },
+    "SIDI_MAROUK": {
+      "name": "SIDI MAROUK",
+      "lat": 36.364074579069474,
+      "lon": 6.640166491784862,
+      "type": "bus"
+    },
+    "BOUSSOUF": {
+      "name": "BOUSSOUF",
+      "lat": 36.3307,
+      "lon": 6.57951,
+      "type": "bus"
+    },
+    "CHAAB_RSAS": {
+      "name": "CHAAB RSAS",
+      "lat": 36.329992517734176,
+      "lon": 6.632137215925363,
+      "type": "bus"
+    },
+    "KADOUR_BOUMEDOUS": {
+      "name": "KADOUR BOUMEDOUS",
+      "lat": 36.34812881654343,
+      "lon": 6.600920693434598,
+      "type": "bus"
+    },
+    "FRERES_ARFA": {
+      "name": "FRERES ARFA",
+      "lat": 36.31305361543669,
+      "lon": 6.628815695573823,
+      "type": "bus"
+    },
+    "CITE_RIADH": {
+      "name": "CITE RIADH",
+      "lat": 36.36066872665258,
+      "lon": 6.654796269834728,
+      "type": "bus"
+    },
+    "1100_LOGTS_AIN_BEY": {
+      "name": "1100 LOGTS AIN BEY",
+      "lat": 36.313780739824665,
+      "lon": 6.6290902674659655,
+      "type": "bus"
+    },
+    "SARKINA": {
+      "name": "SARKINA",
+      "lat": 36.38032365388413,
+      "lon": 6.643541969937332,
+      "type": "bus"
+    },
+    "BOUHOUCHE": {
+      "name": "BOUHOUCHE",
+      "lat": 36.263719,
+      "lon": 6.690799,
+      "type": "bus"
+    },
+    "MASSINISSA": {
+      "name": "MASSINISSA",
+      "lat": 36.28016991062183,
+      "lon": 6.710091540292658,
+      "type": "bus"
+    },
+    "LALLA_N’SOUMER": {
+      "name": "LALLA N’SOUMER",
+      "lat": 36.250617720904735,
+      "lon": 6.561394600203874,
+      "type": "bus"
+    },
+    "CITE_900_LOGTS": {
+      "name": "CITE 900 LOGTS",
+      "lat": 36.26924378680963,
+      "lon": 6.704907042714267,
+      "type": "bus"
+    },
+    "CITE_1600_LOGTS": {
+      "name": "CITE 1600 LOGTS",
+      "lat": 36.26034213851144,
+      "lon": 6.703003651101842,
+      "type": "bus"
+    },
+    "N_VELLE_ALI_MENDJELI": {
+      "name": "N/VELLE ALI MENDJELI",
+      "lat": 36.263626,
+      "lon": 6.569425,
+      "type": "bus"
+    },
+    "RIADH": {
+      "name": "RIADH",
+      "lat": 36.36066872665258,
+      "lon": 6.654796269834728,
+      "type": "bus"
+    },
+    "BERGLI": {
+      "name": "BERGLI",
+      "lat": 18.233367856204815,
+      "lon": 42.504767423268845,
+      "type": "bus"
+    },
+    "BENCHAOUI": {
+      "name": "BENCHAOUI",
+      "lat": 36.433631222595274,
+      "lon": 6.602860283657275,
+      "type": "bus"
+    },
+    "SISSAOUI": {
+      "name": "SISSAOUI",
+      "lat": 36.3280476784208,
+      "lon": 6.6632025698864625,
+      "type": "bus"
+    },
+    "CENTRE_VILLE": {
+      "name": "CENTRE VILLE",
+      "lat": 36.364682,
+      "lon": 6.616947,
+      "type": "bus"
+    },
+    "AEROPORT_MED_BOUDIAF": {
+      "name": "AEROPORT MED/BOUDIAF",
+      "lat": 36.283473,
+      "lon": 6.621136,
+      "type": "bus"
+    },
+    "EXTENSION_OUEST": {
+      "name": "EXTENSION OUEST",
+      "lat": 36.25379057774919,
+      "lon": 6.537490414074081,
+      "type": "bus"
+    },
+    "GARE_ROUTIERE_ALI_MENDJELI": {
+      "name": "GARE ROUTIERE ALI MENDJELI",
+      "lat": 36.263626,
+      "lon": 6.569425,
+      "type": "bus"
+    },
+    "RETBA": {
+      "name": "RETBA",
+      "lat": 36.4432583625598,
+      "lon": 6.663380291884259,
+      "type": "bus"
+    },
+    "AIN_NHAS": {
+      "name": "AIN NHAS",
+      "lat": 36.29479877557177,
+      "lon": 6.732169756935695,
+      "type": "bus"
+    },
+    "AIN_SAAD": {
+      "name": "AIN SAAD",
+      "lat": 36.46887928201286,
+      "lon": 6.698624536381644,
+      "type": "bus"
+    },
+    "SALAH_DERADJI": {
+      "name": "SALAH DERADJI",
+      "lat": 36.22489905828804,
+      "lon": 6.678372545489452,
+      "type": "bus"
+    },
+    "BOUNOUARA": {
+      "name": "BOUNOUARA",
+      "lat": 36.21111215942531,
+      "lon": 6.805074148541744,
+      "type": "bus"
+    },
+    "KIKAYA": {
+      "name": "KIKAYA",
+      "lat": 36.457749201446006,
+      "lon": 6.348533951113974,
+      "type": "bus"
+    },
+    "ALLOUK_ABDELLAH": {
+      "name": "ALLOUK ABDELLAH",
+      "lat": 36.26128877851726,
+      "lon": 6.668532498262247,
+      "type": "bus"
+    },
+    "GUETAR_EL_AYCH": {
+      "name": "GUETAR EL AYCH",
+      "lat": 36.18754344584162,
+      "lon": 6.582742020827661,
+      "type": "bus"
+    },
+    "MIHOUBI": {
+      "name": "MIHOUBI",
+      "lat": 36.51418199913134,
+      "lon": 6.7146252846903485,
+      "type": "bus"
+    },
+    "KASRNADJA": {
+      "name": "KASRNADJA",
+      "lat": 36.51889372875471,
+      "lon": 6.649440077588517,
+      "type": "bus"
+    },
+    "BORDJ_M’HIRIS": {
+      "name": "BORDJ M’HIRIS",
+      "lat": 36.18701545266165,
+      "lon": 6.875520363933827,
+      "type": "bus"
+    },
+    "CHAABET_MEDBOUH": {
+      "name": "CHAABET MEDBOUH",
+      "lat": 36.437720471097364,
+      "lon": 6.554793986487146,
+      "type": "bus"
+    },
+    "EL_KARIA": {
+      "name": "EL KARIA",
+      "lat": 36.33808375715914,
+      "lon": 6.551299871821431,
+      "type": "bus"
+    },
+    "SIDI_LARBI": {
+      "name": "SIDI LARBI",
+      "lat": 36.4368,
+      "lon": 6.6402,
+      "type": "bus"
+    },
+    "BENI_HAMIDENE": {
+      "name": "BENI HAMIDENE",
+      "lat": 36.50708225185956,
+      "lon": 6.5097016423519465,
+      "type": "bus"
+    },
+    "CHAABET_ELMEDBOUH": {
+      "name": "CHAABET ELMEDBOUH",
+      "lat": 36.437720471097364,
+      "lon": 6.554793986487146,
+      "type": "bus"
+    },
+    "BENI_MESTINA": {
+      "name": "BENI MESTINA",
+      "lat": 36.49011748835402,
+      "lon": 6.619301615975386,
+      "type": "bus"
+    },
+    "HERAICHA_AMMAR": {
+      "name": "HERAICHA AMMAR",
+      "lat": 36.26213839388823,
+      "lon": 6.482858715858034,
+      "type": "bus"
+    },
+    "VILLAGE_AGRICOL": {
+      "name": "VILLAGE AGRICOL",
+      "lat": 36.55529476405522,
+      "lon": 6.309850878834912,
+      "type": "bus"
+    },
+    "4_EME_KM": {
+      "name": "4 EME KM",
+      "lat": 36.34834807225687,
+      "lon": 6.641116706476773,
+      "type": "bus"
+    },
+    "ZIGHOUD_YOUCEF": {
+      "name": "ZIGHOUD YOUCEF",
+      "lat": 36.532696042872516,
+      "lon": 6.711761963587001,
+      "type": "bus"
+    },
+    "BEN_DJEDOU": {
+      "name": "BEN DJEDOU",
+      "lat": 36.53282673494578,
+      "lon": 6.728780632274439,
+      "type": "bus"
+    },
+    "AIN_KEBIRA": {
+      "name": "AIN KEBIRA",
+      "lat": 36.422028916693414,
+      "lon": 6.437535525287875,
+      "type": "bus"
+    },
+    "MAESSAOUD_BOUDJRIOU": {
+      "name": "MAESSAOUD BOUDJRIOU",
+      "lat": 36.430759192547825,
+      "lon": 6.468002857940587,
+      "type": "bus"
+    },
+    "BAB_ETROCHE": {
+      "name": "Bab Etroche",
+      "lat": 36.35382220194784,
+      "lon": 6.328884440416088,
+      "type": "bus"
+    },
+    "SIDI_ARRAB": {
+      "name": "SIDI ARRAB",
+      "lat": 36.4368,
+      "lon": 6.6402,
+      "type": "bus"
+    },
+    "AIN_TRAB": {
+      "name": "AIN TRAB",
+      "lat": 36.22770881647712,
+      "lon": 7.1375613687990125,
+      "type": "bus"
+    },
+    "1500_LOGTS_BEKIRA": {
+      "name": "1500 LOGTS BEKIRA",
+      "lat": 36.40282608832248,
+      "lon": 6.610685779768533,
+      "type": "bus"
+    },
     "BEN_ABDELMALEK_RAMDANE": {
       "name": "Ben Abdelmalek Ramdane",
       "lat": 36.35857081529557,
@@ -10,12 +544,6 @@
       "name": "Seffari Abdelmalek",
       "lat": 36.35456000427466,
       "lon": 6.6024406412101655,
-      "type": "tram"
-    },
-    "KADOUR_BOUMEDOUS": {
-      "name": "Kadour Boumedous",
-      "lat": 36.35091876992789,
-      "lon": 6.6011496989975065,
       "type": "tram"
     },
     "EMIR_ABDELKADER": {
@@ -806,6 +1334,1590 @@
     }
   },
   "edges": [
+    {
+      "u": "ZAAMOUCHE",
+      "v": "EL_MERIDJ",
+      "mode": "bus",
+      "route": "L252001",
+      "duration": 18987,
+      "weight": 18987
+    },
+    {
+      "u": "EL_MERIDJ",
+      "v": "ZAAMOUCHE",
+      "mode": "bus",
+      "route": "L252001",
+      "duration": 18987,
+      "weight": 18987
+    },
+    {
+      "u": "ZAAMOUCHE",
+      "v": "ZIGHOYD_YOUCEF",
+      "mode": "bus",
+      "route": "L252005",
+      "duration": 2462,
+      "weight": 2462
+    },
+    {
+      "u": "ZIGHOYD_YOUCEF",
+      "v": "ZAAMOUCHE",
+      "mode": "bus",
+      "route": "L252005",
+      "duration": 2462,
+      "weight": 2462
+    },
+    {
+      "u": "CONSTANTINE",
+      "v": "AIN_ABID",
+      "mode": "bus",
+      "route": "L252006",
+      "duration": 3683,
+      "weight": 3683
+    },
+    {
+      "u": "AIN_ABID",
+      "v": "CONSTANTINE",
+      "mode": "bus",
+      "route": "L252006",
+      "duration": 3683,
+      "weight": 3683
+    },
+    {
+      "u": "GARE_ROUTIER_EST",
+      "v": "IBN_ZIAD",
+      "mode": "bus",
+      "route": "L252009",
+      "duration": 1670,
+      "weight": 1670
+    },
+    {
+      "u": "IBN_ZIAD",
+      "v": "GARE_ROUTIER_EST",
+      "mode": "bus",
+      "route": "L252009",
+      "duration": 1670,
+      "weight": 1670
+    },
+    {
+      "u": "GARE_ROUTIER_EST",
+      "v": "MESSOUD_BOUDJRIOU",
+      "mode": "bus",
+      "route": "L252010",
+      "duration": 1966,
+      "weight": 1966
+    },
+    {
+      "u": "MESSOUD_BOUDJRIOU",
+      "v": "GARE_ROUTIER_EST",
+      "mode": "bus",
+      "route": "L252010",
+      "duration": 1966,
+      "weight": 1966
+    },
+    {
+      "u": "KHROUB",
+      "v": "IBN_BADIS",
+      "mode": "bus",
+      "route": "L252012",
+      "duration": 1777,
+      "weight": 1777
+    },
+    {
+      "u": "IBN_BADIS",
+      "v": "KHROUB",
+      "mode": "bus",
+      "route": "L252012",
+      "duration": 1777,
+      "weight": 1777
+    },
+    {
+      "u": "KHROUB",
+      "v": "OULED_RAHMOUNE",
+      "mode": "bus",
+      "route": "L252013",
+      "duration": 1033,
+      "weight": 1033
+    },
+    {
+      "u": "OULED_RAHMOUNE",
+      "v": "KHROUB",
+      "mode": "bus",
+      "route": "L252013",
+      "duration": 1033,
+      "weight": 1033
+    },
+    {
+      "u": "KHROUB",
+      "v": "AIN_ABID",
+      "mode": "bus",
+      "route": "L252014",
+      "duration": 2515,
+      "weight": 2515
+    },
+    {
+      "u": "AIN_ABID",
+      "v": "KHROUB",
+      "mode": "bus",
+      "route": "L252014",
+      "duration": 2515,
+      "weight": 2515
+    },
+    {
+      "u": "KHROUB",
+      "v": "EL_GOURZI",
+      "mode": "bus",
+      "route": "L252015",
+      "duration": 1661,
+      "weight": 1661
+    },
+    {
+      "u": "EL_GOURZI",
+      "v": "KHROUB",
+      "mode": "bus",
+      "route": "L252015",
+      "duration": 1661,
+      "weight": 1661
+    },
+    {
+      "u": "KHROUB",
+      "v": "BEN_YAGOUB",
+      "mode": "bus",
+      "route": "L252016",
+      "duration": 2512,
+      "weight": 2512
+    },
+    {
+      "u": "BEN_YAGOUB",
+      "v": "KHROUB",
+      "mode": "bus",
+      "route": "L252016",
+      "duration": 2512,
+      "weight": 2512
+    },
+    {
+      "u": "KHROUB",
+      "v": "VILLAGE_BOUCHEBAA",
+      "mode": "bus",
+      "route": "L252020",
+      "duration": 1526,
+      "weight": 1526
+    },
+    {
+      "u": "VILLAGE_BOUCHEBAA",
+      "v": "KHROUB",
+      "mode": "bus",
+      "route": "L252020",
+      "duration": 1526,
+      "weight": 1526
+    },
+    {
+      "u": "ZIGHOUD_YOUSSEF",
+      "v": "DIDOUCHE_MOURAD",
+      "mode": "bus",
+      "route": "L252022",
+      "duration": 1386,
+      "weight": 1386
+    },
+    {
+      "u": "DIDOUCHE_MOURAD",
+      "v": "ZIGHOUD_YOUSSEF",
+      "mode": "bus",
+      "route": "L252022",
+      "duration": 1386,
+      "weight": 1386
+    },
+    {
+      "u": "BEN_ZIAD",
+      "v": "HAMMA_BOUZIANE",
+      "mode": "bus",
+      "route": "L252023",
+      "duration": 1394,
+      "weight": 1394
+    },
+    {
+      "u": "HAMMA_BOUZIANE",
+      "v": "BEN_ZIAD",
+      "mode": "bus",
+      "route": "L252023",
+      "duration": 1394,
+      "weight": 1394
+    },
+    {
+      "u": "IBN_ZIAD",
+      "v": "MESSAOUD_BOUDJRIOU",
+      "mode": "bus",
+      "route": "L252024",
+      "duration": 641,
+      "weight": 641
+    },
+    {
+      "u": "MESSAOUD_BOUDJRIOU",
+      "v": "IBN_ZIAD",
+      "mode": "bus",
+      "route": "L252024",
+      "duration": 641,
+      "weight": 641
+    },
+    {
+      "u": "HAMMA_BOUZIANE",
+      "v": "MESSOUD_BOUDJRIOU",
+      "mode": "bus",
+      "route": "L252025",
+      "duration": 1401,
+      "weight": 1401
+    },
+    {
+      "u": "MESSOUD_BOUDJRIOU",
+      "v": "HAMMA_BOUZIANE",
+      "mode": "bus",
+      "route": "L252025",
+      "duration": 1401,
+      "weight": 1401
+    },
+    {
+      "u": "OULED_RAHMOUNE",
+      "v": "NOUVELLE_VILLE",
+      "mode": "bus",
+      "route": "L252028",
+      "duration": 1666,
+      "weight": 1666
+    },
+    {
+      "u": "NOUVELLE_VILLE",
+      "v": "OULED_RAHMOUNE",
+      "mode": "bus",
+      "route": "L252028",
+      "duration": 1666,
+      "weight": 1666
+    },
+    {
+      "u": "KADDOUR_BOUMEDDOS",
+      "v": "CITE_20_OUT_55",
+      "mode": "bus",
+      "route": "L253006",
+      "duration": 136,
+      "weight": 136
+    },
+    {
+      "u": "CITE_20_OUT_55",
+      "v": "KADDOUR_BOUMEDDOS",
+      "mode": "bus",
+      "route": "L253006",
+      "duration": 136,
+      "weight": 136
+    },
+    {
+      "u": "KADDOUR_BOUMEDDOS",
+      "v": "5__JUILET",
+      "mode": "bus",
+      "route": "L253008",
+      "duration": 430,
+      "weight": 430
+    },
+    {
+      "u": "5__JUILET",
+      "v": "KADDOUR_BOUMEDDOS",
+      "mode": "bus",
+      "route": "L253008",
+      "duration": 430,
+      "weight": 430
+    },
+    {
+      "u": "DIDOUCHE_MOURAD",
+      "v": "KAFE_SALAH",
+      "mode": "bus",
+      "route": "L253013",
+      "duration": 196,
+      "weight": 196
+    },
+    {
+      "u": "KAFE_SALAH",
+      "v": "DIDOUCHE_MOURAD",
+      "mode": "bus",
+      "route": "L253013",
+      "duration": 196,
+      "weight": 196
+    },
+    {
+      "u": "DIDOUCHE_MOURAD",
+      "v": "OUED_LAHDJAR",
+      "mode": "bus",
+      "route": "L253014",
+      "duration": 188,
+      "weight": 188
+    },
+    {
+      "u": "OUED_LAHDJAR",
+      "v": "DIDOUCHE_MOURAD",
+      "mode": "bus",
+      "route": "L253014",
+      "duration": 188,
+      "weight": 188
+    },
+    {
+      "u": "KITOUNI_ABDELMALEK",
+      "v": "BENCHERGUI",
+      "mode": "bus",
+      "route": "L253015",
+      "duration": 252,
+      "weight": 252
+    },
+    {
+      "u": "BENCHERGUI",
+      "v": "KITOUNI_ABDELMALEK",
+      "mode": "bus",
+      "route": "L253015",
+      "duration": 252,
+      "weight": 252
+    },
+    {
+      "u": "KITOUNI_ABDELMALEK",
+      "v": "BOUDRAA_SALAH",
+      "mode": "bus",
+      "route": "L253016",
+      "duration": 109,
+      "weight": 109
+    },
+    {
+      "u": "BOUDRAA_SALAH",
+      "v": "KITOUNI_ABDELMALEK",
+      "mode": "bus",
+      "route": "L253016",
+      "duration": 109,
+      "weight": 109
+    },
+    {
+      "u": "AIN_SMARA",
+      "v": "NOUVELLE_ALI_MENDJ",
+      "mode": "bus",
+      "route": "L253017",
+      "duration": 763,
+      "weight": 763
+    },
+    {
+      "u": "NOUVELLE_ALI_MENDJ",
+      "v": "AIN_SMARA",
+      "mode": "bus",
+      "route": "L253017",
+      "duration": 763,
+      "weight": 763
+    },
+    {
+      "u": "KITOUNI_ABDELMALEK",
+      "v": "ELDJEBES",
+      "mode": "bus",
+      "route": "L253018",
+      "duration": 370,
+      "weight": 370
+    },
+    {
+      "u": "ELDJEBES",
+      "v": "KITOUNI_ABDELMALEK",
+      "mode": "bus",
+      "route": "L253018",
+      "duration": 370,
+      "weight": 370
+    },
+    {
+      "u": "KITOUNI_ABDELMALEK",
+      "v": "SALAH_BEY",
+      "mode": "bus",
+      "route": "L253019",
+      "duration": 403,
+      "weight": 403
+    },
+    {
+      "u": "SALAH_BEY",
+      "v": "KITOUNI_ABDELMALEK",
+      "mode": "bus",
+      "route": "L253019",
+      "duration": 403,
+      "weight": 403
+    },
+    {
+      "u": "ZAAMOUCHE",
+      "v": "SIDI_MABROUK",
+      "mode": "bus",
+      "route": "L253021",
+      "duration": 249,
+      "weight": 249
+    },
+    {
+      "u": "SIDI_MABROUK",
+      "v": "ZAAMOUCHE",
+      "mode": "bus",
+      "route": "L253021",
+      "duration": 249,
+      "weight": 249
+    },
+    {
+      "u": "ZAAMOUCHE",
+      "v": "DJEBEL_ELOUAHCH",
+      "mode": "bus",
+      "route": "L253028",
+      "duration": 505,
+      "weight": 505
+    },
+    {
+      "u": "DJEBEL_ELOUAHCH",
+      "v": "ZAAMOUCHE",
+      "mode": "bus",
+      "route": "L253028",
+      "duration": 505,
+      "weight": 505
+    },
+    {
+      "u": "ZAAMOUCHE",
+      "v": "KAF_LAKHAL",
+      "mode": "bus",
+      "route": "L253029",
+      "duration": 1197,
+      "weight": 1197
+    },
+    {
+      "u": "KAF_LAKHAL",
+      "v": "ZAAMOUCHE",
+      "mode": "bus",
+      "route": "L253029",
+      "duration": 1197,
+      "weight": 1197
+    },
+    {
+      "u": "ZAAMOUCHE",
+      "v": "BEKIRA",
+      "mode": "bus",
+      "route": "L253030",
+      "duration": 418,
+      "weight": 418
+    },
+    {
+      "u": "BEKIRA",
+      "v": "ZAAMOUCHE",
+      "mode": "bus",
+      "route": "L253030",
+      "duration": 418,
+      "weight": 418
+    },
+    {
+      "u": "KHEMISTI",
+      "v": "BOUMERZOUG",
+      "mode": "bus",
+      "route": "L253031",
+      "duration": 361,
+      "weight": 361
+    },
+    {
+      "u": "BOUMERZOUG",
+      "v": "KHEMISTI",
+      "mode": "bus",
+      "route": "L253031",
+      "duration": 361,
+      "weight": 361
+    },
+    {
+      "u": "ZAAMOUCHE",
+      "v": "GAMAS",
+      "mode": "bus",
+      "route": "L253032",
+      "duration": 527,
+      "weight": 527
+    },
+    {
+      "u": "GAMAS",
+      "v": "ZAAMOUCHE",
+      "mode": "bus",
+      "route": "L253032",
+      "duration": 527,
+      "weight": 527
+    },
+    {
+      "u": "ZAAMOUCHE",
+      "v": "BOUMERZOUG",
+      "mode": "bus",
+      "route": "L253034",
+      "duration": 422,
+      "weight": 422
+    },
+    {
+      "u": "BOUMERZOUG",
+      "v": "ZAAMOUCHE",
+      "mode": "bus",
+      "route": "L253034",
+      "duration": 422,
+      "weight": 422
+    },
+    {
+      "u": "KHEMISTI",
+      "v": "DJEBEL_ELOUAHCH",
+      "mode": "bus",
+      "route": "L253035",
+      "duration": 654,
+      "weight": 654
+    },
+    {
+      "u": "DJEBEL_ELOUAHCH",
+      "v": "KHEMISTI",
+      "mode": "bus",
+      "route": "L253035",
+      "duration": 654,
+      "weight": 654
+    },
+    {
+      "u": "KHEMISTI",
+      "v": "SIDI_MAROUK",
+      "mode": "bus",
+      "route": "L253036",
+      "duration": 348,
+      "weight": 348
+    },
+    {
+      "u": "SIDI_MAROUK",
+      "v": "KHEMISTI",
+      "mode": "bus",
+      "route": "L253036",
+      "duration": 348,
+      "weight": 348
+    },
+    {
+      "u": "KHROUB",
+      "v": "NOUVELLE_VILLE",
+      "mode": "bus",
+      "route": "L253037",
+      "duration": 1305,
+      "weight": 1305
+    },
+    {
+      "u": "NOUVELLE_VILLE",
+      "v": "KHROUB",
+      "mode": "bus",
+      "route": "L253037",
+      "duration": 1305,
+      "weight": 1305
+    },
+    {
+      "u": "KHEMISTI",
+      "v": "GAMAS",
+      "mode": "bus",
+      "route": "L253038",
+      "duration": 529,
+      "weight": 529
+    },
+    {
+      "u": "GAMAS",
+      "v": "KHEMISTI",
+      "mode": "bus",
+      "route": "L253038",
+      "duration": 529,
+      "weight": 529
+    },
+    {
+      "u": "KHEMISTI",
+      "v": "BOUSSOUF",
+      "mode": "bus",
+      "route": "L253040",
+      "duration": 458,
+      "weight": 458
+    },
+    {
+      "u": "BOUSSOUF",
+      "v": "KHEMISTI",
+      "mode": "bus",
+      "route": "L253040",
+      "duration": 458,
+      "weight": 458
+    },
+    {
+      "u": "KHEMISTI",
+      "v": "CHAAB_RSAS",
+      "mode": "bus",
+      "route": "L253041",
+      "duration": 409,
+      "weight": 409
+    },
+    {
+      "u": "CHAAB_RSAS",
+      "v": "KHEMISTI",
+      "mode": "bus",
+      "route": "L253041",
+      "duration": 409,
+      "weight": 409
+    },
+    {
+      "u": "KADOUR_BOUMEDOUS",
+      "v": "FRERES_ARFA",
+      "mode": "bus",
+      "route": "L253043",
+      "duration": 555,
+      "weight": 555
+    },
+    {
+      "u": "FRERES_ARFA",
+      "v": "KADOUR_BOUMEDOUS",
+      "mode": "bus",
+      "route": "L253043",
+      "duration": 555,
+      "weight": 555
+    },
+    {
+      "u": "KHEMISTI",
+      "v": "CITE_RIADH",
+      "mode": "bus",
+      "route": "L253044",
+      "duration": 489,
+      "weight": 489
+    },
+    {
+      "u": "CITE_RIADH",
+      "v": "KHEMISTI",
+      "mode": "bus",
+      "route": "L253044",
+      "duration": 489,
+      "weight": 489
+    },
+    {
+      "u": "KHEMISTI",
+      "v": "1100_LOGTS_AIN_BEY",
+      "mode": "bus",
+      "route": "L253047",
+      "duration": 586,
+      "weight": 586
+    },
+    {
+      "u": "1100_LOGTS_AIN_BEY",
+      "v": "KHEMISTI",
+      "mode": "bus",
+      "route": "L253047",
+      "duration": 586,
+      "weight": 586
+    },
+    {
+      "u": "KHEMISTI",
+      "v": "NOUVELLE_VILLE",
+      "mode": "bus",
+      "route": "L253048",
+      "duration": 1293,
+      "weight": 1293
+    },
+    {
+      "u": "NOUVELLE_VILLE",
+      "v": "KHEMISTI",
+      "mode": "bus",
+      "route": "L253048",
+      "duration": 1293,
+      "weight": 1293
+    },
+    {
+      "u": "ZAAMOUCHE",
+      "v": "SARKINA",
+      "mode": "bus",
+      "route": "L 253049",
+      "duration": 353,
+      "weight": 353
+    },
+    {
+      "u": "SARKINA",
+      "v": "ZAAMOUCHE",
+      "mode": "bus",
+      "route": "L 253049",
+      "duration": 353,
+      "weight": 353
+    },
+    {
+      "u": "BOUHOUCHE",
+      "v": "MASSINISSA",
+      "mode": "bus",
+      "route": "L 253050",
+      "duration": 302,
+      "weight": 302
+    },
+    {
+      "u": "MASSINISSA",
+      "v": "BOUHOUCHE",
+      "mode": "bus",
+      "route": "L 253050",
+      "duration": 302,
+      "weight": 302
+    },
+    {
+      "u": "NOUVELLE_VILLE",
+      "v": "LALLA_N’SOUMER",
+      "mode": "bus",
+      "route": "L253051",
+      "duration": 193,
+      "weight": 193
+    },
+    {
+      "u": "LALLA_N’SOUMER",
+      "v": "NOUVELLE_VILLE",
+      "mode": "bus",
+      "route": "L253051",
+      "duration": 193,
+      "weight": 193
+    },
+    {
+      "u": "DJEBEL_ELOUAHCH",
+      "v": "KHROUB",
+      "mode": "bus",
+      "route": "L253055",
+      "duration": 1968,
+      "weight": 1968
+    },
+    {
+      "u": "KHROUB",
+      "v": "DJEBEL_ELOUAHCH",
+      "mode": "bus",
+      "route": "L253055",
+      "duration": 1968,
+      "weight": 1968
+    },
+    {
+      "u": "BOUSSOUF",
+      "v": "KHROUB",
+      "mode": "bus",
+      "route": "L253056",
+      "duration": 1555,
+      "weight": 1555
+    },
+    {
+      "u": "KHROUB",
+      "v": "BOUSSOUF",
+      "mode": "bus",
+      "route": "L253056",
+      "duration": 1555,
+      "weight": 1555
+    },
+    {
+      "u": "BOUDRAA_SALAH",
+      "v": "DIDOUCHE_MOURAD",
+      "mode": "bus",
+      "route": "L 253057",
+      "duration": 1205,
+      "weight": 1205
+    },
+    {
+      "u": "DIDOUCHE_MOURAD",
+      "v": "BOUDRAA_SALAH",
+      "mode": "bus",
+      "route": "L 253057",
+      "duration": 1205,
+      "weight": 1205
+    },
+    {
+      "u": "DJEBEL_ELOUAHCH",
+      "v": "BOUSSOUF",
+      "mode": "bus",
+      "route": "L253058",
+      "duration": 1112,
+      "weight": 1112
+    },
+    {
+      "u": "BOUSSOUF",
+      "v": "DJEBEL_ELOUAHCH",
+      "mode": "bus",
+      "route": "L253058",
+      "duration": 1112,
+      "weight": 1112
+    },
+    {
+      "u": "CONSTANTINE",
+      "v": "KHROUB",
+      "mode": "bus",
+      "route": "L253059",
+      "duration": 1563,
+      "weight": 1563
+    },
+    {
+      "u": "KHROUB",
+      "v": "CONSTANTINE",
+      "mode": "bus",
+      "route": "L253059",
+      "duration": 1563,
+      "weight": 1563
+    },
+    {
+      "u": "KHEMISTI",
+      "v": "AIN_SMARA",
+      "mode": "bus",
+      "route": "L 253060",
+      "duration": 1686,
+      "weight": 1686
+    },
+    {
+      "u": "AIN_SMARA",
+      "v": "KHEMISTI",
+      "mode": "bus",
+      "route": "L 253060",
+      "duration": 1686,
+      "weight": 1686
+    },
+    {
+      "u": "ZAAMOUCHE",
+      "v": "HAMMA_BOUZIANE",
+      "mode": "bus",
+      "route": "L253061",
+      "duration": 664,
+      "weight": 664
+    },
+    {
+      "u": "HAMMA_BOUZIANE",
+      "v": "ZAAMOUCHE",
+      "mode": "bus",
+      "route": "L253061",
+      "duration": 664,
+      "weight": 664
+    },
+    {
+      "u": "ZAAMOUCHE",
+      "v": "DIDOUCHE_MOURAD",
+      "mode": "bus",
+      "route": "L 253062",
+      "duration": 1090,
+      "weight": 1090
+    },
+    {
+      "u": "DIDOUCHE_MOURAD",
+      "v": "ZAAMOUCHE",
+      "mode": "bus",
+      "route": "L 253062",
+      "duration": 1090,
+      "weight": 1090
+    },
+    {
+      "u": "CITE_900_LOGTS",
+      "v": "CITE_1600_LOGTS",
+      "mode": "bus",
+      "route": "L 253063",
+      "duration": 120,
+      "weight": 120
+    },
+    {
+      "u": "CITE_1600_LOGTS",
+      "v": "CITE_900_LOGTS",
+      "mode": "bus",
+      "route": "L 253063",
+      "duration": 120,
+      "weight": 120
+    },
+    {
+      "u": "KHROUB",
+      "v": "AIN_SMARA",
+      "mode": "bus",
+      "route": "L 253064",
+      "duration": 2069,
+      "weight": 2069
+    },
+    {
+      "u": "AIN_SMARA",
+      "v": "KHROUB",
+      "mode": "bus",
+      "route": "L 253064",
+      "duration": 2069,
+      "weight": 2069
+    },
+    {
+      "u": "DJEBEL_ELOUAHCH",
+      "v": "N_VELLE_ALI_MENDJELI",
+      "mode": "bus",
+      "route": "L 253066",
+      "duration": 1919,
+      "weight": 1919
+    },
+    {
+      "u": "N_VELLE_ALI_MENDJELI",
+      "v": "DJEBEL_ELOUAHCH",
+      "mode": "bus",
+      "route": "L 253066",
+      "duration": 1919,
+      "weight": 1919
+    },
+    {
+      "u": "BOUSSOUF",
+      "v": "N_VELLE_ALI_MENDJELI",
+      "mode": "bus",
+      "route": "L253070",
+      "duration": 1405,
+      "weight": 1405
+    },
+    {
+      "u": "N_VELLE_ALI_MENDJELI",
+      "v": "BOUSSOUF",
+      "mode": "bus",
+      "route": "L253070",
+      "duration": 1405,
+      "weight": 1405
+    },
+    {
+      "u": "ZAAMOUCHE",
+      "v": "RIADH",
+      "mode": "bus",
+      "route": "L 253071",
+      "duration": 410,
+      "weight": 410
+    },
+    {
+      "u": "RIADH",
+      "v": "ZAAMOUCHE",
+      "mode": "bus",
+      "route": "L 253071",
+      "duration": 410,
+      "weight": 410
+    },
+    {
+      "u": "BERGLI",
+      "v": "BENCHAOUI",
+      "mode": "bus",
+      "route": "L 253074",
+      "duration": 485821,
+      "weight": 485821
+    },
+    {
+      "u": "BENCHAOUI",
+      "v": "BERGLI",
+      "mode": "bus",
+      "route": "L 253074",
+      "duration": 485821,
+      "weight": 485821
+    },
+    {
+      "u": "ZAAMOUCHE",
+      "v": "NOUVELLE_VILLE",
+      "mode": "bus",
+      "route": "L 253077",
+      "duration": 1441,
+      "weight": 1441
+    },
+    {
+      "u": "NOUVELLE_VILLE",
+      "v": "ZAAMOUCHE",
+      "mode": "bus",
+      "route": "L 253077",
+      "duration": 1441,
+      "weight": 1441
+    },
+    {
+      "u": "KAFE_SALAH",
+      "v": "ZAAMOUCHE",
+      "mode": "bus",
+      "route": "L 253078",
+      "duration": 931,
+      "weight": 931
+    },
+    {
+      "u": "ZAAMOUCHE",
+      "v": "KAFE_SALAH",
+      "mode": "bus",
+      "route": "L 253078",
+      "duration": 931,
+      "weight": 931
+    },
+    {
+      "u": "KHEMISTI",
+      "v": "SISSAOUI",
+      "mode": "bus",
+      "route": "L 253079",
+      "duration": 676,
+      "weight": 676
+    },
+    {
+      "u": "SISSAOUI",
+      "v": "KHEMISTI",
+      "mode": "bus",
+      "route": "L 253079",
+      "duration": 676,
+      "weight": 676
+    },
+    {
+      "u": "ZAAMOUCHE",
+      "v": "SISSAOUI",
+      "mode": "bus",
+      "route": "L 253080",
+      "duration": 697,
+      "weight": 697
+    },
+    {
+      "u": "SISSAOUI",
+      "v": "ZAAMOUCHE",
+      "mode": "bus",
+      "route": "L 253080",
+      "duration": 697,
+      "weight": 697
+    },
+    {
+      "u": "ZAAMOUCHE",
+      "v": "MASSINISSA",
+      "mode": "bus",
+      "route": "L 253083",
+      "duration": 1508,
+      "weight": 1508
+    },
+    {
+      "u": "MASSINISSA",
+      "v": "ZAAMOUCHE",
+      "mode": "bus",
+      "route": "L 253083",
+      "duration": 1508,
+      "weight": 1508
+    },
+    {
+      "u": "KHEMISTI",
+      "v": "LALLA_N’SOUMER",
+      "mode": "bus",
+      "route": "L253084",
+      "duration": 1485,
+      "weight": 1485
+    },
+    {
+      "u": "LALLA_N’SOUMER",
+      "v": "KHEMISTI",
+      "mode": "bus",
+      "route": "L253084",
+      "duration": 1485,
+      "weight": 1485
+    },
+    {
+      "u": "CENTRE_VILLE",
+      "v": "AEROPORT_MED_BOUDIAF",
+      "mode": "bus",
+      "route": "L253087",
+      "duration": 1084,
+      "weight": 1084
+    },
+    {
+      "u": "AEROPORT_MED_BOUDIAF",
+      "v": "CENTRE_VILLE",
+      "mode": "bus",
+      "route": "L253087",
+      "duration": 1084,
+      "weight": 1084
+    },
+    {
+      "u": "EXTENSION_OUEST",
+      "v": "GARE_ROUTIERE_ALI_MENDJELI",
+      "mode": "bus",
+      "route": "L253088",
+      "duration": 367,
+      "weight": 367
+    },
+    {
+      "u": "GARE_ROUTIERE_ALI_MENDJELI",
+      "v": "EXTENSION_OUEST",
+      "mode": "bus",
+      "route": "L253088",
+      "duration": 367,
+      "weight": 367
+    },
+    {
+      "u": "DIDOUCHE_MOURAD",
+      "v": "RETBA",
+      "mode": "bus",
+      "route": "L253091",
+      "duration": 328,
+      "weight": 328
+    },
+    {
+      "u": "RETBA",
+      "v": "DIDOUCHE_MOURAD",
+      "mode": "bus",
+      "route": "L253091",
+      "duration": 328,
+      "weight": 328
+    },
+    {
+      "u": "AIN_NHAS",
+      "v": "ZAAMOUCHE",
+      "mode": "bus",
+      "route": "L253092",
+      "duration": 1550,
+      "weight": 1550
+    },
+    {
+      "u": "ZAAMOUCHE",
+      "v": "AIN_NHAS",
+      "mode": "bus",
+      "route": "L253092",
+      "duration": 1550,
+      "weight": 1550
+    },
+    {
+      "u": "RETBA",
+      "v": "ZAAMOUCHE",
+      "mode": "bus",
+      "route": "L253095",
+      "duration": 1161,
+      "weight": 1161
+    },
+    {
+      "u": "ZAAMOUCHE",
+      "v": "RETBA",
+      "mode": "bus",
+      "route": "L253095",
+      "duration": 1161,
+      "weight": 1161
+    },
+    {
+      "u": "DIDOUCHE_MOURAD",
+      "v": "AIN_SAAD",
+      "mode": "bus",
+      "route": "L 254001",
+      "duration": 771,
+      "weight": 771
+    },
+    {
+      "u": "AIN_SAAD",
+      "v": "DIDOUCHE_MOURAD",
+      "mode": "bus",
+      "route": "L 254001",
+      "duration": 771,
+      "weight": 771
+    },
+    {
+      "u": "IBN_BADIS",
+      "v": "BEN_YAGOUB",
+      "mode": "bus",
+      "route": "L 254005",
+      "duration": 2606,
+      "weight": 2606
+    },
+    {
+      "u": "BEN_YAGOUB",
+      "v": "IBN_BADIS",
+      "mode": "bus",
+      "route": "L 254005",
+      "duration": 2606,
+      "weight": 2606
+    },
+    {
+      "u": "KHROUB",
+      "v": "SALAH_DERADJI",
+      "mode": "bus",
+      "route": "L 254006",
+      "duration": 534,
+      "weight": 534
+    },
+    {
+      "u": "SALAH_DERADJI",
+      "v": "KHROUB",
+      "mode": "bus",
+      "route": "L 254006",
+      "duration": 534,
+      "weight": 534
+    },
+    {
+      "u": "AIN_NHAS",
+      "v": "KHROUB",
+      "mode": "bus",
+      "route": "L254007",
+      "duration": 608,
+      "weight": 608
+    },
+    {
+      "u": "KHROUB",
+      "v": "AIN_NHAS",
+      "mode": "bus",
+      "route": "L254007",
+      "duration": 608,
+      "weight": 608
+    },
+    {
+      "u": "KHROUB",
+      "v": "BOUNOUARA",
+      "mode": "bus",
+      "route": "L254008",
+      "duration": 4712,
+      "weight": 4712
+    },
+    {
+      "u": "BOUNOUARA",
+      "v": "KHROUB",
+      "mode": "bus",
+      "route": "L254008",
+      "duration": 4712,
+      "weight": 4712
+    },
+    {
+      "u": "AIN_SMARA",
+      "v": "KIKAYA",
+      "mode": "bus",
+      "route": "L254010",
+      "duration": 3024,
+      "weight": 3024
+    },
+    {
+      "u": "KIKAYA",
+      "v": "AIN_SMARA",
+      "mode": "bus",
+      "route": "L254010",
+      "duration": 3024,
+      "weight": 3024
+    },
+    {
+      "u": "KHROUB",
+      "v": "ALLOUK_ABDELLAH",
+      "mode": "bus",
+      "route": "L254012",
+      "duration": 241,
+      "weight": 241
+    },
+    {
+      "u": "ALLOUK_ABDELLAH",
+      "v": "KHROUB",
+      "mode": "bus",
+      "route": "L254012",
+      "duration": 241,
+      "weight": 241
+    },
+    {
+      "u": "KHROUB",
+      "v": "GUETAR_EL_AYCH",
+      "mode": "bus",
+      "route": "L254013",
+      "duration": 1544,
+      "weight": 1544
+    },
+    {
+      "u": "GUETAR_EL_AYCH",
+      "v": "KHROUB",
+      "mode": "bus",
+      "route": "L254013",
+      "duration": 1544,
+      "weight": 1544
+    },
+    {
+      "u": "ZIGHOUD_YOUSSEF",
+      "v": "MIHOUBI",
+      "mode": "bus",
+      "route": "L 254015",
+      "duration": 248,
+      "weight": 248
+    },
+    {
+      "u": "MIHOUBI",
+      "v": "ZIGHOUD_YOUSSEF",
+      "mode": "bus",
+      "route": "L 254015",
+      "duration": 248,
+      "weight": 248
+    },
+    {
+      "u": "ZIGHOUD_YOUSSEF",
+      "v": "KASRNADJA",
+      "mode": "bus",
+      "route": "L 254016",
+      "duration": 693,
+      "weight": 693
+    },
+    {
+      "u": "KASRNADJA",
+      "v": "ZIGHOUD_YOUSSEF",
+      "mode": "bus",
+      "route": "L 254016",
+      "duration": 693,
+      "weight": 693
+    },
+    {
+      "u": "AIN_ABID",
+      "v": "BORDJ_M’HIRIS",
+      "mode": "bus",
+      "route": "L254018",
+      "duration": 942,
+      "weight": 942
+    },
+    {
+      "u": "BORDJ_M’HIRIS",
+      "v": "AIN_ABID",
+      "mode": "bus",
+      "route": "L254018",
+      "duration": 942,
+      "weight": 942
+    },
+    {
+      "u": "HAMMA_BOUZIANE",
+      "v": "CHAABET_MEDBOUH",
+      "mode": "bus",
+      "route": "L 254019",
+      "duration": 566,
+      "weight": 566
+    },
+    {
+      "u": "CHAABET_MEDBOUH",
+      "v": "HAMMA_BOUZIANE",
+      "mode": "bus",
+      "route": "L 254019",
+      "duration": 566,
+      "weight": 566
+    },
+    {
+      "u": "AIN_SMARA",
+      "v": "EL_KARIA",
+      "mode": "bus",
+      "route": "L254021",
+      "duration": 1117,
+      "weight": 1117
+    },
+    {
+      "u": "EL_KARIA",
+      "v": "AIN_SMARA",
+      "mode": "bus",
+      "route": "L254021",
+      "duration": 1117,
+      "weight": 1117
+    },
+    {
+      "u": "ZIGHOUD_YOUSSEF",
+      "v": "SIDI_LARBI",
+      "mode": "bus",
+      "route": "L254023",
+      "duration": 1492,
+      "weight": 1492
+    },
+    {
+      "u": "SIDI_LARBI",
+      "v": "ZIGHOUD_YOUSSEF",
+      "mode": "bus",
+      "route": "L254023",
+      "duration": 1492,
+      "weight": 1492
+    },
+    {
+      "u": "DIDOUCHE_MOURAD",
+      "v": "BENI_HAMIDENE",
+      "mode": "bus",
+      "route": "L 254027",
+      "duration": 1514,
+      "weight": 1514
+    },
+    {
+      "u": "BENI_HAMIDENE",
+      "v": "DIDOUCHE_MOURAD",
+      "mode": "bus",
+      "route": "L 254027",
+      "duration": 1514,
+      "weight": 1514
+    },
+    {
+      "u": "CHAABET_ELMEDBOUH",
+      "v": "BOUDRAA_SALAH",
+      "mode": "bus",
+      "route": "L254029",
+      "duration": 1142,
+      "weight": 1142
+    },
+    {
+      "u": "BOUDRAA_SALAH",
+      "v": "CHAABET_ELMEDBOUH",
+      "mode": "bus",
+      "route": "L254029",
+      "duration": 1142,
+      "weight": 1142
+    },
+    {
+      "u": "DIDOUCHE_MOURAD",
+      "v": "CHAABET_MEDBOUH",
+      "mode": "bus",
+      "route": "L 254031",
+      "duration": 849,
+      "weight": 849
+    },
+    {
+      "u": "CHAABET_MEDBOUH",
+      "v": "DIDOUCHE_MOURAD",
+      "mode": "bus",
+      "route": "L 254031",
+      "duration": 849,
+      "weight": 849
+    },
+    {
+      "u": "DIDOUCHE_MOURAD",
+      "v": "BENI_MESTINA",
+      "mode": "bus",
+      "route": "L254033",
+      "duration": 542,
+      "weight": 542
+    },
+    {
+      "u": "BENI_MESTINA",
+      "v": "DIDOUCHE_MOURAD",
+      "mode": "bus",
+      "route": "L254033",
+      "duration": 542,
+      "weight": 542
+    },
+    {
+      "u": "HERAICHA_AMMAR",
+      "v": "AIN_SMARA",
+      "mode": "bus",
+      "route": "L 254034",
+      "duration": 175,
+      "weight": 175
+    },
+    {
+      "u": "AIN_SMARA",
+      "v": "HERAICHA_AMMAR",
+      "mode": "bus",
+      "route": "L 254034",
+      "duration": 175,
+      "weight": 175
+    },
+    {
+      "u": "HAMMA_BOUZIANE",
+      "v": "BENI_HAMIDENE",
+      "mode": "bus",
+      "route": "L254039",
+      "duration": 1577,
+      "weight": 1577
+    },
+    {
+      "u": "BENI_HAMIDENE",
+      "v": "HAMMA_BOUZIANE",
+      "mode": "bus",
+      "route": "L254039",
+      "duration": 1577,
+      "weight": 1577
+    },
+    {
+      "u": "DIDOUCHE_MOURAD",
+      "v": "VILLAGE_AGRICOL",
+      "mode": "bus",
+      "route": "L 254040",
+      "duration": 3728,
+      "weight": 3728
+    },
+    {
+      "u": "VILLAGE_AGRICOL",
+      "v": "DIDOUCHE_MOURAD",
+      "mode": "bus",
+      "route": "L 254040",
+      "duration": 3728,
+      "weight": 3728
+    },
+    {
+      "u": "4_EME_KM",
+      "v": "EL_MERIDJ",
+      "mode": "bus",
+      "route": "L254041",
+      "duration": 18664,
+      "weight": 18664
+    },
+    {
+      "u": "EL_MERIDJ",
+      "v": "4_EME_KM",
+      "mode": "bus",
+      "route": "L254041",
+      "duration": 18664,
+      "weight": 18664
+    },
+    {
+      "u": "ZIGHOUD_YOUCEF",
+      "v": "BEN_DJEDOU",
+      "mode": "bus",
+      "route": "L 254042",
+      "duration": 182,
+      "weight": 182
+    },
+    {
+      "u": "BEN_DJEDOU",
+      "v": "ZIGHOUD_YOUCEF",
+      "mode": "bus",
+      "route": "L 254042",
+      "duration": 182,
+      "weight": 182
+    },
+    {
+      "u": "BEKIRA",
+      "v": "HAMMA_BOUZIANE",
+      "mode": "bus",
+      "route": "L254044",
+      "duration": 261,
+      "weight": 261
+    },
+    {
+      "u": "HAMMA_BOUZIANE",
+      "v": "BEKIRA",
+      "mode": "bus",
+      "route": "L254044",
+      "duration": 261,
+      "weight": 261
+    },
+    {
+      "u": "AIN_KEBIRA",
+      "v": "MAESSAOUD_BOUDJRIOU",
+      "mode": "bus",
+      "route": "L254047",
+      "duration": 347,
+      "weight": 347
+    },
+    {
+      "u": "MAESSAOUD_BOUDJRIOU",
+      "v": "AIN_KEBIRA",
+      "mode": "bus",
+      "route": "L254047",
+      "duration": 347,
+      "weight": 347
+    },
+    {
+      "u": "BAB_ETROCHE",
+      "v": "IBN_ZIAD",
+      "mode": "bus",
+      "route": "L254048",
+      "duration": 1580,
+      "weight": 1580
+    },
+    {
+      "u": "IBN_ZIAD",
+      "v": "BAB_ETROCHE",
+      "mode": "bus",
+      "route": "L254048",
+      "duration": 1580,
+      "weight": 1580
+    },
+    {
+      "u": "DIDOUCHE_MOURAD",
+      "v": "SIDI_ARRAB",
+      "mode": "bus",
+      "route": "L254050",
+      "duration": 138,
+      "weight": 138
+    },
+    {
+      "u": "SIDI_ARRAB",
+      "v": "DIDOUCHE_MOURAD",
+      "mode": "bus",
+      "route": "L254050",
+      "duration": 138,
+      "weight": 138
+    },
+    {
+      "u": "AIN_TRAB",
+      "v": "HAMMA_BOUZIANE",
+      "mode": "bus",
+      "route": "L254052",
+      "duration": 6314,
+      "weight": 6314
+    },
+    {
+      "u": "HAMMA_BOUZIANE",
+      "v": "AIN_TRAB",
+      "mode": "bus",
+      "route": "L254052",
+      "duration": 6314,
+      "weight": 6314
+    },
+    {
+      "u": "1500_LOGTS_BEKIRA",
+      "v": "HAMMA_BOUZIANE",
+      "mode": "bus",
+      "route": "L254053",
+      "duration": 193,
+      "weight": 193
+    },
+    {
+      "u": "HAMMA_BOUZIANE",
+      "v": "1500_LOGTS_BEKIRA",
+      "mode": "bus",
+      "route": "L254053",
+      "duration": 193,
+      "weight": 193
+    },
     {
       "u": "BEN_ABDELMALEK_RAMDANE",
       "v": "SEFFARI_ABDELMALEK",
@@ -4375,36 +6487,1476 @@
       "weight": 120
     },
     {
-      "u": "SEFFARI_ABDELMALEK",
+      "u": "ZAAMOUCHE",
+      "v": "CONSTANTINE",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "CONSTANTINE",
+      "v": "ZAAMOUCHE",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "ZAAMOUCHE",
+      "v": "CENTRE_VILLE",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "CENTRE_VILLE",
+      "v": "ZAAMOUCHE",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "ZAAMOUCHE",
+      "v": "STOP_36.36468_6.61695",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "STOP_36.36468_6.61695",
+      "v": "ZAAMOUCHE",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "ZAAMOUCHE",
+      "v": "STOP_36.36720_6.61872",
+      "mode": "walk",
+      "route": null,
+      "duration": 229,
+      "weight": 229
+    },
+    {
+      "u": "STOP_36.36720_6.61872",
+      "v": "ZAAMOUCHE",
+      "mode": "walk",
+      "route": null,
+      "duration": 229,
+      "weight": 229
+    },
+    {
+      "u": "ZAAMOUCHE",
+      "v": "STOP_36.36515_6.61724",
+      "mode": "walk",
+      "route": null,
+      "duration": 41,
+      "weight": 41
+    },
+    {
+      "u": "STOP_36.36515_6.61724",
+      "v": "ZAAMOUCHE",
+      "mode": "walk",
+      "route": null,
+      "duration": 41,
+      "weight": 41
+    },
+    {
+      "u": "ZIGHOYD_YOUCEF",
+      "v": "ZIGHOUD_YOUSSEF",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "ZIGHOUD_YOUSSEF",
+      "v": "ZIGHOYD_YOUCEF",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "ZIGHOYD_YOUCEF",
+      "v": "ZIGHOUD_YOUCEF",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "ZIGHOUD_YOUCEF",
+      "v": "ZIGHOYD_YOUCEF",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "CONSTANTINE",
+      "v": "CENTRE_VILLE",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "CENTRE_VILLE",
+      "v": "CONSTANTINE",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "CONSTANTINE",
+      "v": "STOP_36.36468_6.61695",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "STOP_36.36468_6.61695",
+      "v": "CONSTANTINE",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "CONSTANTINE",
+      "v": "STOP_36.36720_6.61872",
+      "mode": "walk",
+      "route": null,
+      "duration": 229,
+      "weight": 229
+    },
+    {
+      "u": "STOP_36.36720_6.61872",
+      "v": "CONSTANTINE",
+      "mode": "walk",
+      "route": null,
+      "duration": 229,
+      "weight": 229
+    },
+    {
+      "u": "CONSTANTINE",
+      "v": "STOP_36.36515_6.61724",
+      "mode": "walk",
+      "route": null,
+      "duration": 41,
+      "weight": 41
+    },
+    {
+      "u": "STOP_36.36515_6.61724",
+      "v": "CONSTANTINE",
+      "mode": "walk",
+      "route": null,
+      "duration": 41,
+      "weight": 41
+    },
+    {
+      "u": "GARE_ROUTIER_EST",
+      "v": "STOP_36.35052_6.61982",
+      "mode": "walk",
+      "route": null,
+      "duration": 142,
+      "weight": 142
+    },
+    {
+      "u": "STOP_36.35052_6.61982",
+      "v": "GARE_ROUTIER_EST",
+      "mode": "walk",
+      "route": null,
+      "duration": 142,
+      "weight": 142
+    },
+    {
+      "u": "GARE_ROUTIER_EST",
+      "v": "STOP_36.35103_6.62196",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "STOP_36.35103_6.62196",
+      "v": "GARE_ROUTIER_EST",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "IBN_ZIAD",
+      "v": "BEN_ZIAD",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "BEN_ZIAD",
+      "v": "IBN_ZIAD",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "MESSOUD_BOUDJRIOU",
+      "v": "MESSAOUD_BOUDJRIOU",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "MESSAOUD_BOUDJRIOU",
+      "v": "MESSOUD_BOUDJRIOU",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "MESSOUD_BOUDJRIOU",
+      "v": "MAESSAOUD_BOUDJRIOU",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "MAESSAOUD_BOUDJRIOU",
+      "v": "MESSOUD_BOUDJRIOU",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "KHROUB",
+      "v": "BOUHOUCHE",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "BOUHOUCHE",
+      "v": "KHROUB",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "KHROUB",
+      "v": "STOP_36.26756_6.69089",
+      "mode": "walk",
+      "route": null,
+      "duration": 305,
+      "weight": 305
+    },
+    {
+      "u": "STOP_36.26756_6.69089",
+      "v": "KHROUB",
+      "mode": "walk",
+      "route": null,
+      "duration": 305,
+      "weight": 305
+    },
+    {
+      "u": "KHROUB",
+      "v": "STOP_36.26376_6.69055",
+      "mode": "walk",
+      "route": null,
+      "duration": 16,
+      "weight": 16
+    },
+    {
+      "u": "STOP_36.26376_6.69055",
+      "v": "KHROUB",
+      "mode": "walk",
+      "route": null,
+      "duration": 16,
+      "weight": 16
+    },
+    {
+      "u": "KHROUB",
+      "v": "STOP_36.26372_6.69080",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "STOP_36.26372_6.69080",
+      "v": "KHROUB",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "IBN_BADIS",
+      "v": "STOP_36.38597_6.63832",
+      "mode": "walk",
+      "route": null,
+      "duration": 306,
+      "weight": 306
+    },
+    {
+      "u": "STOP_36.38597_6.63832",
+      "v": "IBN_BADIS",
+      "mode": "walk",
+      "route": null,
+      "duration": 306,
+      "weight": 306
+    },
+    {
+      "u": "IBN_BADIS",
+      "v": "STOP_36.38769_6.64062",
+      "mode": "walk",
+      "route": null,
+      "duration": 266,
+      "weight": 266
+    },
+    {
+      "u": "STOP_36.38769_6.64062",
+      "v": "IBN_BADIS",
+      "mode": "walk",
+      "route": null,
+      "duration": 266,
+      "weight": 266
+    },
+    {
+      "u": "IBN_BADIS",
+      "v": "STOP_36.38927_6.64160",
+      "mode": "walk",
+      "route": null,
+      "duration": 276,
+      "weight": 276
+    },
+    {
+      "u": "STOP_36.38927_6.64160",
+      "v": "IBN_BADIS",
+      "mode": "walk",
+      "route": null,
+      "duration": 276,
+      "weight": 276
+    },
+    {
+      "u": "VILLAGE_BOUCHEBAA",
+      "v": "STOP_36.24208_6.55312",
+      "mode": "walk",
+      "route": null,
+      "duration": 232,
+      "weight": 232
+    },
+    {
+      "u": "STOP_36.24208_6.55312",
+      "v": "VILLAGE_BOUCHEBAA",
+      "mode": "walk",
+      "route": null,
+      "duration": 232,
+      "weight": 232
+    },
+    {
+      "u": "ZIGHOUD_YOUSSEF",
+      "v": "ZIGHOUD_YOUCEF",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "ZIGHOUD_YOUCEF",
+      "v": "ZIGHOUD_YOUSSEF",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "MESSAOUD_BOUDJRIOU",
+      "v": "MAESSAOUD_BOUDJRIOU",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "MAESSAOUD_BOUDJRIOU",
+      "v": "MESSAOUD_BOUDJRIOU",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "NOUVELLE_VILLE",
+      "v": "NOUVELLE_ALI_MENDJ",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "NOUVELLE_ALI_MENDJ",
+      "v": "NOUVELLE_VILLE",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "NOUVELLE_VILLE",
+      "v": "N_VELLE_ALI_MENDJELI",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "N_VELLE_ALI_MENDJELI",
+      "v": "NOUVELLE_VILLE",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "NOUVELLE_VILLE",
+      "v": "GARE_ROUTIERE_ALI_MENDJELI",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "GARE_ROUTIERE_ALI_MENDJELI",
+      "v": "NOUVELLE_VILLE",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "NOUVELLE_VILLE",
+      "v": "STOP_36.26250_6.57328",
+      "mode": "walk",
+      "route": null,
+      "duration": 262,
+      "weight": 262
+    },
+    {
+      "u": "STOP_36.26250_6.57328",
+      "v": "NOUVELLE_VILLE",
+      "mode": "walk",
+      "route": null,
+      "duration": 262,
+      "weight": 262
+    },
+    {
+      "u": "NOUVELLE_VILLE",
+      "v": "STOP_36.26530_6.57425",
+      "mode": "walk",
+      "route": null,
+      "duration": 336,
+      "weight": 336
+    },
+    {
+      "u": "STOP_36.26530_6.57425",
+      "v": "NOUVELLE_VILLE",
+      "mode": "walk",
+      "route": null,
+      "duration": 336,
+      "weight": 336
+    },
+    {
+      "u": "NOUVELLE_VILLE",
+      "v": "STOP_36.26363_6.56942",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "STOP_36.26363_6.56942",
+      "v": "NOUVELLE_VILLE",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "NOUVELLE_VILLE",
+      "v": "STOP_36.26537_6.57417",
+      "mode": "walk",
+      "route": null,
+      "duration": 333,
+      "weight": 333
+    },
+    {
+      "u": "STOP_36.26537_6.57417",
+      "v": "NOUVELLE_VILLE",
+      "mode": "walk",
+      "route": null,
+      "duration": 333,
+      "weight": 333
+    },
+    {
+      "u": "NOUVELLE_VILLE",
+      "v": "STOP_36.26357_6.56945",
+      "mode": "walk",
+      "route": null,
+      "duration": 4,
+      "weight": 4
+    },
+    {
+      "u": "STOP_36.26357_6.56945",
+      "v": "NOUVELLE_VILLE",
+      "mode": "walk",
+      "route": null,
+      "duration": 4,
+      "weight": 4
+    },
+    {
+      "u": "NOUVELLE_VILLE",
+      "v": "STOP_36.26112_6.56985",
+      "mode": "walk",
+      "route": null,
+      "duration": 200,
+      "weight": 200
+    },
+    {
+      "u": "STOP_36.26112_6.56985",
+      "v": "NOUVELLE_VILLE",
+      "mode": "walk",
+      "route": null,
+      "duration": 200,
+      "weight": 200
+    },
+    {
+      "u": "KADDOUR_BOUMEDDOS",
       "v": "KADOUR_BOUMEDOUS",
       "mode": "walk",
       "route": null,
-      "duration": 300,
-      "weight": 300
+      "duration": 0,
+      "weight": 0
     },
     {
       "u": "KADOUR_BOUMEDOUS",
-      "v": "SEFFARI_ABDELMALEK",
+      "v": "KADDOUR_BOUMEDDOS",
       "mode": "walk",
       "route": null,
-      "duration": 300,
-      "weight": 300
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "KADDOUR_BOUMEDDOS",
+      "v": "EMIR_ABDELKADER",
+      "mode": "walk",
+      "route": null,
+      "duration": 122,
+      "weight": 122
+    },
+    {
+      "u": "EMIR_ABDELKADER",
+      "v": "KADDOUR_BOUMEDDOS",
+      "mode": "walk",
+      "route": null,
+      "duration": 122,
+      "weight": 122
+    },
+    {
+      "u": "CITE_20_OUT_55",
+      "v": "STOP_36.33706_6.59656",
+      "mode": "walk",
+      "route": null,
+      "duration": 215,
+      "weight": 215
+    },
+    {
+      "u": "STOP_36.33706_6.59656",
+      "v": "CITE_20_OUT_55",
+      "mode": "walk",
+      "route": null,
+      "duration": 215,
+      "weight": 215
+    },
+    {
+      "u": "5__JUILET",
+      "v": "ELDJEBES",
+      "mode": "walk",
+      "route": null,
+      "duration": 22,
+      "weight": 22
+    },
+    {
+      "u": "ELDJEBES",
+      "v": "5__JUILET",
+      "mode": "walk",
+      "route": null,
+      "duration": 22,
+      "weight": 22
+    },
+    {
+      "u": "5__JUILET",
+      "v": "STOP_36.35772_6.64222",
+      "mode": "walk",
+      "route": null,
+      "duration": 186,
+      "weight": 186
+    },
+    {
+      "u": "STOP_36.35772_6.64222",
+      "v": "5__JUILET",
+      "mode": "walk",
+      "route": null,
+      "duration": 186,
+      "weight": 186
+    },
+    {
+      "u": "AIN_SMARA",
+      "v": "STOP_36.26593_6.49849",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "STOP_36.26593_6.49849",
+      "v": "AIN_SMARA",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "NOUVELLE_ALI_MENDJ",
+      "v": "N_VELLE_ALI_MENDJELI",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "N_VELLE_ALI_MENDJELI",
+      "v": "NOUVELLE_ALI_MENDJ",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "NOUVELLE_ALI_MENDJ",
+      "v": "GARE_ROUTIERE_ALI_MENDJELI",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "GARE_ROUTIERE_ALI_MENDJELI",
+      "v": "NOUVELLE_ALI_MENDJ",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "NOUVELLE_ALI_MENDJ",
+      "v": "STOP_36.26250_6.57328",
+      "mode": "walk",
+      "route": null,
+      "duration": 262,
+      "weight": 262
+    },
+    {
+      "u": "STOP_36.26250_6.57328",
+      "v": "NOUVELLE_ALI_MENDJ",
+      "mode": "walk",
+      "route": null,
+      "duration": 262,
+      "weight": 262
+    },
+    {
+      "u": "NOUVELLE_ALI_MENDJ",
+      "v": "STOP_36.26530_6.57425",
+      "mode": "walk",
+      "route": null,
+      "duration": 336,
+      "weight": 336
+    },
+    {
+      "u": "STOP_36.26530_6.57425",
+      "v": "NOUVELLE_ALI_MENDJ",
+      "mode": "walk",
+      "route": null,
+      "duration": 336,
+      "weight": 336
+    },
+    {
+      "u": "NOUVELLE_ALI_MENDJ",
+      "v": "STOP_36.26363_6.56942",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "STOP_36.26363_6.56942",
+      "v": "NOUVELLE_ALI_MENDJ",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "NOUVELLE_ALI_MENDJ",
+      "v": "STOP_36.26537_6.57417",
+      "mode": "walk",
+      "route": null,
+      "duration": 333,
+      "weight": 333
+    },
+    {
+      "u": "STOP_36.26537_6.57417",
+      "v": "NOUVELLE_ALI_MENDJ",
+      "mode": "walk",
+      "route": null,
+      "duration": 333,
+      "weight": 333
+    },
+    {
+      "u": "NOUVELLE_ALI_MENDJ",
+      "v": "STOP_36.26357_6.56945",
+      "mode": "walk",
+      "route": null,
+      "duration": 4,
+      "weight": 4
+    },
+    {
+      "u": "STOP_36.26357_6.56945",
+      "v": "NOUVELLE_ALI_MENDJ",
+      "mode": "walk",
+      "route": null,
+      "duration": 4,
+      "weight": 4
+    },
+    {
+      "u": "NOUVELLE_ALI_MENDJ",
+      "v": "STOP_36.26112_6.56985",
+      "mode": "walk",
+      "route": null,
+      "duration": 200,
+      "weight": 200
+    },
+    {
+      "u": "STOP_36.26112_6.56985",
+      "v": "NOUVELLE_ALI_MENDJ",
+      "mode": "walk",
+      "route": null,
+      "duration": 200,
+      "weight": 200
+    },
+    {
+      "u": "ELDJEBES",
+      "v": "STOP_36.35772_6.64222",
+      "mode": "walk",
+      "route": null,
+      "duration": 208,
+      "weight": 208
+    },
+    {
+      "u": "STOP_36.35772_6.64222",
+      "v": "ELDJEBES",
+      "mode": "walk",
+      "route": null,
+      "duration": 208,
+      "weight": 208
+    },
+    {
+      "u": "SIDI_MABROUK",
+      "v": "SIDI_MAROUK",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "SIDI_MAROUK",
+      "v": "SIDI_MABROUK",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "SIDI_MABROUK",
+      "v": "STOP_36.36173_6.64421",
+      "mode": "walk",
+      "route": null,
+      "duration": 318,
+      "weight": 318
+    },
+    {
+      "u": "STOP_36.36173_6.64421",
+      "v": "SIDI_MABROUK",
+      "mode": "walk",
+      "route": null,
+      "duration": 318,
+      "weight": 318
+    },
+    {
+      "u": "SIDI_MABROUK",
+      "v": "STOP_36.36369_6.64413",
+      "mode": "walk",
+      "route": null,
+      "duration": 255,
+      "weight": 255
+    },
+    {
+      "u": "STOP_36.36369_6.64413",
+      "v": "SIDI_MABROUK",
+      "mode": "walk",
+      "route": null,
+      "duration": 255,
+      "weight": 255
+    },
+    {
+      "u": "SIDI_MABROUK",
+      "v": "STOP_36.36506_6.64423",
+      "mode": "walk",
+      "route": null,
+      "duration": 271,
+      "weight": 271
+    },
+    {
+      "u": "STOP_36.36506_6.64423",
+      "v": "SIDI_MABROUK",
+      "mode": "walk",
+      "route": null,
+      "duration": 271,
+      "weight": 271
+    },
+    {
+      "u": "SIDI_MABROUK",
+      "v": "STOP_36.36709_6.64427",
+      "mode": "walk",
+      "route": null,
+      "duration": 355,
+      "weight": 355
+    },
+    {
+      "u": "STOP_36.36709_6.64427",
+      "v": "SIDI_MABROUK",
+      "mode": "walk",
+      "route": null,
+      "duration": 355,
+      "weight": 355
+    },
+    {
+      "u": "DJEBEL_ELOUAHCH",
+      "v": "STOP_36.39138_6.64515",
+      "mode": "walk",
+      "route": null,
+      "duration": 267,
+      "weight": 267
+    },
+    {
+      "u": "STOP_36.39138_6.64515",
+      "v": "DJEBEL_ELOUAHCH",
+      "mode": "walk",
+      "route": null,
+      "duration": 267,
+      "weight": 267
+    },
+    {
+      "u": "DJEBEL_ELOUAHCH",
+      "v": "STOP_36.39146_6.64680",
+      "mode": "walk",
+      "route": null,
+      "duration": 166,
+      "weight": 166
+    },
+    {
+      "u": "STOP_36.39146_6.64680",
+      "v": "DJEBEL_ELOUAHCH",
+      "mode": "walk",
+      "route": null,
+      "duration": 166,
+      "weight": 166
+    },
+    {
+      "u": "DJEBEL_ELOUAHCH",
+      "v": "STOP_36.39216_6.64889",
+      "mode": "walk",
+      "route": null,
+      "duration": 21,
+      "weight": 21
+    },
+    {
+      "u": "STOP_36.39216_6.64889",
+      "v": "DJEBEL_ELOUAHCH",
+      "mode": "walk",
+      "route": null,
+      "duration": 21,
+      "weight": 21
+    },
+    {
+      "u": "SIDI_MAROUK",
+      "v": "STOP_36.36173_6.64421",
+      "mode": "walk",
+      "route": null,
+      "duration": 318,
+      "weight": 318
+    },
+    {
+      "u": "STOP_36.36173_6.64421",
+      "v": "SIDI_MAROUK",
+      "mode": "walk",
+      "route": null,
+      "duration": 318,
+      "weight": 318
+    },
+    {
+      "u": "SIDI_MAROUK",
+      "v": "STOP_36.36369_6.64413",
+      "mode": "walk",
+      "route": null,
+      "duration": 255,
+      "weight": 255
+    },
+    {
+      "u": "STOP_36.36369_6.64413",
+      "v": "SIDI_MAROUK",
+      "mode": "walk",
+      "route": null,
+      "duration": 255,
+      "weight": 255
+    },
+    {
+      "u": "SIDI_MAROUK",
+      "v": "STOP_36.36506_6.64423",
+      "mode": "walk",
+      "route": null,
+      "duration": 271,
+      "weight": 271
+    },
+    {
+      "u": "STOP_36.36506_6.64423",
+      "v": "SIDI_MAROUK",
+      "mode": "walk",
+      "route": null,
+      "duration": 271,
+      "weight": 271
+    },
+    {
+      "u": "SIDI_MAROUK",
+      "v": "STOP_36.36709_6.64427",
+      "mode": "walk",
+      "route": null,
+      "duration": 355,
+      "weight": 355
+    },
+    {
+      "u": "STOP_36.36709_6.64427",
+      "v": "SIDI_MAROUK",
+      "mode": "walk",
+      "route": null,
+      "duration": 355,
+      "weight": 355
+    },
+    {
+      "u": "BOUSSOUF",
+      "v": "STOP_36.33070_6.57951",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "STOP_36.33070_6.57951",
+      "v": "BOUSSOUF",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "BOUSSOUF",
+      "v": "STOP_36.32987_6.58478",
+      "mode": "walk",
+      "route": null,
+      "duration": 343,
+      "weight": 343
+    },
+    {
+      "u": "STOP_36.32987_6.58478",
+      "v": "BOUSSOUF",
+      "mode": "walk",
+      "route": null,
+      "duration": 343,
+      "weight": 343
     },
     {
       "u": "KADOUR_BOUMEDOUS",
       "v": "EMIR_ABDELKADER",
       "mode": "walk",
       "route": null,
-      "duration": 342,
-      "weight": 342
+      "duration": 122,
+      "weight": 122
     },
     {
       "u": "EMIR_ABDELKADER",
       "v": "KADOUR_BOUMEDOUS",
       "mode": "walk",
       "route": null,
-      "duration": 342,
-      "weight": 342
+      "duration": 122,
+      "weight": 122
+    },
+    {
+      "u": "FRERES_ARFA",
+      "v": "1100_LOGTS_AIN_BEY",
+      "mode": "walk",
+      "route": null,
+      "duration": 60,
+      "weight": 60
+    },
+    {
+      "u": "1100_LOGTS_AIN_BEY",
+      "v": "FRERES_ARFA",
+      "mode": "walk",
+      "route": null,
+      "duration": 60,
+      "weight": 60
+    },
+    {
+      "u": "CITE_RIADH",
+      "v": "RIADH",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "RIADH",
+      "v": "CITE_RIADH",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "BOUHOUCHE",
+      "v": "STOP_36.26756_6.69089",
+      "mode": "walk",
+      "route": null,
+      "duration": 305,
+      "weight": 305
+    },
+    {
+      "u": "STOP_36.26756_6.69089",
+      "v": "BOUHOUCHE",
+      "mode": "walk",
+      "route": null,
+      "duration": 305,
+      "weight": 305
+    },
+    {
+      "u": "BOUHOUCHE",
+      "v": "STOP_36.26376_6.69055",
+      "mode": "walk",
+      "route": null,
+      "duration": 16,
+      "weight": 16
+    },
+    {
+      "u": "STOP_36.26376_6.69055",
+      "v": "BOUHOUCHE",
+      "mode": "walk",
+      "route": null,
+      "duration": 16,
+      "weight": 16
+    },
+    {
+      "u": "BOUHOUCHE",
+      "v": "STOP_36.26372_6.69080",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "STOP_36.26372_6.69080",
+      "v": "BOUHOUCHE",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "LALLA_N’SOUMER",
+      "v": "STOP_36.24997_6.56120",
+      "mode": "walk",
+      "route": null,
+      "duration": 52,
+      "weight": 52
+    },
+    {
+      "u": "STOP_36.24997_6.56120",
+      "v": "LALLA_N’SOUMER",
+      "mode": "walk",
+      "route": null,
+      "duration": 52,
+      "weight": 52
+    },
+    {
+      "u": "LALLA_N’SOUMER",
+      "v": "STOP_36.24688_6.55983",
+      "mode": "walk",
+      "route": null,
+      "duration": 313,
+      "weight": 313
+    },
+    {
+      "u": "STOP_36.24688_6.55983",
+      "v": "LALLA_N’SOUMER",
+      "mode": "walk",
+      "route": null,
+      "duration": 313,
+      "weight": 313
+    },
+    {
+      "u": "LALLA_N’SOUMER",
+      "v": "STOP_36.24679_6.55993",
+      "mode": "walk",
+      "route": null,
+      "duration": 318,
+      "weight": 318
+    },
+    {
+      "u": "STOP_36.24679_6.55993",
+      "v": "LALLA_N’SOUMER",
+      "mode": "walk",
+      "route": null,
+      "duration": 318,
+      "weight": 318
+    },
+    {
+      "u": "LALLA_N’SOUMER",
+      "v": "STOP_36.25018_6.56192",
+      "mode": "walk",
+      "route": null,
+      "duration": 48,
+      "weight": 48
+    },
+    {
+      "u": "STOP_36.25018_6.56192",
+      "v": "LALLA_N’SOUMER",
+      "mode": "walk",
+      "route": null,
+      "duration": 48,
+      "weight": 48
+    },
+    {
+      "u": "N_VELLE_ALI_MENDJELI",
+      "v": "GARE_ROUTIERE_ALI_MENDJELI",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "GARE_ROUTIERE_ALI_MENDJELI",
+      "v": "N_VELLE_ALI_MENDJELI",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "N_VELLE_ALI_MENDJELI",
+      "v": "STOP_36.26250_6.57328",
+      "mode": "walk",
+      "route": null,
+      "duration": 262,
+      "weight": 262
+    },
+    {
+      "u": "STOP_36.26250_6.57328",
+      "v": "N_VELLE_ALI_MENDJELI",
+      "mode": "walk",
+      "route": null,
+      "duration": 262,
+      "weight": 262
+    },
+    {
+      "u": "N_VELLE_ALI_MENDJELI",
+      "v": "STOP_36.26530_6.57425",
+      "mode": "walk",
+      "route": null,
+      "duration": 336,
+      "weight": 336
+    },
+    {
+      "u": "STOP_36.26530_6.57425",
+      "v": "N_VELLE_ALI_MENDJELI",
+      "mode": "walk",
+      "route": null,
+      "duration": 336,
+      "weight": 336
+    },
+    {
+      "u": "N_VELLE_ALI_MENDJELI",
+      "v": "STOP_36.26363_6.56942",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "STOP_36.26363_6.56942",
+      "v": "N_VELLE_ALI_MENDJELI",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "N_VELLE_ALI_MENDJELI",
+      "v": "STOP_36.26537_6.57417",
+      "mode": "walk",
+      "route": null,
+      "duration": 333,
+      "weight": 333
+    },
+    {
+      "u": "STOP_36.26537_6.57417",
+      "v": "N_VELLE_ALI_MENDJELI",
+      "mode": "walk",
+      "route": null,
+      "duration": 333,
+      "weight": 333
+    },
+    {
+      "u": "N_VELLE_ALI_MENDJELI",
+      "v": "STOP_36.26357_6.56945",
+      "mode": "walk",
+      "route": null,
+      "duration": 4,
+      "weight": 4
+    },
+    {
+      "u": "STOP_36.26357_6.56945",
+      "v": "N_VELLE_ALI_MENDJELI",
+      "mode": "walk",
+      "route": null,
+      "duration": 4,
+      "weight": 4
+    },
+    {
+      "u": "N_VELLE_ALI_MENDJELI",
+      "v": "STOP_36.26112_6.56985",
+      "mode": "walk",
+      "route": null,
+      "duration": 200,
+      "weight": 200
+    },
+    {
+      "u": "STOP_36.26112_6.56985",
+      "v": "N_VELLE_ALI_MENDJELI",
+      "mode": "walk",
+      "route": null,
+      "duration": 200,
+      "weight": 200
+    },
+    {
+      "u": "CENTRE_VILLE",
+      "v": "STOP_36.36468_6.61695",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "STOP_36.36468_6.61695",
+      "v": "CENTRE_VILLE",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "CENTRE_VILLE",
+      "v": "STOP_36.36720_6.61872",
+      "mode": "walk",
+      "route": null,
+      "duration": 229,
+      "weight": 229
+    },
+    {
+      "u": "STOP_36.36720_6.61872",
+      "v": "CENTRE_VILLE",
+      "mode": "walk",
+      "route": null,
+      "duration": 229,
+      "weight": 229
+    },
+    {
+      "u": "CENTRE_VILLE",
+      "v": "STOP_36.36515_6.61724",
+      "mode": "walk",
+      "route": null,
+      "duration": 41,
+      "weight": 41
+    },
+    {
+      "u": "STOP_36.36515_6.61724",
+      "v": "CENTRE_VILLE",
+      "mode": "walk",
+      "route": null,
+      "duration": 41,
+      "weight": 41
+    },
+    {
+      "u": "GARE_ROUTIERE_ALI_MENDJELI",
+      "v": "STOP_36.26250_6.57328",
+      "mode": "walk",
+      "route": null,
+      "duration": 262,
+      "weight": 262
+    },
+    {
+      "u": "STOP_36.26250_6.57328",
+      "v": "GARE_ROUTIERE_ALI_MENDJELI",
+      "mode": "walk",
+      "route": null,
+      "duration": 262,
+      "weight": 262
+    },
+    {
+      "u": "GARE_ROUTIERE_ALI_MENDJELI",
+      "v": "STOP_36.26530_6.57425",
+      "mode": "walk",
+      "route": null,
+      "duration": 336,
+      "weight": 336
+    },
+    {
+      "u": "STOP_36.26530_6.57425",
+      "v": "GARE_ROUTIERE_ALI_MENDJELI",
+      "mode": "walk",
+      "route": null,
+      "duration": 336,
+      "weight": 336
+    },
+    {
+      "u": "GARE_ROUTIERE_ALI_MENDJELI",
+      "v": "STOP_36.26363_6.56942",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "STOP_36.26363_6.56942",
+      "v": "GARE_ROUTIERE_ALI_MENDJELI",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "GARE_ROUTIERE_ALI_MENDJELI",
+      "v": "STOP_36.26537_6.57417",
+      "mode": "walk",
+      "route": null,
+      "duration": 333,
+      "weight": 333
+    },
+    {
+      "u": "STOP_36.26537_6.57417",
+      "v": "GARE_ROUTIERE_ALI_MENDJELI",
+      "mode": "walk",
+      "route": null,
+      "duration": 333,
+      "weight": 333
+    },
+    {
+      "u": "GARE_ROUTIERE_ALI_MENDJELI",
+      "v": "STOP_36.26357_6.56945",
+      "mode": "walk",
+      "route": null,
+      "duration": 4,
+      "weight": 4
+    },
+    {
+      "u": "STOP_36.26357_6.56945",
+      "v": "GARE_ROUTIERE_ALI_MENDJELI",
+      "mode": "walk",
+      "route": null,
+      "duration": 4,
+      "weight": 4
+    },
+    {
+      "u": "GARE_ROUTIERE_ALI_MENDJELI",
+      "v": "STOP_36.26112_6.56985",
+      "mode": "walk",
+      "route": null,
+      "duration": 200,
+      "weight": 200
+    },
+    {
+      "u": "STOP_36.26112_6.56985",
+      "v": "GARE_ROUTIERE_ALI_MENDJELI",
+      "mode": "walk",
+      "route": null,
+      "duration": 200,
+      "weight": 200
+    },
+    {
+      "u": "CHAABET_MEDBOUH",
+      "v": "CHAABET_ELMEDBOUH",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "CHAABET_ELMEDBOUH",
+      "v": "CHAABET_MEDBOUH",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "SIDI_LARBI",
+      "v": "SIDI_ARRAB",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
+    },
+    {
+      "u": "SIDI_ARRAB",
+      "v": "SIDI_LARBI",
+      "mode": "walk",
+      "route": null,
+      "duration": 0,
+      "weight": 0
     },
     {
       "u": "CITÉ_FADILA_SAÂDANE",
