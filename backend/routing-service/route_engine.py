@@ -2,6 +2,7 @@ import json
 import logging
 import math
 import heapq
+import itertools
 
 logger = logging.getLogger(__name__)
 
@@ -55,107 +56,93 @@ class GraphEngine:
             logger.error(f"Cannot route. Unknown stations: {origin_id} or {dest_id}")
             return None
 
-        # Dijkstra's Algorithm
-        TRANSFER_PENALTY = 900 # 15 minutes penalty for transferring
-        BOARDING_PENALTY = 300 # 5 minute penalty for getting on a bus/tram
-        WALK_PENALTY_MULTIPLIER = 3.0 # Strongly discourage excessive walking
+        # --- Simple Dijkstra ---
+        # State: (cost, counter, node, current_route, path)
+        TRANSFER_PENALTY = 600  # 10 minutes: transfers are painful in real life
+        WALK_MULTIPLIER = 2.5   # Discourage walking
+        BOARDING_PENALTY = 180  # 3 minutes: first time boarding a vehicle
 
-        # Priority Queue: (cost, current_node, current_route, path_length, visited_routes, path)
-        import itertools
         counter = itertools.count()
-        pq = [(0, next(counter), origin_id, None, 0, frozenset(), [])]
-        best_cost = {}
+        pq = [(0, next(counter), origin_id, None, [])]
+        visited = {}  # (node, route) -> best cost
 
         best_path = None
-        min_final_cost = float('inf')
+        best_cost = float('inf')
 
         while pq:
-            cost, _, current_node, current_route, path_len, visited_routes, path = heapq.heappop(pq)
+            cost, _, node, cur_route, path = heapq.heappop(pq)
 
-            if cost >= min_final_cost:
+            if cost >= best_cost:
                 continue
 
-            state = (current_node, current_route, visited_routes)
-            if state in best_cost and cost > best_cost[state]:
+            state = (node, cur_route)
+            if state in visited and cost >= visited[state]:
                 continue
-            best_cost[state] = cost
+            visited[state] = cost
 
-            if current_node == dest_id:
-                if cost < min_final_cost:
-                    min_final_cost = cost
-                    best_path = path
+            if node == dest_id:
+                best_cost = cost
+                best_path = path
                 continue
 
-            for edge in self.graph[current_node]:
+            for edge in self.graph[node]:
                 next_node = edge['to']
                 next_route = edge['route']
-                
-                # Calculate cost and penalties
                 edge_cost = edge['duration']
+
+                # Apply walk multiplier
                 if edge['mode'] == 'walk':
-                    edge_cost *= WALK_PENALTY_MULTIPLIER
+                    edge_cost = int(edge_cost * WALK_MULTIPLIER)
+                # Tram bonus: tram is more reliable and comfortable, prefer it
+                elif edge['mode'] == 'tram':
+                    edge_cost = int(edge_cost * 0.6)
 
+                # Apply penalties for transfers and boarding
                 penalty = 0
-                wait_time = 0
-                new_visited_routes = visited_routes
                 if next_route is not None:
-                    if next_route != current_route:
-                        # Bus departs every 15 mins (900 seconds)
-                        current_arrival_time = departure_time_sec + cost
-                        remainder = current_arrival_time % 900
-                        if remainder > 0:
-                            wait_time = 900 - remainder
+                    if cur_route is None:
+                        # First time boarding transit (from walking/origin)
+                        penalty = BOARDING_PENALTY
+                    elif next_route != cur_route:
+                        # Switching between different transit lines
+                        penalty = TRANSFER_PENALTY
 
-                        if next_route in visited_routes:
-                            penalty += 999999
-                        if current_route is not None:
-                            penalty += TRANSFER_PENALTY
-                        else:
-                            penalty += BOARDING_PENALTY
-                        new_visited_routes = visited_routes.union({next_route})
-                else:
-                    if current_route is not None:
-                        penalty += BOARDING_PENALTY
-                
-                new_cost = cost + edge_cost + penalty + wait_time
-                
-                new_state = (next_node, next_route, new_visited_routes)
-                if new_state not in best_cost or new_cost < best_cost[new_state]:
-                    best_cost[new_state] = new_cost
-                    new_step = {
-                        'from_stop': current_node,
+                new_cost = cost + edge_cost + penalty
+                new_state = (next_node, next_route)
+
+                if new_state not in visited or new_cost < visited[new_state]:
+                    step = {
+                        'from_stop': node,
                         'to_stop': next_node,
                         'mode': edge['mode'],
                         'route_short': next_route if next_route else "WALK",
                         'route_long': f"Route {next_route}" if next_route else "Walk",
                         'duration': edge['duration'],
-                        'wait_time': wait_time
                     }
-                    heapq.heappush(pq, (new_cost, next(counter), next_node, next_route, path_len + 1, new_visited_routes, path + [new_step]))
+                    heapq.heappush(pq, (new_cost, next(counter), next_node, next_route, path + [step]))
 
         if not best_path:
             return None
 
-        # Reconstruct legs
+        # --- Reconstruct legs with names and coordinates ---
         legs = []
         current_time = departure_time_sec
         transfers = 0
-        
+
         for i, step in enumerate(best_path):
             from_stop = step['from_stop']
             to_stop = step['to_stop']
             from_name = self.stations[from_stop]['name']
             to_name = self.stations[to_stop]['name']
-            
+
             if i > 0 and step['route_short'] != best_path[i-1]['route_short'] and step['mode'] != 'walk':
                 transfers += 1
-                current_time += TRANSFER_PENALTY
 
             arr_time = current_time + step['duration']
-            
+
             lat1, lon1 = self.stations[from_stop]['lat'], self.stations[from_stop]['lon']
             lat2, lon2 = self.stations[to_stop]['lat'], self.stations[to_stop]['lon']
-            
+
             leg = {
                 'from_stop': from_stop,
                 'to_stop': to_stop,
@@ -172,13 +159,13 @@ class GraphEngine:
             legs.append(leg)
             current_time = arr_time
 
-        # Merge consecutive legs on the same route
+        # --- Merge consecutive legs on the same route ---
         merged_legs = []
         for leg in legs:
             if not merged_legs:
                 merged_legs.append(leg)
                 continue
-                
+
             last = merged_legs[-1]
             if last['mode'] == leg['mode'] and last['route_short'] == leg['route_short']:
                 last['to_stop'] = leg['to_stop']
@@ -189,22 +176,23 @@ class GraphEngine:
             else:
                 merged_legs.append(leg)
 
-        # Now fetch OSRM path for each merged leg
+        # --- Fetch OSRM road-snapped paths for transit legs ---
         import requests
         for m_leg in merged_legs:
-            if m_leg['mode'] != 'walk' and len(m_leg['path_coordinates']) > 1:
+            if m_leg['mode'] == 'bus' and len(m_leg['path_coordinates']) > 1:
                 coords_str = ";".join([f"{lon},{lat}" for lat, lon in m_leg['path_coordinates']])
                 url = f"http://router.project-osrm.org/route/v1/driving/{coords_str}?geometries=geojson&overview=full"
                 try:
-                    resp = requests.get(url, timeout=5)
+                    resp = requests.get(url, timeout=3)
                     if resp.status_code == 200:
                         data = resp.json()
                         if data.get('code') == 'Ok' and len(data.get('routes', [])) > 0:
                             osrm_coords = data['routes'][0]['geometry']['coordinates']
                             m_leg['path_coordinates'] = [[lat, lon] for lon, lat in osrm_coords]
                 except Exception as e:
-                    logger.error(f"Failed to fetch OSRM multi-point route: {e}")
+                    logger.error(f"Failed to fetch OSRM route: {e}")
 
+        # --- Calculate cost: 40 DZD per unique transit line used ---
         total_cost_dzd = len(set(m['route_short'] for m in merged_legs if m['mode'] != 'walk')) * 40
 
         return {

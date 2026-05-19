@@ -157,8 +157,7 @@ async def calculate_route(request: RouteRequest):
             duration=leg['duration'],
             dep_time=leg['dep_time'],
             arr_time=leg['arr_time'],
-            path_coordinates=leg['path_coordinates'],
-            wait_time=leg.get('wait_time')
+            path_coordinates=leg['path_coordinates']
         ))
         
     return RouteResponse(

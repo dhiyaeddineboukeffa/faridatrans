@@ -1,628 +1,5 @@
 [
   {
-    "id": "ZAAMOUCHE",
-    "name": "ZAAMOUCHE",
-    "lat": 36.364682,
-    "lon": 6.616947,
-    "type": "bus"
-  },
-  {
-    "id": "EL_MERIDJ",
-    "name": "EL MERIDJ",
-    "lat": 35.80088195666073,
-    "lon": 8.233690522019858,
-    "type": "bus"
-  },
-  {
-    "id": "ZIGHOYD_YOUCEF",
-    "name": "ZIGHOYD YOUCEF",
-    "lat": 36.532696042872516,
-    "lon": 6.711761963587001,
-    "type": "bus"
-  },
-  {
-    "id": "CONSTANTINE",
-    "name": "CONSTANTINE",
-    "lat": 36.364682,
-    "lon": 6.616947,
-    "type": "bus"
-  },
-  {
-    "id": "AIN_ABID",
-    "name": "AIN ABID",
-    "lat": 36.240283414499565,
-    "lon": 6.922765963593303,
-    "type": "bus"
-  },
-  {
-    "id": "GARE_ROUTIER_EST",
-    "name": "GARE ROUTIER EST",
-    "lat": 36.3510349,
-    "lon": 6.6219617,
-    "type": "bus"
-  },
-  {
-    "id": "IBN_ZIAD",
-    "name": "IBN ZIAD",
-    "lat": 36.3827361223889,
-    "lon": 6.4715778799457,
-    "type": "bus"
-  },
-  {
-    "id": "MESSOUD_BOUDJRIOU",
-    "name": "MESSOUD BOUDJRIOU",
-    "lat": 36.430759192547825,
-    "lon": 6.468002857940587,
-    "type": "bus"
-  },
-  {
-    "id": "KHROUB",
-    "name": "KHROUB",
-    "lat": 36.263719,
-    "lon": 6.690799,
-    "type": "bus"
-  },
-  {
-    "id": "IBN_BADIS",
-    "name": "IBN BADIS",
-    "lat": 36.38973679920406,
-    "lon": 6.637317457185694,
-    "type": "bus"
-  },
-  {
-    "id": "OULED_RAHMOUNE",
-    "name": "OULED RAHMOUNE",
-    "lat": 36.18626087362963,
-    "lon": 6.6909078249331415,
-    "type": "bus"
-  },
-  {
-    "id": "EL_GOURZI",
-    "name": "EL GOURZI",
-    "lat": 36.15066292308654,
-    "lon": 6.626109054342001,
-    "type": "bus"
-  },
-  {
-    "id": "BEN_YAGOUB",
-    "name": "BEN YAGOUB",
-    "lat": 36.37506511067003,
-    "lon": 6.879244947689147,
-    "type": "bus"
-  },
-  {
-    "id": "VILLAGE_BOUCHEBAA",
-    "name": "VILLAGE BOUCHEBAA",
-    "lat": 36.24444187523834,
-    "lon": 6.550962916190518,
-    "type": "bus"
-  },
-  {
-    "id": "ZIGHOUD_YOUSSEF",
-    "name": "ZIGHOUD YOUSSEF",
-    "lat": 36.532696042872516,
-    "lon": 6.711761963587001,
-    "type": "bus"
-  },
-  {
-    "id": "DIDOUCHE_MOURAD",
-    "name": "DIDOUCHE MOURAD",
-    "lat": 36.450791925016105,
-    "lon": 6.632278409884134,
-    "type": "bus"
-  },
-  {
-    "id": "BEN_ZIAD",
-    "name": "BEN ZIAD",
-    "lat": 36.3827361223889,
-    "lon": 6.4715778799457,
-    "type": "bus"
-  },
-  {
-    "id": "HAMMA_BOUZIANE",
-    "name": "HAMMA BOUZIANE",
-    "lat": 36.41161409921078,
-    "lon": 6.596363094690649,
-    "type": "bus"
-  },
-  {
-    "id": "MESSAOUD_BOUDJRIOU",
-    "name": "MESSAOUD BOUDJRIOU",
-    "lat": 36.430759192547825,
-    "lon": 6.468002857940587,
-    "type": "bus"
-  },
-  {
-    "id": "NOUVELLE_VILLE",
-    "name": "NOUVELLE VILLE",
-    "lat": 36.263626,
-    "lon": 6.569425,
-    "type": "bus"
-  },
-  {
-    "id": "KADDOUR_BOUMEDDOS",
-    "name": "KADDOUR BOUMEDDOS",
-    "lat": 36.34812881654343,
-    "lon": 6.600920693434598,
-    "type": "bus"
-  },
-  {
-    "id": "CITE_20_OUT_55",
-    "name": "CITE 20 OUT 55",
-    "lat": 36.33928323607305,
-    "lon": 6.5946203230799325,
-    "type": "bus"
-  },
-  {
-    "id": "5__JUILET",
-    "name": "5  JUILET",
-    "lat": 36.35719525981326,
-    "lon": 6.639382246887964,
-    "type": "bus"
-  },
-  {
-    "id": "KAFE_SALAH",
-    "name": "KAFE SALAH",
-    "lat": 36.43190528966095,
-    "lon": 6.640311460639172,
-    "type": "bus"
-  },
-  {
-    "id": "OUED_LAHDJAR",
-    "name": "OUED LAHDJAR",
-    "lat": 36.4517494059569,
-    "lon": 6.648592244504645,
-    "type": "bus"
-  },
-  {
-    "id": "KITOUNI_ABDELMALEK",
-    "name": "KITOUNI AbdelMALEK",
-    "lat": 36.36492628420016,
-    "lon": 6.605880380062158,
-    "type": "bus"
-  },
-  {
-    "id": "BENCHERGUI",
-    "name": "BENCHERGUI",
-    "lat": 36.36504032501761,
-    "lon": 6.582374239958634,
-    "type": "bus"
-  },
-  {
-    "id": "BOUDRAA_SALAH",
-    "name": "BOUDRAA SALAH",
-    "lat": 36.35952676097813,
-    "lon": 6.598191302569249,
-    "type": "bus"
-  },
-  {
-    "id": "AIN_SMARA",
-    "name": "AIN SMARA",
-    "lat": 36.26593,
-    "lon": 6.49849,
-    "type": "bus"
-  },
-  {
-    "id": "NOUVELLE_ALI_MENDJ",
-    "name": "NOUVELLE ALI MENDJ",
-    "lat": 36.263626,
-    "lon": 6.569425,
-    "type": "bus"
-  },
-  {
-    "id": "ELDJEBES",
-    "name": "ELDJEBES",
-    "lat": 36.357212540466286,
-    "lon": 6.639028195289364,
-    "type": "bus"
-  },
-  {
-    "id": "SALAH_BEY",
-    "name": "SALAH BEY",
-    "lat": 36.38166735293937,
-    "lon": 6.574548627356913,
-    "type": "bus"
-  },
-  {
-    "id": "SIDI_MABROUK",
-    "name": "SIDI MABROUK",
-    "lat": 36.364074579069474,
-    "lon": 6.640166491784862,
-    "type": "bus"
-  },
-  {
-    "id": "DJEBEL_ELOUAHCH",
-    "name": "DJEBEL ELOUAHCH",
-    "lat": 36.392313152766405,
-    "lon": 6.649172855009447,
-    "type": "bus"
-  },
-  {
-    "id": "KAF_LAKHAL",
-    "name": "KAF LAKHAL",
-    "lat": 36.40297974792608,
-    "lon": 6.7177356780926765,
-    "type": "bus"
-  },
-  {
-    "id": "BEKIRA",
-    "name": "BEKIRA",
-    "lat": 36.39558804059363,
-    "lon": 6.610368181572787,
-    "type": "bus"
-  },
-  {
-    "id": "KHEMISTI",
-    "name": "KHEMISTI",
-    "lat": 36.354892715893094,
-    "lon": 6.6098541090359495,
-    "type": "bus"
-  },
-  {
-    "id": "BOUMERZOUG",
-    "name": "BOUMERZOUG",
-    "lat": 36.336249977499854,
-    "lon": 6.634261498666347,
-    "type": "bus"
-  },
-  {
-    "id": "GAMAS",
-    "name": "GAMAS",
-    "lat": 36.340501889525015,
-    "lon": 6.655805050588319,
-    "type": "bus"
-  },
-  {
-    "id": "SIDI_MAROUK",
-    "name": "SIDI MAROUK",
-    "lat": 36.364074579069474,
-    "lon": 6.640166491784862,
-    "type": "bus"
-  },
-  {
-    "id": "BOUSSOUF",
-    "name": "BOUSSOUF",
-    "lat": 36.3307,
-    "lon": 6.57951,
-    "type": "bus"
-  },
-  {
-    "id": "CHAAB_RSAS",
-    "name": "CHAAB RSAS",
-    "lat": 36.329992517734176,
-    "lon": 6.632137215925363,
-    "type": "bus"
-  },
-  {
-    "id": "KADOUR_BOUMEDOUS",
-    "name": "KADOUR BOUMEDOUS",
-    "lat": 36.34812881654343,
-    "lon": 6.600920693434598,
-    "type": "bus"
-  },
-  {
-    "id": "FRERES_ARFA",
-    "name": "FRERES ARFA",
-    "lat": 36.31305361543669,
-    "lon": 6.628815695573823,
-    "type": "bus"
-  },
-  {
-    "id": "CITE_RIADH",
-    "name": "CITE RIADH",
-    "lat": 36.36066872665258,
-    "lon": 6.654796269834728,
-    "type": "bus"
-  },
-  {
-    "id": "1100_LOGTS_AIN_BEY",
-    "name": "1100 LOGTS AIN BEY",
-    "lat": 36.313780739824665,
-    "lon": 6.6290902674659655,
-    "type": "bus"
-  },
-  {
-    "id": "SARKINA",
-    "name": "SARKINA",
-    "lat": 36.38032365388413,
-    "lon": 6.643541969937332,
-    "type": "bus"
-  },
-  {
-    "id": "BOUHOUCHE",
-    "name": "BOUHOUCHE",
-    "lat": 36.263719,
-    "lon": 6.690799,
-    "type": "bus"
-  },
-  {
-    "id": "MASSINISSA",
-    "name": "MASSINISSA",
-    "lat": 36.28016991062183,
-    "lon": 6.710091540292658,
-    "type": "bus"
-  },
-  {
-    "id": "LALLA_N’SOUMER",
-    "name": "LALLA N’SOUMER",
-    "lat": 36.250617720904735,
-    "lon": 6.561394600203874,
-    "type": "bus"
-  },
-  {
-    "id": "CITE_900_LOGTS",
-    "name": "CITE 900 LOGTS",
-    "lat": 36.26924378680963,
-    "lon": 6.704907042714267,
-    "type": "bus"
-  },
-  {
-    "id": "CITE_1600_LOGTS",
-    "name": "CITE 1600 LOGTS",
-    "lat": 36.26034213851144,
-    "lon": 6.703003651101842,
-    "type": "bus"
-  },
-  {
-    "id": "N_VELLE_ALI_MENDJELI",
-    "name": "N/VELLE ALI MENDJELI",
-    "lat": 36.263626,
-    "lon": 6.569425,
-    "type": "bus"
-  },
-  {
-    "id": "RIADH",
-    "name": "RIADH",
-    "lat": 36.36066872665258,
-    "lon": 6.654796269834728,
-    "type": "bus"
-  },
-  {
-    "id": "BERGLI",
-    "name": "BERGLI",
-    "lat": 18.233367856204815,
-    "lon": 42.504767423268845,
-    "type": "bus"
-  },
-  {
-    "id": "BENCHAOUI",
-    "name": "BENCHAOUI",
-    "lat": 36.433631222595274,
-    "lon": 6.602860283657275,
-    "type": "bus"
-  },
-  {
-    "id": "SISSAOUI",
-    "name": "SISSAOUI",
-    "lat": 36.3280476784208,
-    "lon": 6.6632025698864625,
-    "type": "bus"
-  },
-  {
-    "id": "CENTRE_VILLE",
-    "name": "CENTRE VILLE",
-    "lat": 36.364682,
-    "lon": 6.616947,
-    "type": "bus"
-  },
-  {
-    "id": "AEROPORT_MED_BOUDIAF",
-    "name": "AEROPORT MED/BOUDIAF",
-    "lat": 36.283473,
-    "lon": 6.621136,
-    "type": "bus"
-  },
-  {
-    "id": "EXTENSION_OUEST",
-    "name": "EXTENSION OUEST",
-    "lat": 36.25379057774919,
-    "lon": 6.537490414074081,
-    "type": "bus"
-  },
-  {
-    "id": "GARE_ROUTIERE_ALI_MENDJELI",
-    "name": "GARE ROUTIERE ALI MENDJELI",
-    "lat": 36.263626,
-    "lon": 6.569425,
-    "type": "bus"
-  },
-  {
-    "id": "RETBA",
-    "name": "RETBA",
-    "lat": 36.4432583625598,
-    "lon": 6.663380291884259,
-    "type": "bus"
-  },
-  {
-    "id": "AIN_NHAS",
-    "name": "AIN NHAS",
-    "lat": 36.29479877557177,
-    "lon": 6.732169756935695,
-    "type": "bus"
-  },
-  {
-    "id": "AIN_SAAD",
-    "name": "AIN SAAD",
-    "lat": 36.46887928201286,
-    "lon": 6.698624536381644,
-    "type": "bus"
-  },
-  {
-    "id": "SALAH_DERADJI",
-    "name": "SALAH DERADJI",
-    "lat": 36.22489905828804,
-    "lon": 6.678372545489452,
-    "type": "bus"
-  },
-  {
-    "id": "BOUNOUARA",
-    "name": "BOUNOUARA",
-    "lat": 36.21111215942531,
-    "lon": 6.805074148541744,
-    "type": "bus"
-  },
-  {
-    "id": "KIKAYA",
-    "name": "KIKAYA",
-    "lat": 36.457749201446006,
-    "lon": 6.348533951113974,
-    "type": "bus"
-  },
-  {
-    "id": "ALLOUK_ABDELLAH",
-    "name": "ALLOUK ABDELLAH",
-    "lat": 36.26128877851726,
-    "lon": 6.668532498262247,
-    "type": "bus"
-  },
-  {
-    "id": "GUETAR_EL_AYCH",
-    "name": "GUETAR EL AYCH",
-    "lat": 36.18754344584162,
-    "lon": 6.582742020827661,
-    "type": "bus"
-  },
-  {
-    "id": "MIHOUBI",
-    "name": "MIHOUBI",
-    "lat": 36.51418199913134,
-    "lon": 6.7146252846903485,
-    "type": "bus"
-  },
-  {
-    "id": "KASRNADJA",
-    "name": "KASRNADJA",
-    "lat": 36.51889372875471,
-    "lon": 6.649440077588517,
-    "type": "bus"
-  },
-  {
-    "id": "BORDJ_M’HIRIS",
-    "name": "BORDJ M’HIRIS",
-    "lat": 36.18701545266165,
-    "lon": 6.875520363933827,
-    "type": "bus"
-  },
-  {
-    "id": "CHAABET_MEDBOUH",
-    "name": "CHAABET MEDBOUH",
-    "lat": 36.437720471097364,
-    "lon": 6.554793986487146,
-    "type": "bus"
-  },
-  {
-    "id": "EL_KARIA",
-    "name": "EL KARIA",
-    "lat": 36.33808375715914,
-    "lon": 6.551299871821431,
-    "type": "bus"
-  },
-  {
-    "id": "SIDI_LARBI",
-    "name": "SIDI LARBI",
-    "lat": 36.4368,
-    "lon": 6.6402,
-    "type": "bus"
-  },
-  {
-    "id": "BENI_HAMIDENE",
-    "name": "BENI HAMIDENE",
-    "lat": 36.50708225185956,
-    "lon": 6.5097016423519465,
-    "type": "bus"
-  },
-  {
-    "id": "CHAABET_ELMEDBOUH",
-    "name": "CHAABET ELMEDBOUH",
-    "lat": 36.437720471097364,
-    "lon": 6.554793986487146,
-    "type": "bus"
-  },
-  {
-    "id": "BENI_MESTINA",
-    "name": "BENI MESTINA",
-    "lat": 36.49011748835402,
-    "lon": 6.619301615975386,
-    "type": "bus"
-  },
-  {
-    "id": "HERAICHA_AMMAR",
-    "name": "HERAICHA AMMAR",
-    "lat": 36.26213839388823,
-    "lon": 6.482858715858034,
-    "type": "bus"
-  },
-  {
-    "id": "VILLAGE_AGRICOL",
-    "name": "VILLAGE AGRICOL",
-    "lat": 36.55529476405522,
-    "lon": 6.309850878834912,
-    "type": "bus"
-  },
-  {
-    "id": "4_EME_KM",
-    "name": "4 EME KM",
-    "lat": 36.34834807225687,
-    "lon": 6.641116706476773,
-    "type": "bus"
-  },
-  {
-    "id": "ZIGHOUD_YOUCEF",
-    "name": "ZIGHOUD YOUCEF",
-    "lat": 36.532696042872516,
-    "lon": 6.711761963587001,
-    "type": "bus"
-  },
-  {
-    "id": "BEN_DJEDOU",
-    "name": "BEN DJEDOU",
-    "lat": 36.53282673494578,
-    "lon": 6.728780632274439,
-    "type": "bus"
-  },
-  {
-    "id": "AIN_KEBIRA",
-    "name": "AIN KEBIRA",
-    "lat": 36.422028916693414,
-    "lon": 6.437535525287875,
-    "type": "bus"
-  },
-  {
-    "id": "MAESSAOUD_BOUDJRIOU",
-    "name": "MAESSAOUD BOUDJRIOU",
-    "lat": 36.430759192547825,
-    "lon": 6.468002857940587,
-    "type": "bus"
-  },
-  {
-    "id": "BAB_ETROCHE",
-    "name": "Bab Etroche",
-    "lat": 36.35382220194784,
-    "lon": 6.328884440416088,
-    "type": "bus"
-  },
-  {
-    "id": "SIDI_ARRAB",
-    "name": "SIDI ARRAB",
-    "lat": 36.4368,
-    "lon": 6.6402,
-    "type": "bus"
-  },
-  {
-    "id": "AIN_TRAB",
-    "name": "AIN TRAB",
-    "lat": 36.22770881647712,
-    "lon": 7.1375613687990125,
-    "type": "bus"
-  },
-  {
-    "id": "1500_LOGTS_BEKIRA",
-    "name": "1500 LOGTS BEKIRA",
-    "lat": 36.40282608832248,
-    "lon": 6.610685779768533,
-    "type": "bus"
-  },
-  {
     "id": "BEN_ABDELMALEK_RAMDANE",
     "name": "Ben Abdelmalek Ramdane",
     "lat": 36.35857081529557,
@@ -634,6 +11,13 @@
     "name": "Seffari Abdelmalek",
     "lat": 36.35456000427466,
     "lon": 6.6024406412101655,
+    "type": "tram"
+  },
+  {
+    "id": "KADOUR_BOUMEDOUS",
+    "name": "Kadour Boumedous",
+    "lat": 36.35091876992789,
+    "lon": 6.6011496989975065,
     "type": "tram"
   },
   {
@@ -761,5 +145,796 @@
     "lat": 36.247835883229904,
     "lon": 6.569352526436634,
     "type": "tram"
+  },
+  {
+    "id": "STOP_36.25039_6.57318",
+    "name": "GAROUTIERE ALI MENDJLI",
+    "lat": 36.25039,
+    "lon": 6.57318,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.25118_6.57426",
+    "name": "ARRETS RITEDJ MOLE",
+    "lat": 36.251185,
+    "lon": 6.574261,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.25330_6.57317",
+    "name": "ARRETS KADRI",
+    "lat": 36.2533,
+    "lon": 6.57317,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.25597_6.57177",
+    "name": "ARRETS OSCAR",
+    "lat": 36.25597,
+    "lon": 6.57177,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.25893_6.57028",
+    "name": "ARRETS UV15",
+    "lat": 36.25893,
+    "lon": 6.57028,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.26250_6.57328",
+    "name": "ARRETS DE BUS N1",
+    "lat": 36.2625,
+    "lon": 6.57328,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.26186_6.57647",
+    "name": "ARRETS DE BUS N2",
+    "lat": 36.26186,
+    "lon": 6.57647,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.26079_6.58119",
+    "name": "ARRETS SANS VISA",
+    "lat": 36.26079,
+    "lon": 6.58119,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.26183_6.57644",
+    "name": "ARRETS 400",
+    "lat": 36.26183,
+    "lon": 6.57644,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.25730_6.58694",
+    "name": "ARRETS COSIDER",
+    "lat": 36.2573,
+    "lon": 6.58694,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.26129_6.60248",
+    "name": "ARRETS KADRI BRAHIM",
+    "lat": 36.26129,
+    "lon": 6.60248,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.25972_6.60703",
+    "name": "ARRETS QUATRE CHEMINS",
+    "lat": 36.25972,
+    "lon": 6.60703,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.25825_6.61123",
+    "name": "ARRETS DE BUS Z1",
+    "lat": 36.25825,
+    "lon": 6.61123,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.31183_6.62157",
+    "name": "ARRETS ZOUAGHI SLIMANE",
+    "lat": 36.31183,
+    "lon": 6.62157,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.31135_6.62128",
+    "name": "ARRETS DE BUS ZOUAGHI 2",
+    "lat": 36.31135,
+    "lon": 6.62128,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.32333_6.62095",
+    "name": "ARRETS DNC",
+    "lat": 36.323328,
+    "lon": 6.62095,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.32898_6.61878",
+    "name": "ARRETS ZERZARA",
+    "lat": 36.32898,
+    "lon": 6.61878,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.33272_6.61623",
+    "name": "ARRETS CITE MANTORI",
+    "lat": 36.33272,
+    "lon": 6.61623,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.34315_6.61706",
+    "name": "ARRETS MANTORI",
+    "lat": 36.34315,
+    "lon": 6.61706,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.34894_6.61651",
+    "name": "ARRETS DJNAN ZITOUNE",
+    "lat": 36.34894,
+    "lon": 6.61651,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.34929_6.61217",
+    "name": "ARRETS DE BUS B4",
+    "lat": 36.34929,
+    "lon": 6.61217,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.33995_6.60244",
+    "name": "ARRETS 20 OUT",
+    "lat": 36.33995,
+    "lon": 6.60244,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.33481_6.58872",
+    "name": "ARRETS DE BUS B1",
+    "lat": 36.33481,
+    "lon": 6.58872,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.33190_6.58523",
+    "name": "ARRETS DE BUS B2",
+    "lat": 36.3319,
+    "lon": 6.58523,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.33070_6.57951",
+    "name": "ARRETS DE BUS B3",
+    "lat": 36.3307,
+    "lon": 6.57951,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.32987_6.58478",
+    "name": "ARRETS DE BUS  BOUSSOUF1",
+    "lat": 36.32987,
+    "lon": 6.58478,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.33402_6.58833",
+    "name": "ARRETS DE BUS  BOUSSOUF2",
+    "lat": 36.33402,
+    "lon": 6.58833,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.33706_6.59656",
+    "name": "ARRETS DE BUS  BOUSSOUF3",
+    "lat": 36.33706,
+    "lon": 6.59656,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.34906_6.61224",
+    "name": "DJNAN ZITOUNE",
+    "lat": 36.34906,
+    "lon": 6.61224,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.34445_6.61646",
+    "name": "ARRETS MANTORI",
+    "lat": 36.34445,
+    "lon": 6.61646,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.33180_6.61633",
+    "name": "ARRETS CITE MANTORI",
+    "lat": 36.3318,
+    "lon": 6.61633,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.19246_6.37145",
+    "name": "ARRETS ZERZARA",
+    "lat": 36.19246,
+    "lon": 6.37145,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.32349_6.62069",
+    "name": "ARRETS DNC",
+    "lat": 36.323493,
+    "lon": 6.620691,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.31904_6.61752",
+    "name": "ARRETS DE BUS ZOUAGHI",
+    "lat": 36.319039,
+    "lon": 6.617515,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.30724_6.61897",
+    "name": "ARRETS ZOUAGHI SLIMAN",
+    "lat": 36.307243,
+    "lon": 6.618974,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.28564_6.60911",
+    "name": "ARRETS AIN KARMA",
+    "lat": 36.285644,
+    "lon": 6.609111,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.27886_6.61232",
+    "name": "ARRETS VILLIAGE BEKHAWAN",
+    "lat": 36.278863,
+    "lon": 6.612322,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.25863_6.60945",
+    "name": "ARRETS QUATRE CHAMINS",
+    "lat": 36.258634,
+    "lon": 6.609455,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.26139_6.60261",
+    "name": "ARRETS KADRI BRAHIM",
+    "lat": 36.261394,
+    "lon": 6.602613,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.25804_6.59144",
+    "name": "ARRETS ISTIKLAL",
+    "lat": 36.258038,
+    "lon": 6.591438,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.25765_6.58803",
+    "name": "ARRETS LFIRMA",
+    "lat": 36.257646,
+    "lon": 6.588028,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.26252_6.58457",
+    "name": "ARRETS 400",
+    "lat": 36.262523,
+    "lon": 6.584572,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.26464_6.57754",
+    "name": "ARRETS DE BUS 5",
+    "lat": 36.264639,
+    "lon": 6.577536,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.26530_6.57425",
+    "name": "EARRETS VOLITIF",
+    "lat": 36.265301,
+    "lon": 6.574249,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.26363_6.56942",
+    "name": "ARRETS RESIDANCE EL YASSMINE",
+    "lat": 36.263626,
+    "lon": 6.569425,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.25483_6.57212",
+    "name": "ARRETS KADRI",
+    "lat": 36.2548279,
+    "lon": 6.5721219,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.25135_6.57407",
+    "name": "ARRETS RITADJ MOLE",
+    "lat": 36.25135,
+    "lon": 6.57407,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.24997_6.56120",
+    "name": "ARRETS DE BUS AS3",
+    "lat": 36.24997,
+    "lon": 6.5612,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.24688_6.55983",
+    "name": "ARRETS DE BUS AS4",
+    "lat": 36.24688,
+    "lon": 6.55983,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.23837_6.55203",
+    "name": "ARRETS DE BUS AS5",
+    "lat": 36.23837,
+    "lon": 6.55203,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.23655_6.55015",
+    "name": "ARRETS DE BUS AS6",
+    "lat": 36.236554,
+    "lon": 6.550151,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.22983_6.52172",
+    "name": "ARRETS DE BUS AS7",
+    "lat": 36.22983,
+    "lon": 6.52172,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.25677_6.50377",
+    "name": "ARRETS DE BUS AS8",
+    "lat": 36.25677,
+    "lon": 6.50377,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.25853_6.49234",
+    "name": "ARRETS DE BUS AS9",
+    "lat": 36.25853,
+    "lon": 6.49234,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.26593_6.49849",
+    "name": "GAROUTIERE AIN SMARA",
+    "lat": 36.26593,
+    "lon": 6.49849,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.25864_6.50221",
+    "name": "ARRETS DE BUS S1",
+    "lat": 36.258641,
+    "lon": 6.50221,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.24605_6.51026",
+    "name": "ARRETS EPTP AIN SMARA",
+    "lat": 36.24605,
+    "lon": 6.51026,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.22979_6.52155",
+    "name": "ARRETS AIN ZBIRA",
+    "lat": 36.22979,
+    "lon": 6.52155,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.23107_6.54456",
+    "name": "ARRETS DE BUS S2",
+    "lat": 36.23107,
+    "lon": 6.54456,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.23483_6.54848",
+    "name": "ARRETS DE BUS S3",
+    "lat": 36.23483,
+    "lon": 6.54848,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.23853_6.55221",
+    "name": "ARRETS DE BUS S4",
+    "lat": 36.23853,
+    "lon": 6.55221,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.24208_6.55312",
+    "name": "ARRETS DE BUS S5",
+    "lat": 36.24208,
+    "lon": 6.55312,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.24679_6.55993",
+    "name": "ARRETS DE BUS S6",
+    "lat": 36.24679,
+    "lon": 6.55993,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.25018_6.56192",
+    "name": "ARRETS DE BUS S7",
+    "lat": 36.25018,
+    "lon": 6.56192,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.25377_6.57194",
+    "name": "ARRETS DE BUS S8",
+    "lat": 36.25377,
+    "lon": 6.57194,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.25676_6.58209",
+    "name": "ARRETS DE BUS S9",
+    "lat": 36.25676,
+    "lon": 6.58209,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.25709_6.58621",
+    "name": "ARRETS DE BUS S10",
+    "lat": 36.25709,
+    "lon": 6.58621,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.25894_6.58680",
+    "name": "ARRETS DE BUS S11",
+    "lat": 36.25894,
+    "lon": 6.5868,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.26261_6.58473",
+    "name": "ARRETS 400",
+    "lat": 36.26261,
+    "lon": 6.58473,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.26400_6.58106",
+    "name": "ARRETS 1 UV5",
+    "lat": 36.264,
+    "lon": 6.58106,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.26466_6.57773",
+    "name": "ARRETS 2 UV5",
+    "lat": 36.26466,
+    "lon": 6.57773,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.26537_6.57417",
+    "name": "ARRETS 3 UV5",
+    "lat": 36.26537,
+    "lon": 6.57417,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.26357_6.56945",
+    "name": "ARRETS DE BUS N1",
+    "lat": 36.26357,
+    "lon": 6.56945,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.26112_6.56985",
+    "name": "ARRETS DE BUS N2",
+    "lat": 36.26112,
+    "lon": 6.56985,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.25600_6.57149",
+    "name": "ARRETS DE BUS N3",
+    "lat": 36.256,
+    "lon": 6.57149,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.25712_6.63087",
+    "name": "ARRETS DE BUS K1",
+    "lat": 36.25712,
+    "lon": 6.630875,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.27382_6.69024",
+    "name": "ARRETS DE BUS K2",
+    "lat": 36.273824,
+    "lon": 6.690236,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.26756_6.69089",
+    "name": "ARRETS DE BUS K3",
+    "lat": 36.267565,
+    "lon": 6.690893,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.26376_6.69055",
+    "name": "ARRETS DE BUS KHROUB",
+    "lat": 36.263762,
+    "lon": 6.690553,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.26372_6.69080",
+    "name": "ARRETS DE BUS KHROUB 1",
+    "lat": 36.263719,
+    "lon": 6.690799,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.26868_6.69091",
+    "name": "ARRETS DE BUS KHROUB 2",
+    "lat": 36.268685,
+    "lon": 6.690913,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.27489_6.69052",
+    "name": "ARRETS DE BUS KHROUB 3",
+    "lat": 36.274886,
+    "lon": 6.690515,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.27387_6.69027",
+    "name": "ARRETS DE BUS KHROUB 4",
+    "lat": 36.27387,
+    "lon": 6.690272,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.27162_6.66397",
+    "name": "ARRETS DE BUS KHROUB 5",
+    "lat": 36.2716195,
+    "lon": 6.6639677,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.25711_6.63065",
+    "name": "ARRETS DE BUS",
+    "lat": 36.257113,
+    "lon": 6.630651,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.25632_6.62496",
+    "name": "ARRETS DE BUS",
+    "lat": 36.256315,
+    "lon": 6.624958,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.35052_6.61982",
+    "name": "ARRETS DE BUS SNTV SAHRAOUI",
+    "lat": 36.350515,
+    "lon": 6.619824,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.35014_6.63318",
+    "name": "ARRETS DE BUS JW1",
+    "lat": 36.350143,
+    "lon": 6.633179,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.35326_6.63416",
+    "name": "ARRETS DE BUS JW2",
+    "lat": 36.353264,
+    "lon": 6.634159,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.35772_6.64222",
+    "name": "ARRETS DE BUS JW3",
+    "lat": 36.357717,
+    "lon": 6.642223,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.36173_6.64421",
+    "name": "ARRETS DE BUS JW4",
+    "lat": 36.361728,
+    "lon": 6.644208,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.36369_6.64413",
+    "name": "ARRETS DE BUS JW5",
+    "lat": 36.363693,
+    "lon": 6.644132,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.36506_6.64423",
+    "name": "ARRETS DE BUS JW6",
+    "lat": 36.365057,
+    "lon": 6.64423,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.36709_6.64427",
+    "name": "ARRETS DE BUS JW7",
+    "lat": 36.367094,
+    "lon": 6.644272,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.36997_6.64258",
+    "name": "ARRETS DE BUS JW8",
+    "lat": 36.369968,
+    "lon": 6.642583,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.37547_6.63677",
+    "name": "ARRETS DE BUS JW9",
+    "lat": 36.375472,
+    "lon": 6.636767,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.37588_6.63438",
+    "name": "ARRETS DE BUS JW10",
+    "lat": 36.375884,
+    "lon": 6.634378,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.37910_6.63392",
+    "name": "ARRETS DE BUS JW11",
+    "lat": 36.379103,
+    "lon": 6.633922,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.38167_6.63423",
+    "name": "ARRETS DE BUS JW12",
+    "lat": 36.381669,
+    "lon": 6.634227,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.38597_6.63832",
+    "name": "ARRETS DE BUS JW13",
+    "lat": 36.385968,
+    "lon": 6.638321,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.38769_6.64062",
+    "name": "ARRETS DE BUS JW14",
+    "lat": 36.387687,
+    "lon": 6.640622,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.38927_6.64160",
+    "name": "ARRETS DE BUS JW15",
+    "lat": 36.3892671,
+    "lon": 6.6416005,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.39138_6.64515",
+    "name": "ARRETS DE BUS JW16",
+    "lat": 36.391378,
+    "lon": 6.645148,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.39146_6.64680",
+    "name": "ARRETS DE BUS JW17",
+    "lat": 36.391457,
+    "lon": 6.646802,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.39216_6.64889",
+    "name": "ARRETS DE BUS DJBEL LWAHCH",
+    "lat": 36.392161,
+    "lon": 6.64889,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.35189_6.63224",
+    "name": "ARRETS DE BUS C1",
+    "lat": 36.351889,
+    "lon": 6.632238,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.35594_6.62294",
+    "name": "ARRETS DE BUS C2",
+    "lat": 36.355936,
+    "lon": 6.62294,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.36468_6.61695",
+    "name": "ARRETS DE BUS C3",
+    "lat": 36.364682,
+    "lon": 6.616947,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.36720_6.61872",
+    "name": "GAROUTIERE ZAAMOUCHE",
+    "lat": 36.3672,
+    "lon": 6.618719,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.36515_6.61724",
+    "name": "ARRETS DE BUS C 1",
+    "lat": 36.365149,
+    "lon": 6.617237,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.35590_6.62203",
+    "name": "ARRETS DE BUS C 2",
+    "lat": 36.355904,
+    "lon": 6.622031,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.35126_6.63259",
+    "name": "ARRETS DE BUS C 3",
+    "lat": 36.351264,
+    "lon": 6.632589,
+    "type": "bus"
+  },
+  {
+    "id": "STOP_36.35103_6.62196",
+    "name": "ARRETS SNTV SAHRAOUI",
+    "lat": 36.3510349,
+    "lon": 6.6219617,
+    "type": "bus"
   }
 ]
